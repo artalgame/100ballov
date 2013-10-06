@@ -1,0 +1,19 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="100Ballov\PreTestActivity.cs">
+    <Files>
+      <File FileName="100Ballov\Test.cs" Line="37" Column="1" />
+      <File FileName="100Ballov\MainActivity.cs" Line="34" Column="6" />
+      <File FileName="100Ballov\PreTestActivity.cs" Line="26" Column="16" />
+      <File FileName="100Ballov\ATask.cs" Line="10" Column="33" />
+      <File FileName="100Ballov\BTask.cs" Line="9" Column="41" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint file="E:\Projects\xamarin\100Ballov\100Ballov\100Ballov\Test.cs" line="70" column="1" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.100Ballov MonoForAntroid.PreferredDevice="3.7in WVGA (Nexus One)" AndroidDeviceId-Debug="emulator-5554" />
+</Properties>
