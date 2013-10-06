@@ -60,14 +60,14 @@ namespace Ballov
 		public partial class Id
 		{
 			
+			// aapt resource value: 0x7f050005
+			public const int AnnoText = 2131034117;
+			
 			// aapt resource value: 0x7f050000
 			public const int AppName = 2131034112;
 			
 			// aapt resource value: 0x7f050003
 			public const int BelButton = 2131034115;
-			
-			// aapt resource value: 0x7f050005
-			public const int DescriptionText = 2131034117;
 			
 			// aapt resource value: 0x7f050001
 			public const int MathButton = 2131034113;

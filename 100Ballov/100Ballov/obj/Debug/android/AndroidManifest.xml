@@ -9,6 +9,7 @@
       </intent-filter>
     </activity>
     <activity android:label="PreTestActivity" android:name="ballov.PreTestActivity" />
+    <activity android:label="TestActivity" android:name="ballov.TestActivity" />
     <provider android:name="mono.MonoRuntimeProvider" android:exported="false" android:initOrder="2147483647" android:authorities="x100Ballov.x100Ballov.mono.MonoRuntimeProvider.__mono_init__" />
     <receiver android:name="mono.android.Seppuku">
       <intent-filter>

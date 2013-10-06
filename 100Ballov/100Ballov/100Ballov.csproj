@@ -53,6 +53,7 @@
     <Compile Include="Test.cs" />
     <Compile Include="ATask.cs" />
     <Compile Include="BTask.cs" />
+    <Compile Include="TestActivity.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -68,6 +69,20 @@
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
   <ItemGroup>
     <AndroidAsset Include="Assets\Math.txt" />
+    <AndroidAsset Include="Assets\Math\a3.png" />
+    <AndroidAsset Include="Assets\Math\a4.png" />
+    <AndroidAsset Include="Assets\Math\a5.png" />
+    <AndroidAsset Include="Assets\Math\a9.png" />
+    <AndroidAsset Include="Assets\Math\a10.png" />
+    <AndroidAsset Include="Assets\Math\a11.png" />
+    <AndroidAsset Include="Assets\Math\a12.png" />
+    <AndroidAsset Include="Assets\Math\b6.png" />
+    <AndroidAsset Include="Assets\Math\b7.png" />
+    <AndroidAsset Include="Assets\Math\b8.png" />
+    <AndroidAsset Include="Assets\Math\b9.png" />
+    <AndroidAsset Include="Assets\Math\b10.png" />
+    <AndroidAsset Include="Assets\Math\b12.png" />
+    <AndroidAsset Include="Assets\Math\b14.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Assets\Math\" />

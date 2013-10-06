@@ -1,2 +1,3 @@
 Ballov.MainActivity;ballov.MainActivity
 Ballov.PreTestActivity;ballov.PreTestActivity
+Ballov.TestActivity;ballov.TestActivity

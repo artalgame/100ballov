@@ -9,8 +9,6 @@ namespace Ballov
 	public class Test
 	{
 		AssetManager assets = null;
-		int aTaskCount=0;
-		int bTaskCount=0;
 		List<ATask> aTasks = new List<ATask> ();
 		List<BTask> bTasks = new List<BTask> ();
 		public Test (TestTypeEnum testType, AssetManager assets)
@@ -42,8 +40,6 @@ namespace Ballov
 				string content = reader.ReadToEnd ();
 
 				var json = JsonObject.Parse (content);
-				aTaskCount = int.Parse (json ["A_Count"]);
-				bTaskCount = int.Parse (json ["B_Count"]);
 
 				JsonArray aTasksJson = json ["A_Tasks"] as JsonArray;
 				foreach (JsonObject task in aTasksJson) 

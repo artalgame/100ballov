@@ -14,9 +14,9 @@ public final class R {
         public static final int icon=0x7f020000;
     }
     public static final class id {
+        public static final int AnnoText=0x7f050005;
         public static final int AppName=0x7f050000;
         public static final int BelButton=0x7f050003;
-        public static final int DescriptionText=0x7f050005;
         public static final int MathButton=0x7f050001;
         public static final int RusButton=0x7f050002;
         public static final int SettingsButton=0x7f050004;
