@@ -1,23 +1,21 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="100Ballov\Test.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="100Ballov\Source\Activities\TestActivity.cs">
     <Files>
-      <File FileName="100Ballov\Test.cs" Line="62" Column="35" />
-      <File FileName="100Ballov\MainActivity.cs" Line="1" Column="1" />
-      <File FileName="100Ballov\PreTestActivity.cs" Line="24" Column="3" />
-      <File FileName="100Ballov\ATask.cs" Line="10" Column="33" />
-      <File FileName="100Ballov\BTask.cs" Line="9" Column="41" />
-      <File FileName="100Ballov\TestActivity.cs" Line="20" Column="4" />
+      <File FileName="100Ballov\Source\Activities\MainActivity.cs" Line="1" Column="1" />
+      <File FileName="100Ballov\Source\Activities\PreTestActivity.cs" Line="1" Column="1" />
+      <File FileName="100Ballov\Source\Activities\TestActivity.cs" Line="40" Column="4" />
+      <File FileName="100Ballov\Source\TestClasses\Test.cs" Line="1" Column="1" />
+      <File FileName="100Ballov\Assets\Math.txt" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
-      <Breakpoint file="E:\Projects\xamarin\100Ballov\100Ballov\100Ballov\Test.cs" line="66" column="1" />
       <Breakpoint file="E:\Projects\xamarin\100Ballov\100Ballov\100Ballov\PreTestActivity.cs" line="26" column="1" />
       <Breakpoint file="E:\Projects\xamarin\100Ballov\100Ballov\100Ballov\Test.cs" line="42" column="1" />
-      <Breakpoint file="E:\Projects\xamarin\100Ballov\100Ballov\100Ballov\Test.cs" line="76" column="1" />
+      <Breakpoint file="E:\Projects\xamarin\100Ballov\100Ballov\100Ballov\Source\Activities\TestActivity.cs" line="35" column="1" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.ItemProperties.100Ballov MonoForAntroid.PreferredDevice="3.7in WVGA (Nexus One)" AndroidDeviceId-Debug="emulator-5554" />
+  <MonoDevelop.Ide.ItemProperties.100Ballov MonoForAntroid.PreferredDevice="3.7in WVGA (Nexus One)" AndroidDeviceId-Debug="015d2ea4a624020e" />
 </Properties>

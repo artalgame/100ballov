@@ -27,6 +27,7 @@
     <WarningLevel>4</WarningLevel>
     <AndroidLinkMode>None</AndroidLinkMode>
     <ConsolePause>false</ConsolePause>
+    <EmbedAssembliesIntoApk>True</EmbedAssembliesIntoApk>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>full</DebugType>
@@ -45,15 +46,15 @@
     <Reference Include="System.Json" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="MainActivity.cs" />
     <Compile Include="Resources\Resource.designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="PreTestActivity.cs" />
-    <Compile Include="TestTypeEnum.cs" />
-    <Compile Include="Test.cs" />
-    <Compile Include="ATask.cs" />
-    <Compile Include="BTask.cs" />
-    <Compile Include="TestActivity.cs" />
+    <Compile Include="Source\Activities\MainActivity.cs" />
+    <Compile Include="Source\Activities\PreTestActivity.cs" />
+    <Compile Include="Source\Activities\TestActivity.cs" />
+    <Compile Include="Source\TestClasses\ATask.cs" />
+    <Compile Include="Source\TestClasses\BTask.cs" />
+    <Compile Include="Source\TestClasses\Test.cs" />
+    <Compile Include="Source\TestClasses\TestTypeEnum.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -65,26 +66,29 @@
     <AndroidResource Include="Resources\values\Strings.xml" />
     <AndroidResource Include="Resources\drawable\Icon.png" />
     <AndroidResource Include="Resources\layout\PreTest.axml" />
+    <AndroidResource Include="Resources\layout\TestTask.axml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
   <ItemGroup>
     <AndroidAsset Include="Assets\Math.txt" />
+    <AndroidAsset Include="Assets\Math\a10.png" />
+    <AndroidAsset Include="Assets\Math\a11.png" />
+    <AndroidAsset Include="Assets\Math\a12.png" />
     <AndroidAsset Include="Assets\Math\a3.png" />
     <AndroidAsset Include="Assets\Math\a4.png" />
     <AndroidAsset Include="Assets\Math\a5.png" />
     <AndroidAsset Include="Assets\Math\a9.png" />
-    <AndroidAsset Include="Assets\Math\a10.png" />
-    <AndroidAsset Include="Assets\Math\a11.png" />
-    <AndroidAsset Include="Assets\Math\a12.png" />
+    <AndroidAsset Include="Assets\Math\b10.png" />
+    <AndroidAsset Include="Assets\Math\b12.png" />
+    <AndroidAsset Include="Assets\Math\b14.png" />
     <AndroidAsset Include="Assets\Math\b6.png" />
     <AndroidAsset Include="Assets\Math\b7.png" />
     <AndroidAsset Include="Assets\Math\b8.png" />
     <AndroidAsset Include="Assets\Math\b9.png" />
-    <AndroidAsset Include="Assets\Math\b10.png" />
-    <AndroidAsset Include="Assets\Math\b12.png" />
-    <AndroidAsset Include="Assets\Math\b14.png" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Assets\Math\" />
+    <Folder Include="Source\" />
+    <Folder Include="Source\Activities\" />
+    <Folder Include="Source\TestClasses\" />
   </ItemGroup>
 </Project>

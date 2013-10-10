@@ -10,5 +10,6 @@ E:\Projects\xamarin\100Ballov\100Ballov\100Ballov\obj\Debug\res\layout\main.xml
 E:\Projects\xamarin\100Ballov\100Ballov\100Ballov\obj\Debug\res\values\strings.xml
 E:\Projects\xamarin\100Ballov\100Ballov\100Ballov\obj\Debug\res\drawable\icon.png
 E:\Projects\xamarin\100Ballov\100Ballov\100Ballov\obj\Debug\res\layout\pretest.xml
+E:\Projects\xamarin\100Ballov\100Ballov\100Ballov\obj\Debug\res\layout\testtask.xml
 E:\Projects\xamarin\100Ballov\100Ballov\100Ballov\obj\Debug\R.cs.flag
 E:\Projects\xamarin\100Ballov\100Ballov\100Ballov\obj\Debug\uploadflags.txt
