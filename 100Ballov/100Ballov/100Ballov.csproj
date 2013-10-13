@@ -55,6 +55,7 @@
     <Compile Include="Source\TestClasses\BTask.cs" />
     <Compile Include="Source\TestClasses\Test.cs" />
     <Compile Include="Source\TestClasses\TestTypeEnum.cs" />
+    <Compile Include="Source\Activities\FinishTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -64,9 +65,10 @@
   <ItemGroup>
     <AndroidResource Include="Resources\layout\Main.axml" />
     <AndroidResource Include="Resources\values\Strings.xml" />
-    <AndroidResource Include="Resources\drawable\Icon.png" />
     <AndroidResource Include="Resources\layout\PreTest.axml" />
     <AndroidResource Include="Resources\layout\TestTask.axml" />
+    <AndroidResource Include="Resources\drawable\icon.png" />
+    <AndroidResource Include="Resources\layout\FinishTest.axml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
   <ItemGroup>
@@ -90,5 +92,6 @@
     <Folder Include="Source\" />
     <Folder Include="Source\Activities\" />
     <Folder Include="Source\TestClasses\" />
+    <Folder Include="Resources\drawable\" />
   </ItemGroup>
 </Project>

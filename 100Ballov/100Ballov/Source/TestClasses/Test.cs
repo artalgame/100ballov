@@ -42,6 +42,13 @@ namespace Ballov.TestClasses
 					return null;
 		}
 
+		public int GetATaskCount
+		{
+			get {
+				return aTasks.Count;
+			}
+		}
+
 		public BTask GetBTask(int num)
 		{
 			if ((num >= 0) && (num < bTasks.Count))
@@ -49,6 +56,33 @@ namespace Ballov.TestClasses
 			else
 				return null;
 		}
+
+		public int GetBTaskCount
+		{
+			get {
+				return bTasks.Count;
+			}
+		}
+
+		public int[][] GetARightAnswers()
+		{
+			int[][] rightAnswers = new int[aTasks.Count][];
+			for (int i=0; i<aTasks.Count; i++) {
+				rightAnswers[i] =aTasks [i].RightVariants.ToArray();
+			}
+			return rightAnswers; 
+		}
+
+		public string[] GetBRightAnswers()
+		{
+			string[] rightAnswers = new string[bTasks.Count];
+			for (int i=0; i<bTasks.Count; i++) {
+				rightAnswers[i] = bTasks [i].RightAnswer;
+			}
+			return rightAnswers;
+		}
+		
+
 		private void SetTest(string testFileName)
 		{
 

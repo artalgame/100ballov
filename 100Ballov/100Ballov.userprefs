@@ -1,19 +1,47 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="100Ballov\Source\Activities\TestActivity.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="100Ballov\Source\Activities\FinishTest.cs">
     <Files>
-      <File FileName="100Ballov\Source\Activities\MainActivity.cs" Line="1" Column="1" />
+      <File FileName="100Ballov\Source\Activities\MainActivity.cs" Line="16" Column="4" />
       <File FileName="100Ballov\Source\Activities\PreTestActivity.cs" Line="1" Column="1" />
-      <File FileName="100Ballov\Source\Activities\TestActivity.cs" Line="40" Column="4" />
-      <File FileName="100Ballov\Source\TestClasses\Test.cs" Line="1" Column="1" />
+      <File FileName="100Ballov\Source\Activities\TestActivity.cs" Line="169" Column="1" />
+      <File FileName="100Ballov\Source\Activities\FinishTest.cs" Line="39" Column="39" />
+      <File FileName="100Ballov\Source\TestClasses\Test.cs" Line="69" Column="50" />
       <File FileName="100Ballov\Assets\Math.txt" Line="1" Column="1" />
+      <File FileName="C:\Program Files (x86)\MSBuild\Xamarin\Android\Xamarin.Android.Common.targets" Line="190" Column="5" />
     </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State expanded="True">
+          <Node name="100Ballov" expanded="True">
+            <Node name="References" expanded="True" />
+            <Node name="Resources" expanded="True">
+              <Node name="layout" expanded="True" />
+            </Node>
+            <Node name="Source" expanded="True">
+              <Node name="Activities" expanded="True">
+                <Node name="FinishTest.cs" selected="True" />
+              </Node>
+              <Node name="TestClasses" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="ClassPad">
+        <State expanded="True" selected="True" />
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
+      </Pad>
+    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
       <Breakpoint file="E:\Projects\xamarin\100Ballov\100Ballov\100Ballov\PreTestActivity.cs" line="26" column="1" />
       <Breakpoint file="E:\Projects\xamarin\100Ballov\100Ballov\100Ballov\Test.cs" line="42" column="1" />
-      <Breakpoint file="E:\Projects\xamarin\100Ballov\100Ballov\100Ballov\Source\Activities\TestActivity.cs" line="35" column="1" />
+      <Breakpoint file="E:\Projects\xamarin\100Ballov\100Ballov\100Ballov\Source\Activities\TestActivity.cs" line="39" column="1" />
+      <Breakpoint file="E:\Projects\xamarin\100Ballov\100Ballov\100Ballov\Source\Activities\FinishTest.cs" line="37" column="1" />
+      <Breakpoint file="E:\Projects\xamarin\100Ballov\100Ballov\100Ballov\Source\Activities\FinishTest.cs" line="52" column="1" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
