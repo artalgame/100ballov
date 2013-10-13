@@ -67,7 +67,7 @@ namespace Ballov.Activites
 		private void StartTest()
 		{
 			variantsLayout.RemoveAllViews ();
-			taskImage.Enabled = false;
+			taskImage.Visibility = ViewStates.Invisible;
 
 			if (isATask) {
 				SetCurrentATask ();
@@ -84,35 +84,35 @@ namespace Ballov.Activites
 				taskNameLabel.Text = "A" + (currentTaskNum + 1);
 				taskLabel.Text = curTask.Desc;
 				if (!String.IsNullOrEmpty (curTask.ImageLink)) {
-					taskImage.Enabled = true;
+					taskImage.Visibility = ViewStates.Visible;
 					using (Stream ims = Assets.Open (curTask.ImageLink)) {
 						Drawable d = Drawable.CreateFromStream (ims, null);
 						taskImage.SetImageDrawable (d);
 					}
 				}
 				RadioGroup variantGroup = new RadioGroup (this);
-				variantGroup.CheckedChange+= (object sender, RadioGroup.CheckedChangeEventArgs e) => {
-					for(int i=0; i<variantGroup.ChildCount; i++)
-					{
-						RadioButton child = (RadioButton) variantGroup.GetChildAt(i);
-						if(child.Checked)
-						{
-							aAnswers[currentTaskNum] = i;
-							return;
+				variantGroup.CheckedChange += (object sender, RadioGroup.CheckedChangeEventArgs e) => {
+					if (e.CheckedId != -1) {
+						for (int i=0; i<variantGroup.ChildCount; i++) {
+							RadioButton child = (RadioButton)variantGroup.GetChildAt (i);
+							if (child.Id == e.CheckedId) {
+								aAnswers [currentTaskNum] = i;
+							} 
 						}
+						
 					}
+
 				};
 				variantGroup.Orientation = Orientation.Vertical;
 				int index=0;
 				foreach (var variant in curTask.Variants) {
 					RadioButton variantRadio = new RadioButton (this);
 					variantRadio.Text = variant;
-
+					variantGroup.AddView (variantRadio);
 					if((aAnswers[currentTaskNum] != NoSelectedAnswers)&&(index == aAnswers[currentTaskNum]))
 					{
-						variantRadio.Checked = true;
+						variantGroup.Check(variantRadio.Id);
 					}
-					variantGroup.AddView (variantRadio);
 					index++;
 				}
 
@@ -127,7 +127,7 @@ namespace Ballov.Activites
 				taskNameLabel.Text = "B" + (currentTaskNum + 1);
 				taskLabel.Text = curTask.Desc;
 				if (!String.IsNullOrEmpty (curTask.ImageLink)) {
-					taskImage.Enabled = true;
+					taskImage.Visibility = ViewStates.Visible;
 					using (Stream ims = Assets.Open (curTask.ImageLink)) {
 						Drawable d = Drawable.CreateFromStream (ims, null);
 						taskImage.SetImageDrawable (d);

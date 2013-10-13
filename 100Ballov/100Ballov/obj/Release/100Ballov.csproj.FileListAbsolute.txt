@@ -12,3 +12,4 @@ E:\Projects\xamarin\100Ballov\100Ballov\100Ballov\obj\Release\res\layout\pretest
 E:\Projects\xamarin\100Ballov\100Ballov\100Ballov\obj\Release\res\layout\testtask.xml
 E:\Projects\xamarin\100Ballov\100Ballov\100Ballov\obj\Release\R.cs.flag
 E:\Projects\xamarin\100Ballov\100Ballov\100Ballov\obj\Release\uploadflags.txt
+E:\Projects\xamarin\100Ballov\100Ballov\100Ballov\obj\Release\res\layout\finishtest.xml

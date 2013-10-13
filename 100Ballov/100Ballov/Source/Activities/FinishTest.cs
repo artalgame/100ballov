@@ -30,7 +30,7 @@ namespace Ballov
 			ReadExtras ();
 			rating = CalcRating ();
 			var resultTextView =(TextView) FindViewById (Resource.Id.testResultTextView);
-			resultTextView.Text = rating.ToString();
+			resultTextView.Text ="Ваш результат " + rating + " баллов";
 		}
 
 		private int CalcRating(){
@@ -56,7 +56,7 @@ namespace Ballov
 					sum+= bPart;
 				}
 			}
-			return (int) sum;
+			return (int)Math.Round(sum);
 		}
 
 		private void ReadExtras()
