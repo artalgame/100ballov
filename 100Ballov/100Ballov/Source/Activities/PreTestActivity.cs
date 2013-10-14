@@ -10,7 +10,7 @@ using Android.Views;
 using Android.Widget;
 using Ballov.TestClasses;
 
-namespace Ballov.Activites
+namespace com.flaxtreme.CT.Activites
 {
 	[Activity (Label = "PreTestActivity")]			
 	public class PreTestActivity : Activity
@@ -32,6 +32,7 @@ namespace Ballov.Activites
 					var intent = new Intent(this, typeof(TestActivity));
 					intent.PutExtra("TestType", testType.ToString());
 					StartActivity(intent);
+					Finish();
 				};
 			} 
 			else
@@ -40,7 +41,9 @@ namespace Ballov.Activites
 			}
 		}
 
-
+		public bool onPrepareOptionsMenu (Menu menu) {
+			return false;
+		}
 
 		private void SetAnnotation(TestTypeEnum testType)
 		{

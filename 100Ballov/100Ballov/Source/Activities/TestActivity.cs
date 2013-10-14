@@ -13,7 +13,7 @@ using Android.Graphics.Drawables;
 using System.IO;
 using System.Xml.Serialization;
 
-namespace Ballov.Activites
+namespace com.flaxtreme.CT.Activites
 {
 	[Activity (Label = "TestActivity")]			
 	public class TestActivity : Activity
@@ -21,7 +21,6 @@ namespace Ballov.Activites
 		public const int NoSelectedAnswers = -1;
 
 		Test test = null;
-		TextView timeLabel = null;
 		TextView subjectNameLabel = null;
 		TextView taskNameLabel = null;
 
@@ -144,10 +143,12 @@ namespace Ballov.Activites
 			}
 		}
 
+		public bool onPrepareOptionsMenu (Menu menu) {
+			return false;
+		}
 
 		private void LoadViews()
 		{
-			timeLabel = FindViewById<TextView> (Resource.Id.timeLabel);
 			subjectNameLabel = FindViewById<TextView> (Resource.Id.subjectNameLabel);
 			taskNameLabel = FindViewById<TextView> (Resource.Id.taskNameLabel);
 
@@ -166,16 +167,12 @@ namespace Ballov.Activites
 
 		private void PassButtonClick(Object sender, EventArgs args)
 		{
-			var finishTestIntent = new Intent (this, typeof(FinishTest));
-			finishTestIntent.PutExtra ("aAnswers", aAnswers);
-			finishTestIntent.PutExtra ("bAnswers", bAnswers);
-			var aRightAns = test.GetARightAnswers();
-			for (int i=0; i<aRightAns.Length; i++) {
-				finishTestIntent.PutExtra ("aRightAnswers"+i.ToString(),aRightAns[i]);
-			}
-			finishTestIntent.PutExtra ("bRightAnswers", test.GetBRightAnswers());
+			DrawFinishTestDialog ();
+		}
 
-			StartActivity (finishTestIntent);
+		public override void OnBackPressed()
+		{
+			DrawFinishTestDialog ();
 		}
 
 		private void PrevButtonClick(Object sender, EventArgs args)
@@ -223,6 +220,36 @@ namespace Ballov.Activites
 		private Test GetTest(TestTypeEnum testType)
 		{
 			return new Test (testType, Assets);
+		}
+
+		private void DrawFinishTestDialog()
+		{
+			AlertDialog.Builder dialog = new AlertDialog.Builder (this);
+			dialog.SetTitle ("Сдать тест");
+			dialog.SetMessage ("Вы действительно хотите сдать тест");
+			dialog.SetPositiveButton ("Да", OkClicked);
+			dialog.SetNegativeButton ("Het", CancellClicked);
+			dialog.Show();
+		}
+
+		private void CancellClicked(Object IntentSender, EventArgs args)
+		{ 
+			((Dialog)(IntentSender)).Cancel();
+		}
+
+		private void OkClicked(Object sender, EventArgs args)
+		{
+			var finishTestIntent = new Intent (this, typeof(FinishTest));
+			finishTestIntent.PutExtra ("aAnswers", aAnswers);
+			finishTestIntent.PutExtra ("bAnswers", bAnswers);
+			var aRightAns = test.GetARightAnswers();
+			for (int i=0; i<aRightAns.Length; i++) {
+				finishTestIntent.PutExtra ("aRightAnswers"+i.ToString(),aRightAns[i]);
+			}
+			finishTestIntent.PutExtra ("bRightAnswers", test.GetBRightAnswers());
+
+			StartActivity (finishTestIntent);
+			Finish ();
 		}
 	}
 }

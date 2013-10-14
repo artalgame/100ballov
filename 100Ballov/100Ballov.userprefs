@@ -1,14 +1,12 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="100Ballov\Source\Activities\FinishTest.cs">
+  <MonoDevelop.Ide.Workbench>
     <Files>
-      <File FileName="100Ballov\Source\Activities\MainActivity.cs" Line="1" Column="1" />
-      <File FileName="100Ballov\Source\Activities\PreTestActivity.cs" Line="1" Column="1" />
-      <File FileName="100Ballov\Source\Activities\TestActivity.cs" Line="99" Column="39" />
-      <File FileName="100Ballov\Source\Activities\FinishTest.cs" Line="54" Column="29" />
-      <File FileName="100Ballov\Source\TestClasses\Test.cs" Line="69" Column="50" />
-      <File FileName="100Ballov\Assets\Math.txt" Line="323" Column="4" />
-      <File FileName="C:\Program Files (x86)\MSBuild\Xamarin\Android\Xamarin.Android.Common.targets" Line="1" Column="1" />
+      <File FileName="100Ballov\Source\Activities\MainActivity.cs" Line="45" Column="36" />
+      <File FileName="100Ballov\Resources\values\Strings.xml" Line="10" Column="1" />
+      <File FileName="e:\Projects\xamarin\100Ballov\100Ballov\100Ballov\Source\Activities\FinishTest.cs" Line="84" Column="5" />
+      <File FileName="100Ballov\Source\Activities\PreTestActivity.cs" Line="35" Column="15" />
+      <File FileName="100Ballov\Source\Activities\TestActivity.cs" Line="149" Column="4" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -16,13 +14,16 @@
           <Node name="100Ballov" expanded="True">
             <Node name="References" expanded="True" />
             <Node name="Assets" expanded="True" />
+            <Node name="Properties" expanded="True" />
             <Node name="Resources" expanded="True">
-              <Node name="layout" expanded="True" />
+              <Node name="drawable" expanded="True" />
+              <Node name="layout" expanded="True">
+                <Node name="TestTask.axml" selected="True" />
+              </Node>
+              <Node name="values" expanded="True" />
             </Node>
             <Node name="Source" expanded="True">
-              <Node name="Activities" expanded="True">
-                <Node name="FinishTest.cs" selected="True" />
-              </Node>
+              <Node name="Activities" expanded="True" />
               <Node name="TestClasses" expanded="True" />
             </Node>
           </Node>
@@ -41,9 +42,8 @@
       <Breakpoint file="E:\Projects\xamarin\100Ballov\100Ballov\100Ballov\PreTestActivity.cs" line="26" column="1" />
       <Breakpoint file="E:\Projects\xamarin\100Ballov\100Ballov\100Ballov\Test.cs" line="42" column="1" />
       <Breakpoint file="E:\Projects\xamarin\100Ballov\100Ballov\100Ballov\Source\Activities\TestActivity.cs" line="39" column="1" />
-      <Breakpoint file="E:\Projects\xamarin\100Ballov\100Ballov\100Ballov\Source\Activities\FinishTest.cs" line="37" column="1" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.ItemProperties.100Ballov MonoForAntroid.PreferredDevice="3.7in WVGA (Nexus One)" AndroidDeviceId-Debug="015d2ea4a624020e" AndroidDeviceId-Release="015d2ea4a624020e" />
+  <MonoDevelop.Ide.ItemProperties.100Ballov MonoForAntroid.PreferredDevice="4.7in WXGA" AndroidDeviceId-Debug="015d2ea4a624020e" MonoForAntroid.PreferredTheme="Theme.Holo.Light.NoActionBar" />
 </Properties>

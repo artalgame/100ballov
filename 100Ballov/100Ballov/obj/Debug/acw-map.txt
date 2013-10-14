@@ -1,4 +1,4 @@
-Ballov.Activites.MainActivity;ballov.activites.MainActivity
-Ballov.Activites.PreTestActivity;ballov.activites.PreTestActivity
-Ballov.Activites.TestActivity;ballov.activites.TestActivity
-Ballov.FinishTest;ballov.FinishTest
+com.flaxtreme.CT.Activites.MainActivity;com.flaxtreme.ct.activites.MainActivity
+com.flaxtreme.CT.Activites.PreTestActivity;com.flaxtreme.ct.activites.PreTestActivity
+com.flaxtreme.CT.Activites.TestActivity;com.flaxtreme.ct.activites.TestActivity
+com.flaxtreme.CT.Activites.FinishTest;com.flaxtreme.ct.activites.FinishTest
