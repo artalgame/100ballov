@@ -1,7 +1,5 @@
 package mono;
 
-import android.util.Log;
-
 public class MonoRuntimeProvider
 	extends android.content.ContentProvider
 {
@@ -19,7 +17,20 @@ public class MonoRuntimeProvider
 	public void attachInfo (android.content.Context context, android.content.pm.ProviderInfo info)
 	{
 		// Mono Runtime Initialization {{{
-		mono.MonoPackageManager.LoadApplication (context, null, new String[]{context.getApplicationInfo ().sourceDir});
+		try {
+			android.content.pm.ApplicationInfo runtimeInfo = context.getPackageManager ().getApplicationInfo ("Mono.Android.DebugRuntime", 0);
+			android.content.pm.ApplicationInfo apiInfo = mono.MonoPackageManager.getApiPackageName () != null
+				? context.getPackageManager ().getApplicationInfo (mono.MonoPackageManager.getApiPackageName (), 0)
+				: null;
+			mono.MonoPackageManager.LoadApplication (context, runtimeInfo.dataDir,
+					apiInfo != null
+					? new String[]{runtimeInfo.sourceDir, apiInfo.sourceDir, context.getApplicationInfo ().sourceDir}
+					: new String[]{runtimeInfo.sourceDir, context.getApplicationInfo ().sourceDir});
+		} catch (android.content.pm.PackageManager.NameNotFoundException e) {
+			throw new RuntimeException ("Unable to find application Mono.Android.DebugRuntime" + 
+					(mono.MonoPackageManager.getApiPackageName () == null ? "" : " or " + mono.MonoPackageManager.getApiPackageName ()) +
+					"!", e);
+		}
 		// }}}
 		super.attachInfo (context, info);
 	}

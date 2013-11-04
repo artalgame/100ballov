@@ -30,7 +30,9 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:id="@+id/textView2"
-            android:text="@string/descr_text" />
+            android:text="@string/descr_text"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp" />
         <RelativeLayout
             android:minWidth="25px"
             android:minHeight="25px"
@@ -42,7 +44,7 @@
                 android:id="@+id/marketButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="#ffffff"
+                android:background="@null"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginRight="10dp"
@@ -67,7 +69,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/vkButton"
-                android:background="#ffffff"
+                android:background="@null"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginRight="10dp"
@@ -92,7 +94,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/shareButton"
-                android:background="#ffffff"
+                android:background="@null"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="10dp" />
             <TextView

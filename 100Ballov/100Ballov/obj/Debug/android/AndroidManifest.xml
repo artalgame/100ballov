@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="1.0" package="com.flaxtreme.CT">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" package="com.flaxtreme.CT" android:versionName="1990">
   <uses-sdk android:minSdkVersion="6" android:targetSdkVersion="15" />
-  <application android:label="100Ballov" android:icon="@drawable/icon" android:name="mono.android.app.Application" android:debuggable="true">
+  <application android:label="100Ballov" android:icon="@drawable/icon" android:theme="@android:style/Theme.Black.NoTitleBar" android:name="com.flaxtreme.ct.MRApplication" android:debuggable="true">
     <activity android:label="100Ballov" android:name="com.flaxtreme.ct.activites.MainActivity">
       <intent-filter>
         <action android:name="android.intent.action.MAIN" />

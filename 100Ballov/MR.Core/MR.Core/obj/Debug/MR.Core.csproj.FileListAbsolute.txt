@@ -1,0 +1,4 @@
+E:\Projects\xamarin\100Ballov\100Ballov\MR.Core\MR.Core\bin\Debug\MR.Core.dll
+E:\Projects\xamarin\100Ballov\100Ballov\MR.Core\MR.Core\bin\Debug\MR.Core.pdb
+E:\Projects\xamarin\100Ballov\100Ballov\MR.Core\MR.Core\obj\Debug\MR.Core.dll
+E:\Projects\xamarin\100Ballov\100Ballov\MR.Core\MR.Core\obj\Debug\MR.Core.pdb

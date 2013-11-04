@@ -2,3 +2,5 @@ com.flaxtreme.CT.Activites.MainActivity;com.flaxtreme.ct.activites.MainActivity
 com.flaxtreme.CT.Activites.PreTestActivity;com.flaxtreme.ct.activites.PreTestActivity
 com.flaxtreme.CT.Activites.TestActivity;com.flaxtreme.ct.activites.TestActivity
 com.flaxtreme.CT.Activites.FinishTest;com.flaxtreme.ct.activites.FinishTest
+com.flaxtreme.CT.Activites.Splash;com.flaxtreme.ct.activites.Splash
+com.flaxtreme.CT.MRApplication;com.flaxtreme.ct.MRApplication

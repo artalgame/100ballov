@@ -15,5 +15,7 @@ E:\Projects\xamarin\100Ballov\100Ballov\100Ballov\obj\Debug\res\layout\finishtes
 E:\Projects\xamarin\100Ballov\100Ballov\100Ballov\obj\Debug\res\drawable\play_store_icon.png
 E:\Projects\xamarin\100Ballov\100Ballov\100Ballov\obj\Debug\res\drawable\vk.png
 E:\Projects\xamarin\100Ballov\100Ballov\100Ballov\obj\Debug\res\drawable\share.png
+E:\Projects\xamarin\100Ballov\100Ballov\100Ballov\obj\Debug\res\values\styles.xml
+E:\Projects\xamarin\100Ballov\100Ballov\100Ballov\obj\Debug\res\drawable\splash.png
 E:\Projects\xamarin\100Ballov\100Ballov\100Ballov\obj\Debug\R.cs.flag
 E:\Projects\xamarin\100Ballov\100Ballov\100Ballov\obj\Debug\uploadflags.txt

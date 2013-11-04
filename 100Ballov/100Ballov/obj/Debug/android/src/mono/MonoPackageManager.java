@@ -67,8 +67,9 @@ public class MonoPackageManager {
 class MonoPackageManager_Resources {
 	public static final String[] Assemblies = new String[]{
 		"100Ballov.dll",
+		"MR.Core.dll",
 	};
 	public static final String[] Dependencies = new String[]{
 	};
-	public static final String ApiPackageName = null;
+	public static final String ApiPackageName = "Mono.Android.Platform.ApiLevel_8";
 }

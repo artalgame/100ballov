@@ -1,9 +1,8 @@
 using System;
-using System.IO;
 using Android.Content.Res;
-using System.Json;
 using System.Collections.Generic;
-
+using System.IO;
+using System.Json;
 namespace Ballov.TestClasses
 {
 	public class Test

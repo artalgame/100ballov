@@ -16,6 +16,8 @@ namespace com.flaxtreme.CT.Activites
 		{
 			base.OnCreate (bundle);
 
+		    var task = new SubjectRetriever (MR.Core.TestEntities.SubjectsEnumeration.Math).GetATask("1",1);
+
 			SetContentView (Resource.Layout.Main);
 
 			var mathButton = FindViewById<Button> (Resource.Id.MathButton);
