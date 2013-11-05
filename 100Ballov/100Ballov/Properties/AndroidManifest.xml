@@ -4,7 +4,7 @@
 	<application 
 		android:label="100Ballov" 
 		android:icon="@drawable/icon" 
-		android:theme="@android:style/Theme.Black.NoTitleBar"
+		android:theme="@android:style/Theme.Light.NoTitleBar"
 		android:name="com.flaxtreme.CT.MRApplication" />
 	<uses-permission android:name="android.permission.READ_OWNER_DATA" />
 </manifest>

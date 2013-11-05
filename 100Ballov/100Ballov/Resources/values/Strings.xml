@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 	<string name="MathButton">Математика</string>
-	<string name="RussianButton">Русский Язык</string>
+	<string name="RusButton">Русский Язык</string>
 	<string name="BelButton">Беларуская Мова</string>
+	<string name="PhysButton">Физика</string>
+	
 	<string name="SettingsButton">О приложении</string>
-	<string name="app_name">ЦТ на 100 Баллов</string>
+	
+	<string name="app_name">Мобильный репетитор</string>
 	<string name="descr_text"> Привет. Это тестовое приложение. Мы проверяем, нужны ли тесты на Андроиде будущим абитуриетам. Если хочешь, чтобы полная версия вышла бесплатно и как можно скорее - оставь свой отзыв, оценку на маркете. Также расскажи о приложении другу - чем больше отзывов, тем быстрее выйдет полное приложение. Хочешь решать тесты в любом месте в любое время без кучи сборников и бумажек - оставляй оценку, отзыв и рассказывай о приложении друзьям!</string>
 </resources>

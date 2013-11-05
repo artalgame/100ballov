@@ -8,23 +8,55 @@
         android:layout_width="fill_parent"
         android:layout_height="fill_parent">
         <TextView
-            android:text="ЦТ на 100 баллов"
+            android:text="Мобильный репетитор"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:id="@+id/AppName"
             android:gravity="center_horizontal" />
-        <TextView
-            android:text="Выберите предмет:"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/textView1" />
         <Button
             android:id="@+id/MathButton"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:text="@string/MathButton" />
+            android:text="@string/MathButton"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginLeft="16dp" />
+        <Button
+            android:text="@string/RusButton"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/RusButton"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="8dp"
+            android:visibility="visible"
+            android:enabled="false"
+            android:hint="В стадии разработки" />
+        <Button
+            android:text="@string/BelButton"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/BelButton"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="8dp"
+            android:enabled="false"
+            android:hint="У стадыі распрацоўкі" />
+        <Button
+            android:text="@string/PhysButton"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/PhysButton"
+            android:hint="В стадии разработки"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="8dp"
+            android:enabled="false" />
         <TextView
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:layout_width="fill_parent"

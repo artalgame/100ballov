@@ -1,14 +1,16 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="100Ballov\Source\Data\ThemesRetriever.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="100Ballov\Source\Data\SubjectRetriever.cs">
     <Files>
-      <File FileName="100Ballov\Source\Data\SubjectRetriever.cs" Line="37" Column="66" />
-      <File FileName="100Ballov\Source\Data\ThemesRetriever.cs" Line="27" Column="12" />
-      <File FileName="MR.Core\MR.Core\TestEntities\ATask.cs" Line="30" Column="21" />
-      <File FileName="100Ballov\Assets\Math\1\a\1\task.txt" Line="37" Column="11" />
-      <File FileName="100Ballov\Source\TestClasses\Test.cs" Line="91" Column="34" />
-      <File FileName="MR.Core\MR.Core\TestEntities\AVariant.cs" Line="18" Column="14" />
-      <File FileName="100Ballov\Source\Activities\MainActivity.cs" Line="19" Column="99" />
+      <File FileName="100Ballov\Source\Data\SubjectRetriever.cs" Line="39" Column="3" />
+      <File FileName="100Ballov\Source\Data\ThemesRetriever.cs" Line="25" Column="6" />
+      <File FileName="MR.Core\MR.Core\TestEntities\ATask.cs" Line="1" Column="1" />
+      <File FileName="100Ballov\Assets\Math\1\a\1\task.txt" Line="1" Column="1" />
+      <File FileName="100Ballov\Source\TestClasses\Test.cs" Line="1" Column="1" />
+      <File FileName="MR.Core\MR.Core\TestEntities\AVariant.cs" Line="1" Column="1" />
+      <File FileName="100Ballov\Source\Activities\MainActivity.cs" Line="11" Column="2" />
+      <File FileName="100Ballov\Resources\values\Strings.xml" Line="10" Column="45" />
+      <File FileName="100Ballov\Properties\AndroidManifest.xml" Line="10" Column="12" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -32,7 +34,7 @@
             <Node name="Source" expanded="True">
               <Node name="Activities" expanded="True" />
               <Node name="Data" expanded="True">
-                <Node name="ThemesRetriever.cs" selected="True" />
+                <Node name="SubjectRetriever.cs" selected="True" />
               </Node>
               <Node name="TestClasses" expanded="True" />
             </Node>
@@ -61,5 +63,5 @@
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.ItemProperties.MR.Android MonoForAntroid.PreferredDevice="10.1in WXGA (Tablet)" MonoForAntroid.PreferredTheme="Theme.Black" AndroidDeviceId-Release="015d2ea4a624020e" AndroidDeviceId-Debug="emulator-5554" />
+  <MonoDevelop.Ide.ItemProperties.MR.Android MonoForAntroid.PreferredDevice="4in WVGA (Nexus S)" MonoForAntroid.PreferredTheme="Theme.Black" AndroidDeviceId-Release="015d2ea4a624020e" AndroidDeviceId-Debug="emulator-5554" />
 </Properties>

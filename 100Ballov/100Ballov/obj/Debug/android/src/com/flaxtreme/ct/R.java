@@ -18,30 +18,32 @@ public final class R {
         public static final int vk=0x7f020004;
     }
     public static final class id {
-        public static final int AnnoText=0x7f06000e;
+        public static final int AnnoText=0x7f060010;
         public static final int AppName=0x7f06000b;
-        public static final int MathButton=0x7f06000d;
-        public static final int StartButton=0x7f06000f;
-        public static final int linearLayout1=0x7f060011;
+        public static final int BelButton=0x7f06000e;
+        public static final int MathButton=0x7f06000c;
+        public static final int PhysButton=0x7f06000f;
+        public static final int RusButton=0x7f06000d;
+        public static final int StartButton=0x7f060011;
+        public static final int linearLayout1=0x7f060013;
         public static final int marketButton=0x7f060002;
         public static final int marketTextView=0x7f060003;
-        public static final int nextButton=0x7f060019;
-        public static final int passButton=0x7f060018;
-        public static final int prevButton=0x7f060017;
+        public static final int nextButton=0x7f06001b;
+        public static final int passButton=0x7f06001a;
+        public static final int prevButton=0x7f060019;
         public static final int relativeLayout1=0x7f060001;
         public static final int relativeLayout2=0x7f060004;
         public static final int relativeLayout3=0x7f060007;
-        public static final int scrollView1=0x7f060010;
+        public static final int scrollView1=0x7f060012;
         public static final int shareButton=0x7f060008;
         public static final int shareTextView=0x7f060009;
-        public static final int subjectNameLabel=0x7f060012;
-        public static final int taskImage=0x7f060015;
-        public static final int taskLabel=0x7f060014;
-        public static final int taskNameLabel=0x7f060013;
+        public static final int subjectNameLabel=0x7f060014;
+        public static final int taskImage=0x7f060017;
+        public static final int taskLabel=0x7f060016;
+        public static final int taskNameLabel=0x7f060015;
         public static final int testResultTextView=0x7f060000;
-        public static final int textView1=0x7f06000c;
         public static final int textView2=0x7f06000a;
-        public static final int variantsLayout=0x7f060016;
+        public static final int variantsLayout=0x7f060018;
         public static final int vkButton=0x7f060005;
         public static final int vkTextView=0x7f060006;
     }
@@ -54,10 +56,11 @@ public final class R {
     public static final class string {
         public static final int BelButton=0x7f040002;
         public static final int MathButton=0x7f040000;
-        public static final int RussianButton=0x7f040001;
-        public static final int SettingsButton=0x7f040003;
-        public static final int app_name=0x7f040004;
-        public static final int descr_text=0x7f040005;
+        public static final int PhysButton=0x7f040003;
+        public static final int RusButton=0x7f040001;
+        public static final int SettingsButton=0x7f040004;
+        public static final int app_name=0x7f040005;
+        public static final int descr_text=0x7f040006;
     }
     public static final class style {
         public static final int Theme_Splash=0x7f050000;

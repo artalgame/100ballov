@@ -39,7 +39,7 @@ namespace com.flaxtreme.CT
 
 		public ATask GetATask(SubjectTheme theme, int num)
 		{
-			string fileName = subject.ToString () + "/" + theme.Num.ToString () + @"/a" + num.ToString () + "/" + "task.txt"; 
+			string fileName = subject.ToString () + "/" + theme.Num.ToString () + @"/a/" + num.ToString () + "/" + "task.txt"; 
 			var assets = MRApplication.GetAssetManager ();
 
 			using (StreamReader reader = new  StreamReader(assets.Open(fileName))) {
