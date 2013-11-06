@@ -1,0 +1,15 @@
+d:\MyProjects\xamarin\100ballov\TestRedactor\TestRedactor\TestRedactor\bin\Debug\TestRedactor.exe
+d:\MyProjects\xamarin\100ballov\TestRedactor\TestRedactor\TestRedactor\bin\Debug\TestRedactor.pdb
+d:\MyProjects\xamarin\100ballov\TestRedactor\TestRedactor\TestRedactor\obj\Debug\TestRedactor.csprojResolveAssemblyReference.cache
+d:\MyProjects\xamarin\100ballov\TestRedactor\TestRedactor\TestRedactor\obj\Debug\MainWindow.baml
+d:\MyProjects\xamarin\100ballov\TestRedactor\TestRedactor\TestRedactor\obj\Debug\MainWindow.g.cs
+d:\MyProjects\xamarin\100ballov\TestRedactor\TestRedactor\TestRedactor\obj\Debug\App.g.cs
+d:\MyProjects\xamarin\100ballov\TestRedactor\TestRedactor\TestRedactor\obj\Debug\TestRedactor_MarkupCompile.cache
+d:\MyProjects\xamarin\100ballov\TestRedactor\TestRedactor\TestRedactor\obj\Debug\TestRedactor.g.resources
+d:\MyProjects\xamarin\100ballov\TestRedactor\TestRedactor\TestRedactor\obj\Debug\TestRedactor.Properties.Resources.resources
+d:\MyProjects\xamarin\100ballov\TestRedactor\TestRedactor\TestRedactor\obj\Debug\TestRedactor.csproj.GenerateResource.Cache
+d:\MyProjects\xamarin\100ballov\TestRedactor\TestRedactor\TestRedactor\obj\Debug\TestRedactor.exe
+d:\MyProjects\xamarin\100ballov\TestRedactor\TestRedactor\TestRedactor\obj\Debug\TestRedactor.pdb
+d:\MyProjects\xamarin\100ballov\TestRedactor\TestRedactor\TestRedactor\bin\Debug\TestRedactor.exe.config
+d:\MyProjects\xamarin\100ballov\TestRedactor\TestRedactor\TestRedactor\bin\Debug\Json.dll
+d:\MyProjects\xamarin\100ballov\TestRedactor\TestRedactor\TestRedactor\bin\Debug\Json.pdb

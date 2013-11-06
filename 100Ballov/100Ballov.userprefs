@@ -3,14 +3,14 @@
   <MonoDevelop.Ide.Workbench ActiveDocument="100Ballov\Source\Data\SubjectRetriever.cs">
     <Files>
       <File FileName="100Ballov\Source\Data\SubjectRetriever.cs" Line="39" Column="3" />
-      <File FileName="100Ballov\Source\Data\ThemesRetriever.cs" Line="25" Column="6" />
+      <File FileName="100Ballov\Source\Data\ThemesRetriever.cs" Line="1" Column="1" />
       <File FileName="MR.Core\MR.Core\TestEntities\ATask.cs" Line="1" Column="1" />
       <File FileName="100Ballov\Assets\Math\1\a\1\task.txt" Line="1" Column="1" />
       <File FileName="100Ballov\Source\TestClasses\Test.cs" Line="1" Column="1" />
       <File FileName="MR.Core\MR.Core\TestEntities\AVariant.cs" Line="1" Column="1" />
-      <File FileName="100Ballov\Source\Activities\MainActivity.cs" Line="11" Column="2" />
-      <File FileName="100Ballov\Resources\values\Strings.xml" Line="10" Column="45" />
-      <File FileName="100Ballov\Properties\AndroidManifest.xml" Line="10" Column="12" />
+      <File FileName="100Ballov\Source\Activities\MainActivity.cs" Line="1" Column="1" />
+      <File FileName="100Ballov\Resources\values\Strings.xml" Line="1" Column="1" />
+      <File FileName="100Ballov\Properties\AndroidManifest.xml" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">

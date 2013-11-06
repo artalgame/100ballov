@@ -2,7 +2,16 @@
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="MainWindow" Height="350" Width="525">
-    <Grid>
-        
+    <Grid Margin="0,0,0,-5">
+        <TextBlock HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" Text="Предмет" VerticalAlignment="Top"/>
+        <ListBox Name="SubjectListBox" HorizontalAlignment="Left" Height="55" Margin="10,26,0,0" VerticalAlignment="Top" Width="172" MouseDown="SubjectListBox_MouseDown" MouseDoubleClick="SubjectListBox_MouseDown" >
+            <ListBoxItem Content="Математика(Math)" Name="MathListBoxItem" IsSelected="False"/>
+            <ListBoxItem Content="Русский Язык(Russian)" Name="RussianListBoxItem"/>
+            <ListBoxItem Content="Беларуская Мова(Belarussian)" Name="BelarusianListBoxItem"/>
+        </ListBox>
+        <TextBlock HorizontalAlignment="Left" Margin="286,9,0,0" TextWrapping="Wrap" Name="PathTextBlock" VerticalAlignment="Top" Width="201"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,105,0,0" TextWrapping="Wrap" Text="Тема" VerticalAlignment="Top" Width="172"/>
+        <ListBox Name="ThemeListBox" HorizontalAlignment="Left" Height="184" Margin="10,126,0,0" VerticalAlignment="Top" Width="172"/>
+
     </Grid>
 </Window>
