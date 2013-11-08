@@ -6,46 +6,37 @@ using Android.Views;
 using Android.Widget;
 using Android.OS;
 using Ballov.TestClasses;
+using MR.Core.TestEntities;
 
 namespace com.flaxtreme.CT.Activites
 {
-	[Activity (Label = "100Ballov", MainLauncher = true)]
+	[Activity (Label = "MobileRepetitor", MainLauncher = true)]
 	public class MainActivity : Activity
 	{
 		protected override void OnCreate (Bundle bundle)
 		{
 			base.OnCreate (bundle);
-
-		    var task = new SubjectRetriever (MR.Core.TestEntities.SubjectsEnumeration.Math).GetATask("1",1);
-
 			SetContentView (Resource.Layout.Main);
 
 			var mathButton = FindViewById<Button> (Resource.Id.MathButton);
 			mathButton.Click += (object sender, EventArgs e) => {
-				StartActivity(GetPreTestIntent(TestTypeEnum.Math));
+				StartActivity(GetSubjectIntent(SubjectsEnumeration.Math));
 			};
 
-			var playStoreButton = FindViewById<ImageButton> (Resource.Id.marketButton);
-			playStoreButton.Click += MarketButtonClick;
-			var playStoreTextView = FindViewById<TextView> (Resource.Id.marketTextView);
-			playStoreTextView.Click += MarketButtonClick;
+			(FindViewById<ImageButton> (Resource.Id.marketButton)).Click += MarketButtonClick;
+			(FindViewById<TextView> (Resource.Id.marketTextView)).Click += MarketButtonClick;
 
+			(FindViewById<ImageButton> (Resource.Id.vkButton)).Click += VkButtonClick;
+			(FindViewById<TextView> (Resource.Id.vkTextView)).Click += VkButtonClick;
 
-			var vkButton = FindViewById<ImageButton> (Resource.Id.vkButton);
-			vkButton.Click += VkButtonClick;
-			var vkTextView = FindViewById<TextView> (Resource.Id.vkTextView);
-			vkTextView.Click += VkButtonClick;
-
-			var shareButton = FindViewById<ImageButton> (Resource.Id.shareButton);
-			shareButton.Click += ShareButtonClick;
-			var shareTextView = FindViewById<TextView> (Resource.Id.shareTextView);
-			shareTextView.Click += ShareButtonClick;
+			(FindViewById<ImageButton> (Resource.Id.shareButton)).Click += ShareButtonClick;
+			(FindViewById<TextView> (Resource.Id.shareTextView)).Click += ShareButtonClick;
 		}
 
-		private Intent GetPreTestIntent(TestTypeEnum testType)
+		private Intent GetSubjectIntent(SubjectsEnumeration subjectType)
 		{
-			var intent = new Intent (this, typeof(PreTestActivity));
-			intent.PutExtra ("TestType", testType.ToString());
+			var intent = new Intent (this, typeof(SubjectActivity));
+			intent.PutExtra ("SubjectType", subjectType.ToString());
 			return intent;
 		}
 

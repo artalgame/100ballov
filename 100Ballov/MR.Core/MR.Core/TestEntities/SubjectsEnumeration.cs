@@ -4,6 +4,9 @@ namespace MR.Core.TestEntities
 {
 	public enum SubjectsEnumeration
 	{
-		Math
+		Math,
+		Russian,
+		Belarussian,
+		Physics
 	}
 }

@@ -1,46 +1,31 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="100Ballov\Source\Data\SubjectRetriever.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="100Ballov\Source\Data\SubjectHelper.cs">
     <Files>
-      <File FileName="100Ballov\Source\Data\SubjectRetriever.cs" Line="39" Column="3" />
-      <File FileName="100Ballov\Source\Data\ThemesRetriever.cs" Line="1" Column="1" />
-      <File FileName="MR.Core\MR.Core\TestEntities\ATask.cs" Line="1" Column="1" />
-      <File FileName="100Ballov\Assets\Math\1\a\1\task.txt" Line="1" Column="1" />
-      <File FileName="100Ballov\Source\TestClasses\Test.cs" Line="1" Column="1" />
-      <File FileName="MR.Core\MR.Core\TestEntities\AVariant.cs" Line="1" Column="1" />
-      <File FileName="100Ballov\Source\Activities\MainActivity.cs" Line="1" Column="1" />
-      <File FileName="100Ballov\Resources\values\Strings.xml" Line="1" Column="1" />
-      <File FileName="100Ballov\Properties\AndroidManifest.xml" Line="1" Column="1" />
+      <File FileName="100Ballov\Source\Activities\MainActivity.cs" Line="14" Column="33" />
+      <File FileName="100Ballov\Source\Activities\SubjectActivity.cs" Line="1" Column="1" />
+      <File FileName="100Ballov\Source\Activities\ChooseTrainingActivity.cs" Line="1" Column="1" />
+      <File FileName="100Ballov\Source\Data\SubjectHelper.cs" Line="9" Column="42" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State expanded="True">
           <Node name="MR.Android" expanded="True">
-            <Node name="Assets" expanded="True">
-              <Node name="Math" expanded="True">
-                <Node name="1" expanded="True">
-                  <Node name="a" expanded="True">
-                    <Node name="1" expanded="True" />
-                  </Node>
-                </Node>
-              </Node>
-            </Node>
-            <Node name="Properties" expanded="True" />
+            <Node name="References" expanded="True" />
+            <Node name="Assets" expanded="True" />
             <Node name="Resources" expanded="True">
-              <Node name="drawable" expanded="True" />
               <Node name="layout" expanded="True" />
               <Node name="values" expanded="True" />
             </Node>
             <Node name="Source" expanded="True">
               <Node name="Activities" expanded="True" />
               <Node name="Data" expanded="True">
-                <Node name="SubjectRetriever.cs" selected="True" />
+                <Node name="SubjectHelper.cs" selected="True" />
               </Node>
               <Node name="TestClasses" expanded="True" />
             </Node>
           </Node>
           <Node name="MR.Core" expanded="True">
-            <Node name="Interfaces" expanded="True" />
             <Node name="TestEntities" expanded="True" />
           </Node>
         </State>
@@ -59,9 +44,9 @@
       <Breakpoint file="E:\Projects\xamarin\100Ballov\100Ballov\100Ballov\Test.cs" line="42" column="1" />
       <Breakpoint file="E:\Projects\xamarin\100Ballov\100Ballov\100Ballov\Source\Activities\TestActivity.cs" line="38" column="1" />
       <Breakpoint file="E:\Projects\xamarin\100Ballov\100Ballov\100Ballov\Source\Data\SubjectRetriever.cs" line="42" column="1" />
-      <Breakpoint file="E:\Projects\xamarin\100Ballov\100Ballov\100Ballov\Source\Activities\MainActivity.cs" line="19" column="1" />
+      <Breakpoint file="E:\Projects\xamarin\100Ballov\100Ballov\100Ballov\Source\Activities\MainActivity.cs" line="18" column="1" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.ItemProperties.MR.Android MonoForAntroid.PreferredDevice="4in WVGA (Nexus S)" MonoForAntroid.PreferredTheme="Theme.Black" AndroidDeviceId-Release="015d2ea4a624020e" AndroidDeviceId-Debug="emulator-5554" />
+  <MonoDevelop.Ide.ItemProperties.MR.Android MonoForAntroid.PreferredDevice="4in WVGA (Nexus S)" MonoForAntroid.PreferredTheme="Theme.Holo.Light.NoActionBar" AndroidDeviceId-Release="015d2ea4a624020e" AndroidDeviceId-Debug="emulator-5554" />
 </Properties>

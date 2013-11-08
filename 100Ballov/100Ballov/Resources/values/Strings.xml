@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-	<string name="MathButton">Математика</string>
-	<string name="RusButton">Русский Язык</string>
-	<string name="BelButton">Беларуская Мова</string>
-	<string name="PhysButton">Физика</string>
+	<string name="Math">Математика</string>
+	<string name="Russian">Русский Язык</string>
+	<string name="Belarussian">Беларуская Мова</string>
+	<string name="Physics">Физика</string>
 	
 	<string name="SettingsButton">О приложении</string>
 	

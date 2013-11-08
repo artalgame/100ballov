@@ -13,18 +13,22 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:id="@+id/AppName"
-            android:gravity="center_horizontal" />
+            android:gravity="center_horizontal"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="16dp" />
         <Button
             android:id="@+id/MathButton"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:text="@string/MathButton"
+            android:text="@string/Math"
             android:layout_marginTop="8dp"
             android:layout_marginBottom="8dp"
             android:layout_marginRight="16dp"
             android:layout_marginLeft="16dp" />
         <Button
-            android:text="@string/RusButton"
+            android:text="@string/Russian"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:id="@+id/RusButton"
@@ -36,7 +40,7 @@
             android:enabled="false"
             android:hint="В стадии разработки" />
         <Button
-            android:text="@string/BelButton"
+            android:text="@string/Belarussian"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:id="@+id/BelButton"
@@ -47,7 +51,7 @@
             android:enabled="false"
             android:hint="У стадыі распрацоўкі" />
         <Button
-            android:text="@string/PhysButton"
+            android:text="@string/Physics"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:id="@+id/PhysButton"

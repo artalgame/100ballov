@@ -60,6 +60,9 @@
     <Compile Include="Source\Data\SubjectRetriever.cs" />
     <Compile Include="Source\Data\ThemesRetriever.cs" />
     <Compile Include="Source\MRApplication.cs" />
+    <Compile Include="Source\Activities\SubjectActivity.cs" />
+    <Compile Include="Source\Activities\ChooseTrainingActivity.cs" />
+    <Compile Include="Source\Data\SubjectHelper.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -84,6 +87,9 @@
     <AndroidResource Include="Resources\drawable\share.png" />
     <AndroidResource Include="Resources\values\styles.xml" />
     <AndroidResource Include="Resources\drawable\splash.png" />
+    <AndroidResource Include="Resources\layout\SubjectActivity.axml" />
+    <AndroidResource Include="Resources\layout\ChooseTraningLayout.axml" />
+    <AndroidResource Include="Resources\layout\SubjectLayout.axml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
   <ItemGroup>
