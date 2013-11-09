@@ -3,21 +3,12 @@ using System.Collections.Generic;
 
 namespace MR.Core.TestEntities
 {
-	public class ATask
+	public class ATask:Task
 	{
-		public String QuestionText {get;set;}
-		public String QuestionImageLink{ get; set; }
-
 		public List<AVariant> Variants{ get; set; }
 
-		public String SolutionTxt{ get; set; }
-		public String SolutionImageLink{ get; set; }
-		public String SolutionInetLink{ get; set; }
-		public String SolutionLocalLink{ get; set; }
-
-		public ATask ()
+		public ATask (int taskNum):base(taskNum)
 		{
-
 		}
 
 		public List<AVariant> RightVariants {

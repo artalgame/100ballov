@@ -1,31 +1,50 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="100Ballov\Source\Data\SubjectHelper.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="100Ballov\Source\Activities\ChooseTrainingActivity.cs">
     <Files>
-      <File FileName="100Ballov\Source\Activities\MainActivity.cs" Line="14" Column="33" />
-      <File FileName="100Ballov\Source\Activities\SubjectActivity.cs" Line="1" Column="1" />
-      <File FileName="100Ballov\Source\Activities\ChooseTrainingActivity.cs" Line="1" Column="1" />
-      <File FileName="100Ballov\Source\Data\SubjectHelper.cs" Line="9" Column="42" />
+      <File FileName="100Ballov\Source\Activities\ChooseTrainingActivity.cs" Line="32" Column="92" />
+      <File FileName="100Ballov\Source\Activities\ChooseTrainingTasksActivity.cs" Line="37" Column="4" />
+      <File FileName="100Ballov\Source\Data\SubjectRetriever.cs" Line="136" Column="1" />
+      <File FileName="MR.Core\MR.Core\TestEntities\Task.cs" Line="23" Column="4" />
+      <File FileName="MR.Core\MR.Core\TestEntities\ATask.cs" Line="10" Column="43" />
+      <File FileName="MR.Core\MR.Core\TestEntities\BTask.cs" Line="10" Column="4" />
+      <File FileName="MR.Core\MR.Core\Interfaces\ISubjectRetriver.cs" Line="9" Column="30" />
+      <File FileName="e:\Projects\xamarin\100Ballov\100Ballov\100Ballov\Source\Activities\MainActivity.cs" Line="18" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State expanded="True">
           <Node name="MR.Android" expanded="True">
             <Node name="References" expanded="True" />
-            <Node name="Assets" expanded="True" />
+            <Node name="Assets" expanded="True">
+              <Node name="Math" expanded="True">
+                <Node name="1" expanded="True">
+                  <Node name="a" expanded="True">
+                    <Node name="1" expanded="True" />
+                    <Node name="2" expanded="True" />
+                    <Node name="3" expanded="True" />
+                  </Node>
+                  <Node name="b" expanded="True">
+                    <Node name="1" expanded="True" />
+                    <Node name="2" expanded="True" />
+                  </Node>
+                </Node>
+              </Node>
+            </Node>
             <Node name="Resources" expanded="True">
               <Node name="layout" expanded="True" />
               <Node name="values" expanded="True" />
             </Node>
             <Node name="Source" expanded="True">
-              <Node name="Activities" expanded="True" />
-              <Node name="Data" expanded="True">
-                <Node name="SubjectHelper.cs" selected="True" />
+              <Node name="Activities" expanded="True">
+                <Node name="ChooseTrainingActivity.cs" selected="True" />
               </Node>
+              <Node name="Data" expanded="True" />
               <Node name="TestClasses" expanded="True" />
             </Node>
           </Node>
           <Node name="MR.Core" expanded="True">
+            <Node name="Interfaces" expanded="True" />
             <Node name="TestEntities" expanded="True" />
           </Node>
         </State>
@@ -43,8 +62,10 @@
       <Breakpoint file="E:\Projects\xamarin\100Ballov\100Ballov\100Ballov\PreTestActivity.cs" line="26" column="1" />
       <Breakpoint file="E:\Projects\xamarin\100Ballov\100Ballov\100Ballov\Test.cs" line="42" column="1" />
       <Breakpoint file="E:\Projects\xamarin\100Ballov\100Ballov\100Ballov\Source\Activities\TestActivity.cs" line="38" column="1" />
-      <Breakpoint file="E:\Projects\xamarin\100Ballov\100Ballov\100Ballov\Source\Data\SubjectRetriever.cs" line="42" column="1" />
+      <Breakpoint file="E:\Projects\xamarin\100Ballov\100Ballov\100Ballov\Source\Data\SubjectRetriever.cs" line="43" column="1" />
       <Breakpoint file="E:\Projects\xamarin\100Ballov\100Ballov\100Ballov\Source\Activities\MainActivity.cs" line="18" column="1" />
+      <Breakpoint file="E:\Projects\xamarin\100Ballov\100Ballov\100Ballov\Source\Activities\ChooseTrainingTasksActivity.cs" line="28" column="1" />
+      <Breakpoint file="E:\Projects\xamarin\100Ballov\100Ballov\100Ballov\Source\Data\SubjectRetriever.cs" line="54" column="1" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />

@@ -24,5 +24,6 @@ E:\Projects\xamarin\100Ballov\100Ballov\100Ballov\obj\Debug\res\drawable\splash.
 E:\Projects\xamarin\100Ballov\100Ballov\100Ballov\obj\Debug\res\layout\subjectactivity.xml
 E:\Projects\xamarin\100Ballov\100Ballov\100Ballov\obj\Debug\R.cs.flag
 E:\Projects\xamarin\100Ballov\100Ballov\100Ballov\obj\Debug\uploadflags.txt
-E:\Projects\xamarin\100Ballov\100Ballov\100Ballov\obj\Debug\res\layout\choosetraninglayout.xml
 E:\Projects\xamarin\100Ballov\100Ballov\100Ballov\obj\Debug\res\layout\subjectlayout.xml
+E:\Projects\xamarin\100Ballov\100Ballov\100Ballov\obj\Debug\res\layout\choosetrainingtaskslayout.xml
+E:\Projects\xamarin\100Ballov\100Ballov\100Ballov\obj\Debug\res\layout\choosetraininglayout.xml

@@ -44,6 +44,8 @@
     <Compile Include="TestEntities\SubjectTheme.cs" />
     <Compile Include="TestEntities\ATask.cs" />
     <Compile Include="TestEntities\AVariant.cs" />
+    <Compile Include="TestEntities\Task.cs" />
+    <Compile Include="TestEntities\BTask.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <ItemGroup>

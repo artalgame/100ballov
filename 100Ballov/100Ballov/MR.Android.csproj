@@ -63,6 +63,7 @@
     <Compile Include="Source\Activities\SubjectActivity.cs" />
     <Compile Include="Source\Activities\ChooseTrainingActivity.cs" />
     <Compile Include="Source\Data\SubjectHelper.cs" />
+    <Compile Include="Source\Activities\ChooseTrainingTasksActivity.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -88,8 +89,9 @@
     <AndroidResource Include="Resources\values\styles.xml" />
     <AndroidResource Include="Resources\drawable\splash.png" />
     <AndroidResource Include="Resources\layout\SubjectActivity.axml" />
-    <AndroidResource Include="Resources\layout\ChooseTraningLayout.axml" />
     <AndroidResource Include="Resources\layout\SubjectLayout.axml" />
+    <AndroidResource Include="Resources\layout\ChooseTrainingTasksLayout.axml" />
+    <AndroidResource Include="Resources\layout\ChooseTrainingLayout.axml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
   <ItemGroup>
@@ -113,6 +115,14 @@
     <AndroidAsset Include="Assets\Math\Themes.txt" />
     <AndroidAsset Include="Assets\Math\1\a\1\q.png" />
     <AndroidAsset Include="Assets\Math\1\a\1\task.txt" />
+    <AndroidAsset Include="Assets\Math\1\a\2\task.txt" />
+    <AndroidAsset Include="Assets\Math\1\a\3\task.txt" />
+    <AndroidAsset Include="Assets\Math\1\b\1\task.txt" />
+    <AndroidAsset Include="Assets\Math\1\b\2\task.txt" />
+    <AndroidAsset Include="Assets\Math\1\a\2\q.png" />
+    <AndroidAsset Include="Assets\Math\1\a\3\q.png" />
+    <AndroidAsset Include="Assets\Math\1\b\1\q.png" />
+    <AndroidAsset Include="Assets\Math\1\b\2\q.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Source\" />
@@ -123,6 +133,10 @@
     <Folder Include="Assets\Math\1\b\" />
     <Folder Include="Assets\Math\1\a\" />
     <Folder Include="Source\Data\" />
+    <Folder Include="Assets\Math\1\a\2\" />
+    <Folder Include="Assets\Math\1\a\3\" />
+    <Folder Include="Assets\Math\1\b\1\" />
+    <Folder Include="Assets\Math\1\b\2\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\MR.Core\MR.Core\MR.Core.csproj">
