@@ -35,7 +35,7 @@ namespace MR.Android.Data
 
 		public ATask GetATask(string themeNum, int num)
 		{
-			return GetATask (themes.FirstOrDefault (x => x.Num == themeNum), num);
+			return GetATask (GetThemeByNum(themeNum), num);
 		}
 
 		public ATask GetATask(SubjectTheme theme, int num)
@@ -51,7 +51,8 @@ namespace MR.Android.Data
 				var json = JsonObject.Parse (content);
 				JsonObject jsonTask = json ["task"] as JsonObject;
 
-				var aTask = (ATask) GetTask(jsonTask, num);
+					var aTask= new ATask(num);
+					SetCommonTaskParams(jsonTask, aTask);
 				
 				List<AVariant> variants = new List<AVariant> ();
 				JsonArray variantsJSON = jsonTask ["vs"] as JsonArray;
@@ -61,7 +62,7 @@ namespace MR.Android.Data
 					bool isRight = Boolean.Parse (variant ["right"]);
 					AVariant newVariant = new AVariant () { ImageLink = png, IsRight = isRight, Text = text };     
 					variants.Add (newVariant);
-				}
+				} 
 
 				aTask.Variants = variants;
 				return aTask;
@@ -72,21 +73,24 @@ namespace MR.Android.Data
 			}
 		}
 
-		private Task GetTask(JsonObject jsonTask, int num)
+		private void SetCommonTaskParams(JsonObject jsonTask, Task task)
 		{
-			Task task = new Task (num);
 			task.QuestionText = jsonTask ["q_txt"];
 			task.QuestionImageLink = jsonTask ["q_png"];
 			task.SolutionTxt = jsonTask ["s_txt"];
 			task.SolutionImageLink = jsonTask ["s_png"];
 			task.SolutionInetLink = jsonTask ["s_link"];
 			task.SolutionLocalLink = jsonTask ["s_id"];
-			return task;
 		}
 		
 		public BTask GetBTask(string themeNum, int num)
 		{
-			return GetBTask (themes.FirstOrDefault (x => x.Num == themeNum), num);
+			return GetBTask (GetThemeByNum(themeNum), num);
+		}
+
+		public SubjectTheme GetThemeByNum(string themeNum)
+		{
+			return themes.FirstOrDefault (x => x.Num == themeNum);
 		}
 
 		public BTask GetBTask(SubjectTheme theme, int num)
@@ -102,7 +106,8 @@ namespace MR.Android.Data
 					var json = JsonObject.Parse (content);
 					JsonObject jsonTask = json ["task"] as JsonObject;
 
-					var bTask = (BTask)GetTask (jsonTask, num);
+					var bTask = new BTask(num);
+					SetCommonTaskParams (jsonTask, bTask);
 
 
 					List<AVariant> variants = new List<AVariant> ();
@@ -112,6 +117,33 @@ namespace MR.Android.Data
 			}
 			catch(Exception e) {
 				return null;
+			}
+		}
+
+		public bool IsATaskExist(SubjectTheme theme, int num)
+		{
+			string fileName = subject.ToString () + "/" + theme.Num.ToString () + @"/a/" + num.ToString () + "/" + "task.txt"; 
+			return IsTaskExist (fileName);
+		}
+
+		public bool IsBTaskExist(SubjectTheme theme, int num)
+		{
+			string fileName = subject.ToString () + "/" + theme.Num.ToString () + @"/b/" + num.ToString () + "/" + "task.txt"; 
+			return IsTaskExist (fileName);
+		}
+
+		private bool IsTaskExist(string fileName)
+		{
+			var assets = MRApplication.GetAssetManager ();
+			try
+			{
+				using (StreamReader reader = new  StreamReader(assets.Open(fileName))) {
+					return true;
+				}
+			}
+			catch(Exception)
+			{
+				return false;
 			}
 		}
 	
@@ -124,6 +156,7 @@ namespace MR.Android.Data
 
 			while (task != null) {
 				tasks.Add (task);
+				taskNum++;
 				task = GetATask (themeNum, taskNum);
 			}
 
@@ -131,7 +164,30 @@ namespace MR.Android.Data
 			task = GetBTask (themeNum, taskNum);
 			while (task != null) {
 				tasks.Add (task);
+				taskNum++;
 				task = GetBTask (themeNum, taskNum);
+			}
+			return tasks;
+		}
+		public List<Type> GetTasksInfo(string themeNum)
+		{
+			SubjectTheme theme = GetThemeByNum (themeNum);
+			int taskNum = 1;
+			List<Type> tasks = new List<Type> ();
+			bool taskExits = IsATaskExist (theme, taskNum);
+
+			while (taskExits) {
+				tasks.Add (typeof(ATask));
+				taskNum++;
+				taskExits = IsATaskExist (theme, taskNum);
+			}
+
+			taskNum=1;
+			taskExits = IsBTaskExist (theme, taskNum);
+			while (taskExits) {
+				tasks.Add (typeof(BTask));
+				taskNum++;
+				taskExits = IsBTaskExist (theme, taskNum);
 			}
 			return tasks;
 		}

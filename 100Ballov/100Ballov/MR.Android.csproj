@@ -64,6 +64,7 @@
     <Compile Include="Source\Activities\ChooseTrainingActivity.cs" />
     <Compile Include="Source\Data\SubjectHelper.cs" />
     <Compile Include="Source\Activities\ChooseTrainingTasksActivity.cs" />
+    <Compile Include="Source\Activities\TrainingTasksActivity.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -92,6 +93,7 @@
     <AndroidResource Include="Resources\layout\SubjectLayout.axml" />
     <AndroidResource Include="Resources\layout\ChooseTrainingTasksLayout.axml" />
     <AndroidResource Include="Resources\layout\ChooseTrainingLayout.axml" />
+    <AndroidResource Include="Resources\layout\TrainingTasksLayout.axml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
   <ItemGroup>

@@ -26,8 +26,7 @@ namespace com.flaxtreme.CT
 		protected override void OnCreate (Bundle bundle)
 		{
 			base.OnCreate (bundle);
-
-			
+		
 			SetContentView (Resource.Layout.ChooseTrainingTasksLayout);
 
 			Enum.TryParse<SubjectsEnumeration> (Intent.GetStringExtra ("TestType"), out subjectType);
@@ -42,29 +41,33 @@ namespace com.flaxtreme.CT
 
 		protected void LoadThemesButtons()
 		{
-			var tasks = new SubjectRetriever (subjectType).GetTasks (theme.Num);
+			var tasks = new SubjectRetriever (subjectType).GetTasksInfo (theme.Num);
 			int ai = 1;
 			int bi = 1;
-			int i = 1;
+			int i = 0;
 
 			foreach (var task in tasks) {
 				Button taskButton = new Button (this);
 				taskButton.Id = i;
 				taskButton.Click += TaskButtonClick;
-				if (task is ATask) {
+				if (task == typeof(ATask)) {
 					taskButton.Text = "A" + ai;
+					ai++;
 				} else {
 					taskButton.Text = "B" + bi;
+					bi++;
 				}
 				taskButtonsLayout.AddView (taskButton);
+				i++;
 			}
 		}
 
 		protected void TaskButtonClick(object sender, EventArgs e)
 		{
-			var intent = new Intent (this, typeof(ChooseTrainingTasksActivity));
+			var intent = new Intent (this, typeof(TrainingTasksActivity));
 			intent.PutExtra ("SubjectType", subjectType.ToString());
-			intent.PutExtra ("ThemeNum", ((Button)sender).Id);
+			intent.PutExtra ("ThemeNum", themeNum);
+			intent.PutExtra ("TaskNum", ((Button)sender).Id);
 			StartActivity (intent);
 		}
 	}

@@ -108,14 +108,38 @@ namespace com.flaxtreme.CT
 			// aapt resource value: 0x7f060004
 			public const int ThemesLinearLayout = 2131099652;
 			
+			// aapt resource value: 0x7f06002f
+			public const int TheoryLink = 2131099695;
+			
 			// aapt resource value: 0x7f060018
 			public const int TraningButton = 2131099672;
+			
+			// aapt resource value: 0x7f060026
+			public const int button1 = 2131099686;
+			
+			// aapt resource value: 0x7f060027
+			public const int button2 = 2131099687;
+			
+			// aapt resource value: 0x7f06002c
+			public const int editText1 = 2131099692;
+			
+			// aapt resource value: 0x7f060028
+			public const int imageView1 = 2131099688;
+			
+			// aapt resource value: 0x7f06002e
+			public const int imageView2 = 2131099694;
 			
 			// aapt resource value: 0x7f060000
 			public const int linearLayout1 = 2131099648;
 			
 			// aapt resource value: 0x7f06001a
 			public const int linearLayout2 = 2131099674;
+			
+			// aapt resource value: 0x7f06002d
+			public const int linearLayout3 = 2131099693;
+			
+			// aapt resource value: 0x7f060025
+			public const int linearLayout4 = 2131099685;
 			
 			// aapt resource value: 0x7f060009
 			public const int marketButton = 2131099657;
@@ -131,6 +155,15 @@ namespace com.flaxtreme.CT
 			
 			// aapt resource value: 0x7f060022
 			public const int prevButton = 2131099682;
+			
+			// aapt resource value: 0x7f06002a
+			public const int radioButton2 = 2131099690;
+			
+			// aapt resource value: 0x7f06002b
+			public const int radioButton3 = 2131099691;
+			
+			// aapt resource value: 0x7f060029
+			public const int radioGroup1 = 2131099689;
 			
 			// aapt resource value: 0x7f060008
 			public const int relativeLayout1 = 2131099656;
@@ -219,6 +252,9 @@ namespace com.flaxtreme.CT
 			
 			// aapt resource value: 0x7f030007
 			public const int TestTask = 2130903047;
+			
+			// aapt resource value: 0x7f030008
+			public const int TrainingTasksLayout = 2130903048;
 			
 			static Layout()
 			{
