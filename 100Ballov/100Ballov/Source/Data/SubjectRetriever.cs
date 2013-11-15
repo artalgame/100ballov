@@ -7,6 +7,7 @@ using System.IO;
 using System.Collections.Generic;
 using System.Linq;
 using com.flaxtreme.CT;
+using Android.Graphics.Drawables;
 
 namespace MR.Android.Data
 {
@@ -150,46 +151,68 @@ namespace MR.Android.Data
 
 		public List<Task> GetTasks (string themeNum)
 		{
-			int taskNum = 1;
-			List<Task> tasks = new List<Task> ();
-			Task task = GetATask (themeNum, taskNum);
+				int taskNum = 1;
+				var tasks = new List<Task> ();
+				Task task = GetATask (themeNum, taskNum);
 
-			while (task != null) {
-				tasks.Add (task);
-				taskNum++;
-				task = GetATask (themeNum, taskNum);
-			}
+				while (task != null) {
+					tasks.Add (task);
+					taskNum++;
+					task = GetATask (themeNum, taskNum);
+				}
 
-			taskNum=1;
-			task = GetBTask (themeNum, taskNum);
-			while (task != null) {
-				tasks.Add (task);
-				taskNum++;
+				taskNum = 1;
 				task = GetBTask (themeNum, taskNum);
-			}
+				while (task != null) {
+					tasks.Add (task);
+					taskNum++;
+					task = GetBTask (themeNum, taskNum);
+				}
 			return tasks;
 		}
 		public List<Type> GetTasksInfo(string themeNum)
 		{
-			SubjectTheme theme = GetThemeByNum (themeNum);
-			int taskNum = 1;
-			List<Type> tasks = new List<Type> ();
-			bool taskExits = IsATaskExist (theme, taskNum);
+				SubjectTheme theme = GetThemeByNum (themeNum);
+				int taskNum = 1;
+				var tasksInfo = new List<Type> ();
+				bool taskExits = IsATaskExist (theme, taskNum);
 
-			while (taskExits) {
-				tasks.Add (typeof(ATask));
-				taskNum++;
-				taskExits = IsATaskExist (theme, taskNum);
-			}
+				while (taskExits) {
+					tasksInfo.Add (typeof(ATask));
+					taskNum++;
+					taskExits = IsATaskExist (theme, taskNum);
+				}
 
-			taskNum=1;
-			taskExits = IsBTaskExist (theme, taskNum);
-			while (taskExits) {
-				tasks.Add (typeof(BTask));
-				taskNum++;
+				taskNum = 1;
 				taskExits = IsBTaskExist (theme, taskNum);
+				while (taskExits) {
+					tasksInfo.Add (typeof(BTask));
+					taskNum++;
+					taskExits = IsBTaskExist (theme, taskNum);
+				}
+			return tasksInfo;
+		}
+		public int GetATasksCount (string themeNum){
+			return GetTasksInfo(themeNum).Count (x => x == typeof(ATask));
+		}
+
+		public int GetBTasksCount (string themeNum){
+			return GetTasksInfo(themeNum).Count (x => x == typeof(BTask));
+		}
+
+		public Drawable GetImage(string themeNum, int taskNum, string imageFileName, string taskType="")
+		{
+			try {
+
+				var assets = MRApplication.GetAssetManager ();
+				string fileName = subject.ToString () + "/" + themeNum + @"/" + taskType + @"/" + taskNum.ToString () + "/" + imageFileName;
+				using (Stream ims = assets.Open (fileName)) {
+					Drawable d = Drawable.CreateFromStream (ims, null);
+					return d;
+				}
+			} catch (Exception) {
+				return null;
 			}
-			return tasks;
 		}
 	}
 }

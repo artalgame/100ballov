@@ -7,3 +7,4 @@ com.flaxtreme.CT.MRApplication;com.flaxtreme.ct.MRApplication
 com.flaxtreme.CT.SubjectActivity;com.flaxtreme.ct.SubjectActivity
 com.flaxtreme.CT.ChooseTrainingActivity;com.flaxtreme.ct.ChooseTrainingActivity
 com.flaxtreme.CT.ChooseTrainingTasksActivity;com.flaxtreme.ct.ChooseTrainingTasksActivity
+com.flaxtreme.CT.TrainingTasksActivity;com.flaxtreme.ct.TrainingTasksActivity
