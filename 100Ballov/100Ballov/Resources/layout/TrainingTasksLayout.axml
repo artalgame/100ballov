@@ -64,7 +64,9 @@
                 android:src="@android:drawable/ic_menu_gallery"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/TaskImage" />
+                android:id="@+id/TaskImage"
+                android:adjustViewBounds="true"
+                android:scaleType="fitXY" />
             <LinearLayout
                 android:orientation="vertical"
                 android:minWidth="25px"
@@ -109,10 +111,11 @@
                     android:layout_height="wrap_content"
                     android:id="@+id/SolutionInetLink" />
             </LinearLayout>
+            <Button
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/PastTask"
+                android:text="this is past answer chtoli" />
         </LinearLayout>
     </ScrollView>
-    <Button
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/PastTask" />
 </LinearLayout>

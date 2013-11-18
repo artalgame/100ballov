@@ -52,7 +52,7 @@ namespace MR.Android.Data
 				var json = JsonObject.Parse (content);
 				JsonObject jsonTask = json ["task"] as JsonObject;
 
-					var aTask= new ATask(num);
+					var aTask= new ATask(num,theme, subject);
 					SetCommonTaskParams(jsonTask, aTask);
 				
 				List<AVariant> variants = new List<AVariant> ();
@@ -107,7 +107,7 @@ namespace MR.Android.Data
 					var json = JsonObject.Parse (content);
 					JsonObject jsonTask = json ["task"] as JsonObject;
 
-					var bTask = new BTask(num);
+					var bTask = new BTask(num, theme, subject);
 					SetCommonTaskParams (jsonTask, bTask);
 
 

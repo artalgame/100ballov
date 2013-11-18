@@ -14,12 +14,22 @@ namespace MR.Core.TestEntities
 
 		public int TaskNum{ get; set; }
 
-		public Task(int taskNum)
+		public Task(int taskNum, SubjectTheme theme, SubjectsEnumeration Subject)
 		{
 			TaskNum = taskNum;
 		}
 		public Task()
 		{
+		}
+
+		public SubjectTheme Theme {
+			get;
+			set;
+		}
+
+		public SubjectsEnumeration Subject {
+			get;
+			set;
 		}
 	}
 }

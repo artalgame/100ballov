@@ -10,6 +10,7 @@ using Android.Views;
 using Android.Widget;
 using MR.Core.TestEntities;
 using MR.Android.Data;
+using Android.Graphics.Drawables;
 
 namespace com.flaxtreme.CT
 {
@@ -26,6 +27,8 @@ namespace com.flaxtreme.CT
 		List<bool> isAnswered;
 		List<bool> isRightAnswered;
 		List<bool> isShowAnswer;
+
+		Drawable[] taskImages;
 
 		int currentTaskToShow=0;
 
@@ -51,6 +54,8 @@ namespace com.flaxtreme.CT
 			theme = subjectRetriever.GetThemeByNum(themeNum);
 			tasks = subjectRetriever.GetTasks(themeNum);
 
+			taskImages = new Drawable[tasks.Count];
+
 			isAnswered = new List<bool> (tasks.Count);
 			isRightAnswered = new List<bool> (tasks.Count);
 			isShowAnswer = new List<bool> (tasks.Count);
@@ -68,6 +73,8 @@ namespace com.flaxtreme.CT
 			FindViewById<Button> (Resource.Id.PrevButton).Click += PrevClick;
 			FindViewById<Button> (Resource.Id.NextButton).Click += NextClick;
 
+			FindViewById<Button> (Resource.Id.PastTask).Click += PastButtonClick;
+
 			ShowTask ();
 		}
 
@@ -83,13 +90,10 @@ namespace com.flaxtreme.CT
 			}
 
 			DrawTaskCondition (task);
+			DrawVariants (task);
+			DrawSolution ();
 		}
 		protected void DrawTaskCondition (Task task)
-		{
-			SetTask (task);
-		}
-
-		protected void SetTask(Task task)
 		{
 			if (!String.IsNullOrEmpty (tasks [currentTaskToShow].QuestionText)) {
 				FindViewById<TextView> (Resource.Id.TaskText).Visibility = ViewStates.Visible;
@@ -99,18 +103,33 @@ namespace com.flaxtreme.CT
 			}
 
 
-			var taskImage = subjectRetriever.GetImage (themeNum, currentTaskToShow+1, tasks[currentTaskToShow].QuestionImageLink,"a");
+			string taskType = "a";
+			int taskNum = currentTaskToShow + 1;
+			if (task is BTask) {
+				taskType = "b";
+				taskNum = currentTaskToShow - tasks.Count ((Task x) => x is ATask) + 1;
+			} 
+			var taskImage = taskImages [currentTaskToShow] ?? subjectRetriever.GetImage (themeNum, taskNum, tasks [currentTaskToShow].QuestionImageLink,taskType);
 			if (taskImage != null) {
+				taskImages [currentTaskToShow] = taskImage;
 				FindViewById<ImageView> (Resource.Id.TaskImage).Visibility = ViewStates.Visible;
 				FindViewById<ImageView> (Resource.Id.TaskImage).SetImageDrawable (taskImage);
 			} else {
 				FindViewById<ImageView> (Resource.Id.TaskImage).Visibility = ViewStates.Gone;
 			}
+		}
 
+		protected void DrawVariants(Task task)
+		{
 			if (task is ATask) {
+
+				FindViewById<EditText> (Resource.Id.AnswerTextBox).Visibility=ViewStates.Gone;
+
 				var tsk = (ATask)task;
 				var variantGroup = FindViewById<LinearLayout> (Resource.Id.VariantsGroup);
 				variantGroup.RemoveAllViews ();
+				variantGroup.Enabled = true;
+				variantGroup.Visibility = ViewStates.Visible;
 				for (int i = 0; i < tsk.Variants.Count; i++) {
 					LinearLayout variantLayout = new LinearLayout (this){ Orientation = Orientation.Horizontal, Id = i, Clickable = true };
 					variantLayout.Click += VariantClickEvent;
@@ -136,14 +155,33 @@ namespace com.flaxtreme.CT
 					variantGroup.AddView (variantLayout);
 				}
 			} else {
+				FindViewById<LinearLayout> (Resource.Id.VariantsGroup).Enabled = false;
+				FindViewById<LinearLayout> (Resource.Id.VariantsGroup).Visibility = ViewStates.Gone;
 
+				FindViewById<EditText> (Resource.Id.AnswerTextBox).Enabled = true;
+				FindViewById<EditText> (Resource.Id.AnswerTextBox).Visibility = ViewStates.Visible;
 			}
+		}
+
+		protected void DrawSolution()
+		{
+			FindViewById<TextView> (Resource.Id.SolutionText).Visibility = ViewStates.Gone;
+			FindViewById<TextView> (Resource.Id.SolutionText).Enabled = false;
+
+			FindViewById<ImageView> (Resource.Id.SolutionImage).Visibility = ViewStates.Gone;
+			FindViewById<ImageView> (Resource.Id.SolutionImage).Enabled = false;
+
+			FindViewById<Button> (Resource.Id.SolutionInetLink).Visibility = ViewStates.Gone;
+			FindViewById<Button> (Resource.Id.SolutionInetLink).Enabled = false;
 		}
 
 		protected void VariantClickEvent(object sender, EventArgs args){
 			var variantLayout = (LinearLayout)sender;
 			var task = (ATask)tasks [currentTaskToShow];
-			task.CheckedAnswers [variantLayout.Id] = task.CheckedAnswers [variantLayout.Id] ^ true;
+			var tmpChecked = task.CheckedAnswers [variantLayout.Id];
+			task.ResetCheckedAnswers ();
+
+			task.CheckedAnswers [variantLayout.Id] = tmpChecked ^ true;
 			ShowTask ();
 		}
 
@@ -172,6 +210,38 @@ namespace com.flaxtreme.CT
 				return currentTaskToShow+1;
 			} else {
 				return currentTaskToShow - aCount + 1;
+			}
+		}
+
+		protected void PastButtonClick(object sender, EventArgs args){
+			isAnswered [currentTaskToShow] = true;
+			if (tasks [currentTaskToShow] is ATask) {
+				var task = tasks [currentTaskToShow] as ATask;
+				int i = 0;
+				foreach (var isCheckedAns in task.CheckedAnswers) {
+					if (isCheckedAns) {
+						var variant = (LinearLayout)FindViewById<LinearLayout> (Resource.Id.VariantsGroup).GetChildAt (i);
+						if (task.Variants [i].IsRight) {
+							variant.SetBackgroundColor(Android.Graphics.Color.Green);
+						} else {
+							variant.SetBackgroundColor(Android.Graphics.Color.Red);
+						}
+					}
+							i++;
+				}
+			} else {
+				var task = tasks [currentTaskToShow] as BTask;
+				var answerEditText = FindViewById<EditText> (Resource.Id.AnswerTextBox);
+				string answer = answerEditText.Text;
+				string rightAnswer = task.Variant;
+				if (answer == rightAnswer) {
+					answerEditText.SetBackgroundColor(Android.Graphics.Color.Green);
+				} else {
+					answerEditText.SetBackgroundColor(Android.Graphics.Color.Red);
+					var button = (Button)sender;
+					button.Text = "Показать правильный ответ?";
+				}
+
 			}
 		}
 	}

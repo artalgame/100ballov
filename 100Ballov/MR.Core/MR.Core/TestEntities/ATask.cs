@@ -8,7 +8,7 @@ namespace MR.Core.TestEntities
 		protected bool[] checkedAnswers;
 		public List<AVariant> Variants{ get; set; }
 
-		public ATask (int taskNum):base(taskNum)
+		public ATask (int taskNum, SubjectTheme theme, SubjectsEnumeration subject):base(taskNum,theme, subject)
 		{
 		}
 
@@ -33,6 +33,19 @@ namespace MR.Core.TestEntities
 			}
 			set{
 				checkedAnswers = value;
+			}
+		}
+		public void ResetCheckedAnswers()
+		{
+			switch (Subject) {
+			case SubjectsEnumeration.Math:
+			case SubjectsEnumeration.Physics:
+				{
+					for (int i = 0; i < CheckedAnswers.Length; i++) {
+						CheckedAnswers [i] = false;
+					}
+					break;
+				}
 			}
 		}
 	}
