@@ -92,7 +92,18 @@ namespace com.flaxtreme.CT
 			DrawTaskCondition (task);
 			DrawVariants (task);
 			DrawSolution ();
+			DrawPastTaskButton (task);
 		}
+
+		protected void DrawPastTaskButton(Task task)
+		{
+			if (isAnswered [currentTaskToShow]) {
+				FindViewById<Button> (Resource.Id.PastTask).Text = "Показать правильный ответ?";
+			} else {
+				FindViewById<Button> (Resource.Id.PastTask).Text = "Сдать задачу";
+			}
+		}
+
 		protected void DrawTaskCondition (Task task)
 		{
 			if (!String.IsNullOrEmpty (tasks [currentTaskToShow].QuestionText)) {
@@ -176,13 +187,15 @@ namespace com.flaxtreme.CT
 		}
 
 		protected void VariantClickEvent(object sender, EventArgs args){
-			var variantLayout = (LinearLayout)sender;
-			var task = (ATask)tasks [currentTaskToShow];
-			var tmpChecked = task.CheckedAnswers [variantLayout.Id];
-			task.ResetCheckedAnswers ();
+			if (!isAnswered [currentTaskToShow]) {
+				var variantLayout = (LinearLayout)sender;
+				var task = (ATask)tasks [currentTaskToShow];
+				var tmpChecked = task.CheckedAnswers [variantLayout.Id];
+				task.ResetCheckedAnswers ();
 
-			task.CheckedAnswers [variantLayout.Id] = tmpChecked ^ true;
-			ShowTask ();
+				task.CheckedAnswers [variantLayout.Id] = tmpChecked ^ true;
+				ShowTask ();
+			}
 		}
 
 		protected void NextClick(object sender, EventArgs args){
@@ -214,12 +227,14 @@ namespace com.flaxtreme.CT
 		}
 
 		protected void PastButtonClick(object sender, EventArgs args){
-			isAnswered [currentTaskToShow] = true;
+
 			if (tasks [currentTaskToShow] is ATask) {
 				var task = tasks [currentTaskToShow] as ATask;
 				int i = 0;
+				bool isChecked = false;
 				foreach (var isCheckedAns in task.CheckedAnswers) {
 					if (isCheckedAns) {
+						isChecked = true;
 						var variant = (LinearLayout)FindViewById<LinearLayout> (Resource.Id.VariantsGroup).GetChildAt (i);
 						if (task.Variants [i].IsRight) {
 							variant.SetBackgroundColor(Android.Graphics.Color.Green);
@@ -229,20 +244,31 @@ namespace com.flaxtreme.CT
 					}
 							i++;
 				}
+				if (isChecked) {
+					SetIsAnswered (sender);
+				}
 			} else {
 				var task = tasks [currentTaskToShow] as BTask;
 				var answerEditText = FindViewById<EditText> (Resource.Id.AnswerTextBox);
 				string answer = answerEditText.Text;
 				string rightAnswer = task.Variant;
-				if (answer == rightAnswer) {
-					answerEditText.SetBackgroundColor(Android.Graphics.Color.Green);
-				} else {
-					answerEditText.SetBackgroundColor(Android.Graphics.Color.Red);
-					var button = (Button)sender;
-					button.Text = "Показать правильный ответ?";
+				if (!String.IsNullOrEmpty (rightAnswer)) {
+					if (answer == rightAnswer) {
+						answerEditText.SetBackgroundColor (Android.Graphics.Color.Green);
+					} else {
+						answerEditText.SetBackgroundColor (Android.Graphics.Color.Red);
+					
+					}
+					SetIsAnswered (sender);
 				}
-
 			}
+		}
+
+		protected void SetIsAnswered(object sender)
+		{
+			var button = (Button)sender;
+			isAnswered [currentTaskToShow] = true;
+			button.Text = "Показать правильный ответ?";
 		}
 	}
 }

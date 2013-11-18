@@ -2,7 +2,8 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="fill_parent"
-    android:layout_height="fill_parent">
+    android:layout_height="fill_parent"
+    android:id="@+id/MainLayout">
     <TextView
         android:text="Medium Text"
         android:textAppearance="?android:attr/textAppearanceMedium"
@@ -99,9 +100,10 @@
                     android:textAppearance="?android:attr/textAppearanceSmall"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
-                    android:id="@+id/SolutionText" />
+                    android:id="@+id/SolutionText"
+                    android:background="#ffede314" />
                 <ImageView
-                    android:src="@android:drawable/ic_menu_gallery"
+                    android:src="#ff050cf8"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/SolutionImage" />
@@ -109,13 +111,15 @@
                     android:text="Inet link"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
-                    android:id="@+id/SolutionInetLink" />
+                    android:id="@+id/SolutionInetLink"
+                    android:background="#ffdd0d0d" />
             </LinearLayout>
             <Button
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/PastTask"
-                android:text="this is past answer chtoli" />
+                android:text="this is past answer chtoli"
+                android:background="#ff00ff46" />
         </LinearLayout>
     </ScrollView>
 </LinearLayout>
