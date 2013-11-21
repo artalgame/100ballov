@@ -75,6 +75,8 @@ namespace com.flaxtreme.CT
 
 			FindViewById<Button> (Resource.Id.PastTask).Click += PastButtonClick;
 
+			FindViewById<EditText> (Resource.Id.AnswerTextBox).TextChanged += AnswerTextBoxChanged;
+
 			ShowTask ();
 		}
 
@@ -149,11 +151,20 @@ namespace com.flaxtreme.CT
 					if (!String.IsNullOrEmpty (tsk.Variants [i].Text)) {
 						TextView text = new TextView (this){ Text = tsk.Variants [i].Text };
 
-						if (tsk.CheckedAnswers [i]) {
-							variantLayout.SetBackgroundColor (Android.Graphics.Color.DarkBlue);
-							text.SetTextColor(Android.Graphics.Color.WhiteSmoke);
+						if (!isAnswered [currentTaskToShow]) {
+							if (tsk.CheckedAnswers [i]) {
+								variantLayout.SetBackgroundColor (Android.Graphics.Color.DarkBlue);
+								text.SetTextColor (Android.Graphics.Color.WhiteSmoke);
+							}
+						} else {
+							if (tsk.CheckedAnswers [i]) {
+								if (tsk.Variants [i].IsRight) {
+									variantLayout.SetBackgroundColor (Android.Graphics.Color.Green);
+								} else {
+									variantLayout.SetBackgroundColor (Android.Graphics.Color.Red);
+								}
+							}
 						}
-
 						variantLayout.AddView (text);
 					}
 
@@ -171,6 +182,22 @@ namespace com.flaxtreme.CT
 
 				FindViewById<EditText> (Resource.Id.AnswerTextBox).Enabled = true;
 				FindViewById<EditText> (Resource.Id.AnswerTextBox).Visibility = ViewStates.Visible;
+
+
+				FindViewById<EditText> (Resource.Id.AnswerTextBox).Text = ((BTask)tasks [currentTaskToShow]).UserAnswer;
+				if (isAnswered [currentTaskToShow]) {
+					var tsk = tasks [currentTaskToShow] as BTask;
+					var answerEditText = FindViewById<EditText> (Resource.Id.AnswerTextBox);
+					string answer = tsk.UserAnswer;
+					string rightAnswer = tsk.Variant;
+					if (answer == rightAnswer) {
+						answerEditText.SetBackgroundColor (Android.Graphics.Color.Green);
+					} else {
+						answerEditText.SetBackgroundColor (Android.Graphics.Color.Red);
+					}
+				} else {
+					FindViewById<EditText> (Resource.Id.AnswerTextBox).SetBackgroundColor (Android.Graphics.Color.White);
+				}
 			}
 		}
 
@@ -195,6 +222,15 @@ namespace com.flaxtreme.CT
 
 				task.CheckedAnswers [variantLayout.Id] = tmpChecked ^ true;
 				ShowTask ();
+			}
+		}
+
+		protected void AnswerTextBoxChanged(object sender, EventArgs args)
+		{
+			EditText answerTextBox = (EditText)sender;
+			if (tasks [currentTaskToShow] is BTask) {
+				BTask task = (BTask)tasks [currentTaskToShow];
+				task.UserAnswer = answerTextBox.Text;
 			}
 		}
 
@@ -227,7 +263,6 @@ namespace com.flaxtreme.CT
 		}
 
 		protected void PastButtonClick(object sender, EventArgs args){
-
 			if (tasks [currentTaskToShow] is ATask) {
 				var task = tasks [currentTaskToShow] as ATask;
 				int i = 0;
@@ -263,6 +298,7 @@ namespace com.flaxtreme.CT
 				}
 			}
 		}
+
 
 		protected void SetIsAnswered(object sender)
 		{
