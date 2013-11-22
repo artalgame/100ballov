@@ -2,10 +2,14 @@
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.Workbench ActiveDocument="100Ballov\Source\Activities\TrainingTasksActivity.cs">
     <Files>
-      <File FileName="100Ballov\Source\Activities\TrainingTasksActivity.cs" Line="180" Column="1" />
-      <File FileName="e:\Projects\xamarin\100Ballov\100Ballov\100Ballov\Source\Activities\MainActivity.cs" Line="18" Column="1" />
+      <File FileName="100Ballov\Source\Activities\TrainingTasksActivity.cs" Line="46" Column="20" />
+      <File FileName="e:\Projects\xamarin\100Ballov\100Ballov\100Ballov\Source\Activities\MainActivity.cs" Line="10" Column="1" />
       <File FileName="100Ballov\Source\TestClasses\BTask.cs" Line="1" Column="1" />
       <File FileName="MR.Core\MR.Core\TestEntities\BTask.cs" Line="1" Column="1" />
+      <File FileName="100Ballov\Properties\AndroidManifest.xml" Line="6" Column="12" />
+      <File FileName="C:\Program Files (x86)\MSBuild\Xamarin\Android\Xamarin.Android.Common.targets" Line="1" Column="1" />
+      <File FileName="100Ballov\Source\Data\SubjectRetriever.cs" Line="1" Column="1" />
+      <File FileName="100Ballov\obj\Debug\android\AndroidManifest.xml" Line="1" Column="36" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
@@ -14,10 +18,9 @@
       <Breakpoint file="E:\Projects\xamarin\100Ballov\100Ballov\100Ballov\Test.cs" line="42" column="1" />
       <Breakpoint file="E:\Projects\xamarin\100Ballov\100Ballov\100Ballov\Source\Activities\TestActivity.cs" line="38" column="1" />
       <Breakpoint file="E:\Projects\xamarin\100Ballov\100Ballov\100Ballov\Source\Activities\MainActivity.cs" line="18" column="1" />
-      <Breakpoint file="E:\Projects\xamarin\100Ballov\100Ballov\100Ballov\Source\Activities\TrainingTasksActivity.cs" line="137" column="1" />
-      <Breakpoint file="E:\Projects\xamarin\100Ballov\100Ballov\100Ballov\Source\Activities\TrainingTasksActivity.cs" line="180" column="1" />
+      <Breakpoint file="E:\Projects\xamarin\100Ballov\100Ballov\100Ballov\Source\Activities\TrainingTasksActivity.cs" line="42" column="1" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.ItemProperties.MR.Android MonoForAntroid.PreferredDevice="4in WVGA (Nexus S)" MonoForAntroid.PreferredTheme="Theme.Holo.Light.NoActionBar" AndroidDeviceId-Release="015d2ea4a624020e" AndroidDeviceId-Debug="015d2ea4a624020e" />
+  <MonoDevelop.Ide.ItemProperties.MR.Android MonoForAntroid.PreferredDevice="4in WVGA (Nexus S)" MonoForAntroid.PreferredTheme="Theme.Holo.Light.NoActionBar" AndroidDeviceId-Release="015d2ea4a624020e" AndroidDeviceId-Debug="emulator-5554" />
 </Properties>

@@ -1,6 +1,6 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" package="com.flaxtreme.CT" android:versionName="1990">
-  <uses-sdk android:minSdkVersion="6" android:targetSdkVersion="15" />
+  <uses-sdk android:minSdkVersion="8" android:targetSdkVersion="14" />
   <application android:label="100Ballov" android:icon="@drawable/icon" android:theme="@android:style/Theme.Light.NoTitleBar" android:name="com.flaxtreme.ct.MRApplication" android:debuggable="true">
     <activity android:label="MobileRepetitor" android:name="com.flaxtreme.ct.activites.MainActivity">
       <intent-filter>
@@ -14,7 +14,7 @@
     <activity android:label="Subject" android:name="com.flaxtreme.ct.SubjectActivity" />
     <activity android:label="ChooseTrainingActivity" android:name="com.flaxtreme.ct.ChooseTrainingActivity" />
     <activity android:label="ChooseTrainingTasksActivity" android:name="com.flaxtreme.ct.ChooseTrainingTasksActivity" />
-    <activity android:label="TrainingTasksActivity" android:name="com.flaxtreme.ct.TrainingTasksActivity" />
+    <activity android:configChanges="keyboardHidden|orientation|screenSize" android:label="TrainingTasksActivity" android:name="com.flaxtreme.ct.TrainingTasksActivity" />
     <provider android:name="mono.MonoRuntimeProvider" android:exported="false" android:initOrder="2147483647" android:authorities="com.flaxtreme.CT.mono.MonoRuntimeProvider.__mono_init__" />
     <receiver android:name="mono.android.Seppuku">
       <intent-filter>

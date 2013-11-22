@@ -11,10 +11,13 @@ using Android.Widget;
 using MR.Core.TestEntities;
 using MR.Android.Data;
 using Android.Graphics.Drawables;
+using Android.Content.PM;
 
 namespace com.flaxtreme.CT
 {
-	[Activity (Label = "TrainingTasksActivity")]			
+	[Activity (Label = "TrainingTasksActivity", ConfigurationChanges = (ConfigChanges.Orientation | ConfigChanges.KeyboardHidden
+		| (ConfigChanges)0x0400))]			
+
 	public class TrainingTasksActivity : Activity
 	{
 		public string subjectStringName;

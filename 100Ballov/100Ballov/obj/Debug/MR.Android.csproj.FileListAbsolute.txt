@@ -1,4 +1,3 @@
-E:\Projects\xamarin\100Ballov\100Ballov\100Ballov\obj\Debug\MR.Android.csprojResolveAssemblyReference.cache
 E:\Projects\xamarin\100Ballov\100Ballov\100Ballov\bin\Debug\100Ballov.dll
 E:\Projects\xamarin\100Ballov\100Ballov\100Ballov\bin\Debug\100Ballov.pdb
 E:\Projects\xamarin\100Ballov\100Ballov\100Ballov\bin\Debug\100Ballov.dll.mdb
@@ -7,6 +6,7 @@ E:\Projects\xamarin\100Ballov\100Ballov\100Ballov\bin\Debug\com.flaxtreme.CT-Sig
 E:\Projects\xamarin\100Ballov\100Ballov\100Ballov\bin\Debug\MR.Core.dll
 E:\Projects\xamarin\100Ballov\100Ballov\100Ballov\bin\Debug\MR.Core.pdb
 E:\Projects\xamarin\100Ballov\100Ballov\100Ballov\bin\Debug\MR.Core.dll.mdb
+E:\Projects\xamarin\100Ballov\100Ballov\100Ballov\obj\Debug\MR.Android.csprojResolveAssemblyReference.cache
 E:\Projects\xamarin\100Ballov\100Ballov\100Ballov\obj\Debug\100Ballov.dll
 E:\Projects\xamarin\100Ballov\100Ballov\100Ballov\obj\Debug\100Ballov.pdb
 E:\Projects\xamarin\100Ballov\100Ballov\100Ballov\obj\Debug\android\bin\com.flaxtreme.CT.apk
