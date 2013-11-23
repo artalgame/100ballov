@@ -42,10 +42,18 @@ namespace com.flaxtreme.CT
 				Button themeButton = new Button (this);
 				themeButton.Id = Int32.Parse(theme.Num);
 				themeButton.Click += ThemeButtonClick;
-				themeButton.Text = theme.Num + ')' + theme.Name + "(3/5)";
+				themeButton.Text = theme.Num + ')' + theme.Name + GetTaskStatisticToString(theme);
 				themeButtonsLayout.AddView (themeButton);
 			}
 		}
+
+		private string GetTaskStatisticToString(SubjectTheme theme)
+		{
+			var subjectRetriever = new SubjectRetriever (subject);
+			int ansered = subjectRetriever.GetAnsweredTasksForTheme (theme);
+			int overall = subjectRetriever.OverallTasksForTheme (theme);
+		}
+
 		protected void ThemeButtonClick(object sender, EventArgs e)
 		{
 			var intent = new Intent (this, typeof(ChooseTrainingTasksActivity));

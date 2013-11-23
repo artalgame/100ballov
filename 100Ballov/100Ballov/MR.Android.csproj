@@ -65,6 +65,8 @@
     <Compile Include="Source\Data\SubjectHelper.cs" />
     <Compile Include="Source\Activities\ChooseTrainingTasksActivity.cs" />
     <Compile Include="Source\Activities\TrainingTasksActivity.cs" />
+    <Compile Include="Source\Data\DBAdapter.cs" />
+    <Compile Include="Source\Data\TaskDBData.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />

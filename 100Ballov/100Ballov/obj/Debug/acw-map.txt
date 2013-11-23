@@ -8,3 +8,4 @@ com.flaxtreme.CT.SubjectActivity;com.flaxtreme.ct.SubjectActivity
 com.flaxtreme.CT.ChooseTrainingActivity;com.flaxtreme.ct.ChooseTrainingActivity
 com.flaxtreme.CT.ChooseTrainingTasksActivity;com.flaxtreme.ct.ChooseTrainingTasksActivity
 com.flaxtreme.CT.TrainingTasksActivity;com.flaxtreme.ct.TrainingTasksActivity
+MR.Android.Data.DBAdapter.DBHelper;mr.android.data.DBAdapter_DBHelper
