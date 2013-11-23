@@ -2,14 +2,10 @@
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.Workbench ActiveDocument="100Ballov\Source\Activities\TrainingTasksActivity.cs">
     <Files>
-      <File FileName="100Ballov\Source\Activities\TrainingTasksActivity.cs" Line="46" Column="20" />
-      <File FileName="e:\Projects\xamarin\100Ballov\100Ballov\100Ballov\Source\Activities\MainActivity.cs" Line="10" Column="1" />
-      <File FileName="100Ballov\Source\TestClasses\BTask.cs" Line="1" Column="1" />
-      <File FileName="MR.Core\MR.Core\TestEntities\BTask.cs" Line="1" Column="1" />
-      <File FileName="100Ballov\Properties\AndroidManifest.xml" Line="6" Column="12" />
-      <File FileName="C:\Program Files (x86)\MSBuild\Xamarin\Android\Xamarin.Android.Common.targets" Line="1" Column="1" />
-      <File FileName="100Ballov\Source\Data\SubjectRetriever.cs" Line="1" Column="1" />
-      <File FileName="100Ballov\obj\Debug\android\AndroidManifest.xml" Line="1" Column="36" />
+      <File FileName="100Ballov\Source\Activities\TrainingTasksActivity.cs" Line="42" Column="1" />
+      <File FileName="e:\Projects\xamarin\100Ballov\100Ballov\100Ballov\Source\Activities\MainActivity.cs" Line="18" Column="1" />
+      <File FileName="100Ballov\Resources\values\styles.xml" Line="28" Column="5" />
+      <File FileName="100Ballov\Resources\drawable\border.xml" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
@@ -22,5 +18,5 @@
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.ItemProperties.MR.Android MonoForAntroid.PreferredDevice="4in WVGA (Nexus S)" MonoForAntroid.PreferredTheme="Theme.Holo.Light.NoActionBar" AndroidDeviceId-Release="015d2ea4a624020e" AndroidDeviceId-Debug="emulator-5554" />
+  <MonoDevelop.Ide.ItemProperties.MR.Android MonoForAntroid.PreferredDevice="4in WVGA (Nexus S)" MonoForAntroid.PreferredTheme="Theme.Light" AndroidDeviceId-Release="015d2ea4a624020e" AndroidDeviceId-Debug="015d2ea4a624020e" />
 </Properties>

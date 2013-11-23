@@ -94,6 +94,7 @@
     <AndroidResource Include="Resources\layout\ChooseTrainingTasksLayout.axml" />
     <AndroidResource Include="Resources\layout\ChooseTrainingLayout.axml" />
     <AndroidResource Include="Resources\layout\TrainingTasksLayout.axml" />
+    <AndroidResource Include="Resources\drawable\border.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
   <ItemGroup>
@@ -146,4 +147,14 @@
       <Name>MR.Core</Name>
     </ProjectReference>
   </ItemGroup>
+  <ProjectExtensions>
+    <MonoDevelop>
+      <Properties>
+        <Policies>
+          <TextStylePolicy inheritsSet="Mono" inheritsScope="text/plain" scope="application/xml" />
+          <XmlFormattingPolicy inheritsSet="Mono" inheritsScope="application/xml" scope="application/xml" />
+        </Policies>
+      </Properties>
+    </MonoDevelop>
+  </ProjectExtensions>
 </Project>

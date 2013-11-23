@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="windows-1251"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" package="com.flaxtreme.CT" android:versionName="1990">
 	<uses-sdk android:minSdkVersion="8" android:targetSdkVersion="14" />
 	<application android:label="100Ballov" android:icon="@drawable/icon" android:theme="@android:style/Theme.Light.NoTitleBar" android:name="com.flaxtreme.CT.MRApplication" />

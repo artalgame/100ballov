@@ -147,12 +147,14 @@ namespace com.flaxtreme.CT
 				variantGroup.Enabled = true;
 				variantGroup.Visibility = ViewStates.Visible;
 				for (int i = 0; i < tsk.Variants.Count; i++) {
-					LinearLayout variantLayout = new LinearLayout (this){ Orientation = Orientation.Horizontal, Id = i, Clickable = true };
+					LinearLayout variantLayout = new LinearLayout (this){ Orientation = Orientation.Horizontal, Id = i, Clickable = true};
+					var parameters = new LinearLayout.LayoutParams (LinearLayout.LayoutParams.FillParent, LinearLayout.LayoutParams.WrapContent, 1);
+					parameters.SetMargins (4, 4, 4, 4);
+					variantLayout.LayoutParameters = parameters;
 					variantLayout.Click += VariantClickEvent;
 
-
 					if (!String.IsNullOrEmpty (tsk.Variants [i].Text)) {
-						TextView text = new TextView (this){ Text = tsk.Variants [i].Text };
+						TextView text = new TextView (this){ Text = tsk.Variants [i].Text};
 
 						if (!isAnswered [currentTaskToShow]) {
 							if (tsk.CheckedAnswers [i]) {

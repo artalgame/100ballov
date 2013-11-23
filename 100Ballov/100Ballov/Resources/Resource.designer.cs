@@ -45,19 +45,22 @@ namespace com.flaxtreme.CT
 		{
 			
 			// aapt resource value: 0x7f020000
-			public const int icon = 2130837504;
+			public const int border = 2130837504;
 			
 			// aapt resource value: 0x7f020001
-			public const int play_store_icon = 2130837505;
+			public const int icon = 2130837505;
 			
 			// aapt resource value: 0x7f020002
-			public const int share = 2130837506;
+			public const int play_store_icon = 2130837506;
 			
 			// aapt resource value: 0x7f020003
-			public const int splash = 2130837507;
+			public const int share = 2130837507;
 			
 			// aapt resource value: 0x7f020004
-			public const int vk = 2130837508;
+			public const int splash = 2130837508;
+			
+			// aapt resource value: 0x7f020005
+			public const int vk = 2130837509;
 			
 			static Drawable()
 			{
@@ -314,6 +317,21 @@ namespace com.flaxtreme.CT
 			
 			// aapt resource value: 0x7f050000
 			public const int Theme_Splash = 2131034112;
+			
+			// aapt resource value: 0x7f050001
+			public const int VariantButton = 2131034113;
+			
+			// aapt resource value: 0x7f050003
+			public const int VariantButton_Checked = 2131034115;
+			
+			// aapt resource value: 0x7f050005
+			public const int VariantButton_Right = 2131034117;
+			
+			// aapt resource value: 0x7f050002
+			public const int VariantButton_Standart = 2131034114;
+			
+			// aapt resource value: 0x7f050004
+			public const int VariantButton_Wrong = 2131034116;
 			
 			static Style()
 			{

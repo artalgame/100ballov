@@ -26,5 +26,6 @@ E:\Projects\xamarin\100Ballov\100Ballov\100Ballov\obj\Debug\res\layout\subjectla
 E:\Projects\xamarin\100Ballov\100Ballov\100Ballov\obj\Debug\res\layout\choosetrainingtaskslayout.xml
 E:\Projects\xamarin\100Ballov\100Ballov\100Ballov\obj\Debug\res\layout\choosetraininglayout.xml
 E:\Projects\xamarin\100Ballov\100Ballov\100Ballov\obj\Debug\res\layout\trainingtaskslayout.xml
+E:\Projects\xamarin\100Ballov\100Ballov\100Ballov\obj\Debug\res\drawable\border.xml
 E:\Projects\xamarin\100Ballov\100Ballov\100Ballov\obj\Debug\R.cs.flag
 E:\Projects\xamarin\100Ballov\100Ballov\100Ballov\obj\Debug\uploadflags.txt

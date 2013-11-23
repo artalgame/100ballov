@@ -9,7 +9,14 @@
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/ThemeName" />
+        android:id="@+id/ThemeName"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:typeface="monospace" />
     <LinearLayout
         android:orientation="horizontal"
         android:minWidth="25px"
@@ -23,7 +30,11 @@
             android:layout_width="wrap_content"
             android:layout_height="fill_parent"
             android:layout_weight="1"
-            android:layout_gravity="left" />
+            android:layout_gravity="left"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="4dp"
+            android:layout_marginBottom="8dp" />
         <TextView
             android:text="A1"
             android:textAppearance="?android:attr/textAppearanceMedium"
@@ -32,14 +43,22 @@
             android:layout_height="fill_parent"
             android:layout_weight="1"
             android:layout_gravity="center_horizontal"
-            android:gravity="center" />
+            android:gravity="center"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="8dp" />
         <Button
             android:text="&gt;&gt;&gt;"
             android:layout_width="wrap_content"
             android:layout_height="fill_parent"
             android:id="@+id/NextButton"
             android:layout_gravity="right"
-            android:layout_weight="1" />
+            android:layout_weight="1"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="4dp"
+            android:layout_marginBottom="8dp" />
     </LinearLayout>
     <ScrollView
         android:minWidth="25px"
@@ -60,14 +79,22 @@
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/TaskText"
-                android:visibility="visible" />
+                android:visibility="visible"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginBottom="8dp" />
             <ImageView
                 android:src="@android:drawable/ic_menu_gallery"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/TaskImage"
                 android:adjustViewBounds="true"
-                android:scaleType="fitXY" />
+                android:scaleType="center"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginBottom="8dp" />
             <LinearLayout
                 android:orientation="vertical"
                 android:minWidth="25px"
@@ -81,12 +108,21 @@
                     android:minHeight="25px"
                     android:id="@+id/VariantsGroup"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginBottom="8dp" />
                 <EditText
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/AnswerTextBox"
-                    android:text="AnswerThere" />
+                    android:text="AnswerThere"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginBottom="8dp"
+                    android:typeface="monospace" />
             </LinearLayout>
             <LinearLayout
                 android:orientation="vertical"
@@ -101,25 +137,44 @@
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/SolutionText"
-                    android:background="#ffede314" />
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginBottom="8dp" />
                 <ImageView
-                    android:src="#ff050cf8"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
-                    android:id="@+id/SolutionImage" />
+                    android:id="@+id/SolutionImage"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginBottom="8dp"
+                    android:adjustViewBounds="true"
+                    android:scaleType="center"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:src="@android:drawable/ic_menu_gallery" />
                 <Button
                     android:text="Inet link"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/SolutionInetLink"
-                    android:background="#ffdd0d0d" />
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginBottom="8dp" />
             </LinearLayout>
             <Button
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/PastTask"
-                android:text="this is past answer chtoli"
-                android:background="#ff00ff46" />
+                android:text="Ntcn"
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="32dp"
+                android:layout_marginBottom="8dp"
+                android:typeface="sans"
+                android:textStyle="normal" />
         </LinearLayout>
     </ScrollView>
 </LinearLayout>
