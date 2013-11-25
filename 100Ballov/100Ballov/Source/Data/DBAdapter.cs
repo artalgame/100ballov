@@ -2,13 +2,14 @@ using System;
 using Android.Database.Sqlite;
 using Android.Content;
 using Android.Util;
+using System.Linq;
 
 namespace MR.Android.Data
 {
 	public class DBAdapter
 	{
 		public const string DataBaseName = "mrdb.db";
-		public const string TaskTable = "tasksTable";
+		public const string TaskTable = "taskTable";
 		public const int DataBaseVersion = 1;
 
 		public const string TaskTableKeyId = "id";
@@ -24,8 +25,8 @@ namespace MR.Android.Data
 
 		public static readonly string DATABASE_CREATE = "create table " + TaskTable + " (" + TaskTableKeyId + " integer primary key autoincrement, " +
 		                                       TaskTableTaskNameKeyName + " string not null, " +
-		                                       TaskTableOverallAttemptsKeyName + " int not null, " + 
-		                                       TaskTableRightAttemptsKeyName + " int not null);";
+		                                                TaskTableOverallAttemptsKeyName + " integer not null, " + 
+		                                                TaskTableRightAttemptsKeyName + " integer not null);";
 
 		private SQLiteDatabase db;
 		private readonly Context context;
@@ -35,6 +36,7 @@ namespace MR.Android.Data
 		{
 			this.context = context;
 			dbHelper = new DBHelper (context, DataBaseName, DataBaseVersion);
+			Open ();
 		}
 
 		public DBAdapter Open()
@@ -57,13 +59,18 @@ namespace MR.Android.Data
 		public string InsertEntry(TaskDBData taskInfo)
 		{
 			ContentValues newValues = GetContentValues (taskInfo);
-			db.Insert (TaskTable, null, newValues);
+			try{
+				long t = db.InsertOrThrow (TaskTable, null, newValues);
+			}
+			catch {
+				return null;
+			}
 			return taskInfo.Name;
 		}
 
-		public SQLiteCursor GetAllEntries()
+		public ISQLiteCursorDriver GetAllEntries()
 		{
-			return (SQLiteCursor)db.Query (TaskTable, new String[] {
+			return (ISQLiteCursorDriver) db.Query (TaskTable, new String[] {
 				TaskTableKeyId,
 				TaskTableTaskNameKeyName,
 				TaskTableOverallAttemptsKeyName,
@@ -80,36 +87,55 @@ namespace MR.Android.Data
 				TaskTableRightAttemptsKeyName
 			};
 
-			string where = GetWhereForTaskName (taskName);
-			SQLiteCursor cursor = (SQLiteCursor)db.Query (TaskTable, resultColumns, where, null, null, null,null);
+			try {
+				var cursor = db.Query (TaskTable, resultColumns, null, null, null, null, null);
 
-
-			var taskDBData = new TaskDBData () {Name =
-					cursor.GetString (TaskTableTaskNameNameColumn),
-				OverallAttempts = cursor.GetInt (TaskTableOverallAttemptsNameColumn),
-				RightAttempts = cursor.GetInt (TaskTableRightAttemptsNameColumn)
-			};
-			return taskDBData;
+				cursor.MoveToFirst ();
+				do {
+					var idNum = cursor.GetInt (cursor.GetColumnIndex (TaskTableKeyId));
+					var nameNum = cursor.GetString (cursor.GetColumnIndex (TaskTableTaskNameKeyName));
+					var overallNum = cursor.GetInt (cursor.GetColumnIndex (TaskTableOverallAttemptsKeyName));
+					var rightNum = cursor.GetInt (cursor.GetColumnIndex (TaskTableRightAttemptsKeyName));
+					if (nameNum == taskName) {
+						var taskDBData = new TaskDBData () {
+							ID = idNum,
+							Name =	nameNum,
+							OverallAttempts = overallNum,
+							RightAttempts = rightNum
+						};
+						return taskDBData;
+					}
+				} while(cursor.MoveToNext ());
+				return null;
+			} catch (Exception ex) {
+				return null;
+			}
 		}
 
 		public bool UpdateEntry(TaskDBData taskData)
 		{
 			ContentValues updateValues = GetContentValues (taskData);
-			String where = GetWhereForTaskName (taskData.Name);
+			String where = GetWhereForTaskName (taskData.ID);
 			db.Update (TaskTable, updateValues, where, null);
 			return true;
 		}
 		
 		public bool DeleteEntry(TaskDBData taskData)
 		{
-			String where = GetWhereForTaskName (taskData.Name);
+			String where = GetWhereForTaskName (taskData.ID);
 			db.Delete (TaskTable, where, null);
 			return true;
 		}
 
-		private String GetWhereForTaskName(string taskName)
+		public bool DeleteAllEntry()
 		{
-			return TaskTableTaskNameKeyName + "=" + taskName;
+			db.Delete (TaskTable, null, null);
+			return true;
+		}
+
+		private String GetWhereForTaskName(int taskID)
+		{
+			return TaskTableKeyId + " = " + taskID;
 		}
 
 		private ContentValues GetContentValues(TaskDBData taskInfo)
@@ -131,6 +157,13 @@ namespace MR.Android.Data
 			public override void OnCreate(SQLiteDatabase db)
 			{
 				db.ExecSQL (DATABASE_CREATE);
+				Log.Debug ("db", db.ToString());
+				Log.Debug ("path", db.Path);
+			}
+
+			public override void OnOpen(SQLiteDatabase db)
+			{
+				return;
 			}
 
 			public override void OnUpgrade(SQLiteDatabase db, int oldVersion, int newVersion)

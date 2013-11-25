@@ -41,7 +41,7 @@ namespace com.flaxtreme.CT
 
 		protected void LoadThemesButtons()
 		{
-			var tasks = new SubjectRetriever (subjectType).GetTasksInfo (theme.Num);
+			var tasks = new SubjectRetriever (subjectType,this.ApplicationContext).GetTasksInfo (theme.Num);
 			int ai = 1;
 			int bi = 1;
 			int i = 0;

@@ -19,6 +19,7 @@ namespace com.flaxtreme.CT
 		public string subjectStringName;
 		protected SubjectsEnumeration subjectType;
 		LinearLayout themeButtonsLayout;
+		SubjectsEnumeration subject;
 
 		protected override void OnCreate (Bundle bundle)
 		{
@@ -49,9 +50,12 @@ namespace com.flaxtreme.CT
 
 		private string GetTaskStatisticToString(SubjectTheme theme)
 		{
-			var subjectRetriever = new SubjectRetriever (subject);
-			int ansered = subjectRetriever.GetAnsweredTasksForTheme (theme);
+			var subjectRetriever = new SubjectRetriever (subjectType,this.ApplicationContext);
+			int answered = subjectRetriever.AnsweredTasksForTheme (theme);
 			int overall = subjectRetriever.OverallTasksForTheme (theme);
+			subjectRetriever.DB.Close ();
+			return "(" + answered + "/" + overall + ")";
+
 		}
 
 		protected void ThemeButtonClick(object sender, EventArgs e)

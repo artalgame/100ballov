@@ -8,6 +8,7 @@ using System.Collections.Generic;
 using System.Linq;
 using com.flaxtreme.CT;
 using Android.Graphics.Drawables;
+using Android.Content;
 
 namespace MR.Android.Data
 {
@@ -15,10 +16,19 @@ namespace MR.Android.Data
 	{
 		private SubjectsEnumeration subject;
 		private List<SubjectTheme> themes;
+		private DBAdapter db;
+		private Context context;
 
-		public SubjectRetriever (SubjectsEnumeration subject)
+		public DBAdapter DB{
+			get {
+				return db!=null?db:db=new DBAdapter(context);
+			}
+		}
+
+		public SubjectRetriever (SubjectsEnumeration subject, Context context)
 		{
 			this.subject = subject;
+			this.context = context;
 			themes = new ThemesRetriever (subject).GetThemes;
 		}
 
@@ -213,6 +223,47 @@ namespace MR.Android.Data
 			} catch (Exception) {
 				return null;
 			}
+		}
+
+		public int AnsweredTasksForTheme (SubjectTheme theme)
+		{
+			int answeredCount = 0;
+			foreach (var task in GetTasks (theme.Num)) {
+				var taskName = CreateTaskName (task, theme);
+				TaskDBData dbTask = DB.GetEntry (taskName);
+				if (dbTask == null) {
+					DB.InsertEntry (new TaskDBData (){ Name = taskName, OverallAttempts = 0, RightAttempts = 0 });
+					continue;
+				}
+				if (dbTask.RightAttempts > 0) {
+					answeredCount++;
+				}
+			}
+			return answeredCount;
+		}
+
+		public int OverallTasksForTheme(SubjectTheme theme)
+		{
+			return GetATasksCount (theme.Num) + GetBTasksCount (theme.Num);
+		}
+
+		public TaskDBData GetTaskDBData(Task task, SubjectTheme theme)
+		{
+			string taskName = CreateTaskName (task, theme);
+			return DB.GetEntry (taskName);
+		}
+
+		public void UpdateTaskDBData(TaskDBData taskDBData)
+		{
+			DB.UpdateEntry (taskDBData);
+		}
+
+		private string CreateTaskName(Task task, SubjectTheme theme)
+		{
+			string taskType = "b";
+			if (task is ATask)
+				taskType = "a";
+			return subject.ToString () + "/" + theme.Num + "/" + taskType + "/" + task.TaskNum;
 		}
 	}
 }

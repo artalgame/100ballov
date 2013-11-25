@@ -53,7 +53,7 @@ namespace com.flaxtreme.CT
 			themeNum = Intent.GetStringExtra ("ThemeNum");
 			currentTaskToShow = Intent.GetIntExtra ("TaskNum", 0);
 			subjectStringName = SubjectHelper.GetSubjectName (subjectType, this);
-			subjectRetriever = new SubjectRetriever (subjectType);
+			subjectRetriever = new SubjectRetriever (subjectType, ApplicationContext);
 			theme = subjectRetriever.GetThemeByNum(themeNum);
 			tasks = subjectRetriever.GetTasks(themeNum);
 
@@ -268,48 +268,62 @@ namespace com.flaxtreme.CT
 		}
 
 		protected void PastButtonClick(object sender, EventArgs args){
-			if (tasks [currentTaskToShow] is ATask) {
-				var task = tasks [currentTaskToShow] as ATask;
-				int i = 0;
-				bool isChecked = false;
-				foreach (var isCheckedAns in task.CheckedAnswers) {
-					if (isCheckedAns) {
-						isChecked = true;
-						var variant = (LinearLayout)FindViewById<LinearLayout> (Resource.Id.VariantsGroup).GetChildAt (i);
-						if (task.Variants [i].IsRight) {
-							variant.SetBackgroundColor(Android.Graphics.Color.Green);
-						} else {
-							variant.SetBackgroundColor(Android.Graphics.Color.Red);
+			if (!isAnswered [currentTaskToShow]) {
+				TaskDBData taskDBData = subjectRetriever.GetTaskDBData (tasks [currentTaskToShow], theme);
+				taskDBData.OverallAttempts++;
+				if (tasks [currentTaskToShow] is ATask) {
+					var task = tasks [currentTaskToShow] as ATask;
+					int i = 0;
+					int right = 0;
+					bool isChecked = false;
+					foreach (var isCheckedAns in task.CheckedAnswers) {
+						if (isCheckedAns) {
+							isChecked = true;
+							if (task.Variants [i].IsRight) {
+								right++;
+							}
 						}
+						i++;
 					}
-							i++;
-				}
-				if (isChecked) {
-					SetIsAnswered (sender);
-				}
-			} else {
-				var task = tasks [currentTaskToShow] as BTask;
-				var answerEditText = FindViewById<EditText> (Resource.Id.AnswerTextBox);
-				string answer = answerEditText.Text;
-				string rightAnswer = task.Variant;
-				if (!String.IsNullOrEmpty (rightAnswer)) {
-					if (answer == rightAnswer) {
-						answerEditText.SetBackgroundColor (Android.Graphics.Color.Green);
-					} else {
-						answerEditText.SetBackgroundColor (Android.Graphics.Color.Red);
-					
+					if (right == task.RightVariants.Count ()) {
+						taskDBData.RightAttempts++;
 					}
-					SetIsAnswered (sender);
+					if (isChecked) {
+						SetIsAnswered (sender);
+					}
+				} else {
+					var task = tasks [currentTaskToShow] as BTask;
+					var answerEditText = FindViewById<EditText> (Resource.Id.AnswerTextBox);
+					string answer = answerEditText.Text;
+					string rightAnswer = task.Variant;
+					if (!String.IsNullOrEmpty (rightAnswer)) {
+						if (answer == rightAnswer) {
+							taskDBData.RightAttempts++;
+						} 
+						SetIsAnswered (sender);
+					}
 				}
+				subjectRetriever.UpdateTaskDBData (taskDBData);
+				ShowTask ();
 			}
 		}
-
-
+		
 		protected void SetIsAnswered(object sender)
 		{
 			var button = (Button)sender;
 			isAnswered [currentTaskToShow] = true;
-			button.Text = "Показать правильный ответ?";
+		}
+
+		protected override void OnDestroy()
+		{
+			try
+			{
+				base.OnDestroy();
+				subjectRetriever.DB.Close ();
+			}
+			catch(Exception ex) {
+
+			}
 		}
 	}
 }
