@@ -1,3 +1,4 @@
+E:\Projects\xamarin\100Ballov\100Ballov\100Ballov\obj\Debug\MR.Android.csprojResolveAssemblyReference.cache
 E:\Projects\xamarin\100Ballov\100Ballov\100Ballov\bin\Debug\100Ballov.dll
 E:\Projects\xamarin\100Ballov\100Ballov\100Ballov\bin\Debug\100Ballov.pdb
 E:\Projects\xamarin\100Ballov\100Ballov\100Ballov\bin\Debug\100Ballov.dll.mdb
@@ -6,7 +7,6 @@ E:\Projects\xamarin\100Ballov\100Ballov\100Ballov\bin\Debug\com.flaxtreme.CT-Sig
 E:\Projects\xamarin\100Ballov\100Ballov\100Ballov\bin\Debug\MR.Core.dll
 E:\Projects\xamarin\100Ballov\100Ballov\100Ballov\bin\Debug\MR.Core.pdb
 E:\Projects\xamarin\100Ballov\100Ballov\100Ballov\bin\Debug\MR.Core.dll.mdb
-E:\Projects\xamarin\100Ballov\100Ballov\100Ballov\obj\Debug\MR.Android.csprojResolveAssemblyReference.cache
 E:\Projects\xamarin\100Ballov\100Ballov\100Ballov\obj\Debug\100Ballov.dll
 E:\Projects\xamarin\100Ballov\100Ballov\100Ballov\obj\Debug\100Ballov.pdb
 E:\Projects\xamarin\100Ballov\100Ballov\100Ballov\obj\Debug\android\bin\com.flaxtreme.CT.apk
@@ -22,10 +22,11 @@ E:\Projects\xamarin\100Ballov\100Ballov\100Ballov\obj\Debug\res\drawable\share.p
 E:\Projects\xamarin\100Ballov\100Ballov\100Ballov\obj\Debug\res\values\styles.xml
 E:\Projects\xamarin\100Ballov\100Ballov\100Ballov\obj\Debug\res\drawable\splash.png
 E:\Projects\xamarin\100Ballov\100Ballov\100Ballov\obj\Debug\res\layout\subjectactivity.xml
-E:\Projects\xamarin\100Ballov\100Ballov\100Ballov\obj\Debug\res\layout\subjectlayout.xml
 E:\Projects\xamarin\100Ballov\100Ballov\100Ballov\obj\Debug\res\layout\choosetrainingtaskslayout.xml
 E:\Projects\xamarin\100Ballov\100Ballov\100Ballov\obj\Debug\res\layout\choosetraininglayout.xml
 E:\Projects\xamarin\100Ballov\100Ballov\100Ballov\obj\Debug\res\layout\trainingtaskslayout.xml
 E:\Projects\xamarin\100Ballov\100Ballov\100Ballov\obj\Debug\res\drawable\border.xml
+E:\Projects\xamarin\100Ballov\100Ballov\100Ballov\obj\Debug\res\drawable\anketa.png
+E:\Projects\xamarin\100Ballov\100Ballov\100Ballov\obj\Debug\res\drawable\alma.png
 E:\Projects\xamarin\100Ballov\100Ballov\100Ballov\obj\Debug\R.cs.flag
 E:\Projects\xamarin\100Ballov\100Ballov\100Ballov\obj\Debug\uploadflags.txt

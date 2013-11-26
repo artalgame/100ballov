@@ -152,27 +152,27 @@ namespace com.flaxtreme.CT
 					parameters.SetMargins (4, 4, 4, 4);
 					variantLayout.LayoutParameters = parameters;
 					variantLayout.Click += VariantClickEvent;
+					TextView text = new TextView (this){Text = (i+1)+")" };
 
-					if (!String.IsNullOrEmpty (tsk.Variants [i].Text)) {
-						TextView text = new TextView (this){ Text = tsk.Variants [i].Text};
 
-						if (!isAnswered [currentTaskToShow]) {
-							if (tsk.CheckedAnswers [i]) {
-								variantLayout.SetBackgroundColor (Android.Graphics.Color.DarkBlue);
-								text.SetTextColor (Android.Graphics.Color.WhiteSmoke);
-							}
-						} else {
-							if (tsk.CheckedAnswers [i]) {
-								if (tsk.Variants [i].IsRight) {
-									variantLayout.SetBackgroundColor (Android.Graphics.Color.Green);
-								} else {
-									variantLayout.SetBackgroundColor (Android.Graphics.Color.Red);
-								}
+						text.Text += tsk.Variants [i].Text;
+
+					if (!isAnswered [currentTaskToShow]) {
+						if (tsk.CheckedAnswers [i]) {
+							variantLayout.SetBackgroundColor (Android.Graphics.Color.DarkBlue);
+							text.SetTextColor (Android.Graphics.Color.WhiteSmoke);
+						}
+					} else {
+						if (tsk.CheckedAnswers [i]) {
+							if (tsk.Variants [i].IsRight) {
+								variantLayout.SetBackgroundColor (Android.Graphics.Color.Green);
+							} else {
+								variantLayout.SetBackgroundColor (Android.Graphics.Color.Red);
 							}
 						}
-						variantLayout.AddView (text);
 					}
 
+					variantLayout.AddView (text);
 					var variantImage = subjectRetriever.GetImage (themeNum, currentTaskToShow + 1, tsk.Variants[i].ImageLink, "a");
 					if (variantImage != null) {
 						ImageView variantImgView = new ImageView (this);

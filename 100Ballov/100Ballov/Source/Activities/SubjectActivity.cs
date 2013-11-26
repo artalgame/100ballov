@@ -29,7 +29,6 @@ namespace com.flaxtreme.CT
 			subjectName = SubjectHelper.GetSubjectName(subjectType, this);
 			SetSubjectNameTextView ();
 			LoadStatistics ();
-
 			(FindViewById<Button> (Resource.Id.TraningButton)).Click += TrainingButtonClick;
 
 
@@ -53,7 +52,15 @@ namespace com.flaxtreme.CT
 
 		protected void LoadStatistics()
 		{
-			//TO DO: Implement statistics
+			var retriever = new SubjectRetriever (subjectType, this);
+			var statistic = retriever.GetStatistic ();
+			int overall = statistic.X;
+			int right = statistic.Y;
+
+			FindViewById<TextView> (Resource.Id.OverallTextView).Text = "Всего попыток: " + overall;
+			FindViewById<TextView> (Resource.Id.RightTextView).Text = "Успешных попыток: " + right;
+			int percent = overall == 0 ? 0 : (int)(((float)right / (float)overall) * 100);
+			FindViewById<TextView> (Resource.Id.ProcentTextView).Text = "Процент правильных ответов: " + percent;
 		}
 	}
 }

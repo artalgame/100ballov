@@ -61,14 +61,6 @@
             android:layout_marginRight="16dp"
             android:layout_marginBottom="8dp"
             android:enabled="false" />
-        <TextView
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/textView2"
-            android:text="@string/descr_text"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="10dp" />
         <RelativeLayout
             android:minWidth="25px"
             android:minHeight="25px"
@@ -142,5 +134,73 @@
                 android:layout_toRightOf="@id/shareButton"
                 android:layout_centerInParent="true" />
         </RelativeLayout>
+        <RelativeLayout
+            android:minWidth="25px"
+            android:minHeight="25px"
+            android:id="@+id/relativeLayout4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <ImageButton
+                android:src="@drawable/anketa"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/anketaButton"
+                android:background="@null"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp" />
+            <TextView
+                android:text="Помочь приложению, ответив на вопросы анкеты."
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/anketaTextView"
+                android:layout_centerInParent="true"
+                android:layout_toRightOf="@id/anketaButton" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:minWidth="25px"
+            android:minHeight="25px"
+            android:id="@+id/relativeLayout5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <ImageButton
+                android:src="@drawable/alma"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/almaButton"
+                android:background="@null"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp" />
+            <TextView
+                android:text="Попробуйте порешать тесты на alma.by"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/almaTextView"
+                android:layout_toRightOf="@id/almaButton"
+                android:layout_centerInParent="true" />
+        </RelativeLayout>
+        <TextView
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView2"
+            android:text="@string/descr_text"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp" />
+        <TextView
+            android:text="©Flaxtreme(Alkor) alkor1@yandex.ru"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView4"
+            android:gravity="center" />
+        <TextView
+            android:text="Материал взят со сборника &quot;Практикум по математике&quot; Веременюк, Кожушко, &quot;ТетраСистемс&quot; 2009 год."
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView3"
+            android:layout_marginTop="100dp" />
     </LinearLayout>
 </ScrollView>

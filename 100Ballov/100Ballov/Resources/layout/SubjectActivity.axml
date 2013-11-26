@@ -34,14 +34,15 @@
             p1:layout_marginRight="16dp"
             p1:layout_marginBottom="8dp" />
         <Button
-            p1:text="Пройти тест"
+            p1:text="Пройти тест(появятся в следующей версии)"
             p1:layout_width="fill_parent"
             p1:layout_height="wrap_content"
             p1:id="@+id/TestButton"
             p1:layout_marginLeft="16dp"
             p1:layout_marginRight="16dp"
             p1:layout_marginBottom="8dp"
-            p1:layout_marginTop="8dp" />
+            p1:layout_marginTop="8dp"
+            p1:enabled="false" />
         <LinearLayout
             p1:orientation="vertical"
             p1:minWidth="25px"
@@ -56,7 +57,37 @@
                 p1:layout_height="wrap_content"
                 p1:id="@+id/textView1"
                 p1:layout_marginTop="16dp"
+                p1:layout_marginLeft="8dp"
+                p1:layout_marginRight="16dp"
+                p1:layout_marginBottom="8dp" />
+            <TextView
+                p1:text="Large Text"
+                p1:textAppearance="?android:attr/textAppearanceLarge"
+                p1:layout_width="match_parent"
+                p1:layout_height="wrap_content"
+                p1:id="@+id/OverallTextView"
                 p1:layout_marginLeft="16dp"
+                p1:layout_marginTop="8dp"
+                p1:layout_marginRight="16dp"
+                p1:layout_marginBottom="8dp" />
+            <TextView
+                p1:text="Large Text"
+                p1:textAppearance="?android:attr/textAppearanceLarge"
+                p1:layout_width="match_parent"
+                p1:layout_height="wrap_content"
+                p1:id="@+id/RightTextView"
+                p1:layout_marginLeft="16dp"
+                p1:layout_marginTop="8dp"
+                p1:layout_marginRight="16dp"
+                p1:layout_marginBottom="8dp" />
+            <TextView
+                p1:text="Large Text"
+                p1:textAppearance="?android:attr/textAppearanceLarge"
+                p1:layout_width="match_parent"
+                p1:layout_height="wrap_content"
+                p1:id="@+id/ProcentTextView"
+                p1:layout_marginLeft="16dp"
+                p1:layout_marginTop="8dp"
                 p1:layout_marginRight="16dp"
                 p1:layout_marginBottom="8dp" />
         </LinearLayout>

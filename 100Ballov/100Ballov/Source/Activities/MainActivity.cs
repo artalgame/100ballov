@@ -31,6 +31,12 @@ namespace com.flaxtreme.CT.Activites
 
 			(FindViewById<ImageButton> (Resource.Id.shareButton)).Click += ShareButtonClick;
 			(FindViewById<TextView> (Resource.Id.shareTextView)).Click += ShareButtonClick;
+
+			(FindViewById<ImageButton> (Resource.Id.almaButton)).Click += AlmaButtonClick;
+			(FindViewById<TextView> (Resource.Id.almaTextView)).Click += AlmaButtonClick;
+
+			(FindViewById<ImageButton> (Resource.Id.anketaButton)).Click += AnketaButtonClick;
+			(FindViewById<TextView> (Resource.Id.anketaTextView)).Click += AnketaButtonClick;
 		}
 
 		private Intent GetSubjectIntent(SubjectsEnumeration subjectType)
@@ -58,6 +64,16 @@ namespace com.flaxtreme.CT.Activites
 		private void VkButtonClick(Object sender, EventArgs args)
 		{
 			GoToURL ("http://vk.com/topic-50105858_29108685");	
+		}
+
+		private void AlmaButtonClick(Object sender, EventArgs args)
+		{
+			GoToURL ("http://goo.gl/Ro8frA");	
+		}
+
+		private void AnketaButtonClick(Object sender, EventArgs args)
+		{
+			GoToURL ("http://goo.gl/qvigG2");
 		}
 
 		private void ShareButtonClick(Object sender, EventArgs args)

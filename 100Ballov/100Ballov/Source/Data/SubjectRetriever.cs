@@ -265,6 +265,33 @@ namespace MR.Android.Data
 				taskType = "a";
 			return subject.ToString () + "/" + theme.Num + "/" + taskType + "/" + task.TaskNum;
 		}
+
+		public Point GetStatistic ()
+		{
+			int overall = 0;
+			int right = 0;
+			foreach (var theme in themes) {
+				foreach (var task in GetTasks(theme.Num)) {
+					var taskData = GetTaskDBData (task, theme);
+					if (taskData != null) {
+						overall += taskData.OverallAttempts;
+						right += taskData.RightAttempts;
+					}
+				}
+			}
+			return new Point (overall, right);
+		}
+	}
+
+	public struct Point
+	{
+		public int X, Y;
+
+		public Point(int x, int y)
+		{
+			this.X = x;
+			this.Y = y;
+		}
 	}
 }
 

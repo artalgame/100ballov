@@ -50,7 +50,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Source\Activities\MainActivity.cs" />
     <Compile Include="Source\Activities\PreTestActivity.cs" />
-    <Compile Include="Source\Activities\TestActivity.cs" />
+    <Compile Include="Source\Activities\TestActivity.cs">
+      <DependentUpon>PreTestActivity.cs</DependentUpon>
+    </Compile>
     <Compile Include="Source\TestClasses\ATask.cs" />
     <Compile Include="Source\TestClasses\BTask.cs" />
     <Compile Include="Source\TestClasses\Test.cs" />
@@ -92,11 +94,12 @@
     <AndroidResource Include="Resources\values\styles.xml" />
     <AndroidResource Include="Resources\drawable\splash.png" />
     <AndroidResource Include="Resources\layout\SubjectActivity.axml" />
-    <AndroidResource Include="Resources\layout\SubjectLayout.axml" />
     <AndroidResource Include="Resources\layout\ChooseTrainingTasksLayout.axml" />
     <AndroidResource Include="Resources\layout\ChooseTrainingLayout.axml" />
     <AndroidResource Include="Resources\layout\TrainingTasksLayout.axml" />
     <AndroidResource Include="Resources\drawable\border.xml" />
+    <AndroidResource Include="Resources\drawable\anketa.png" />
+    <AndroidResource Include="Resources\drawable\alma.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
   <ItemGroup>
@@ -128,6 +131,31 @@
     <AndroidAsset Include="Assets\Math\1\a\3\q.png" />
     <AndroidAsset Include="Assets\Math\1\b\1\q.png" />
     <AndroidAsset Include="Assets\Math\1\b\2\q.png" />
+    <AndroidAsset Include="Assets\Math\2\a\1\q.png" />
+    <AndroidAsset Include="Assets\Math\2\a\1\task.txt" />
+    <AndroidAsset Include="Assets\Math\2\a\1\v1.png" />
+    <AndroidAsset Include="Assets\Math\2\a\1\v2.png" />
+    <AndroidAsset Include="Assets\Math\2\a\1\v3.png" />
+    <AndroidAsset Include="Assets\Math\2\a\1\v4.png" />
+    <AndroidAsset Include="Assets\Math\2\a\1\v5.png" />
+    <AndroidAsset Include="Assets\Math\2\a\2\q.png" />
+    <AndroidAsset Include="Assets\Math\2\a\2\task.txt" />
+    <AndroidAsset Include="Assets\Math\2\a\2\v1.png" />
+    <AndroidAsset Include="Assets\Math\2\a\2\v2.png" />
+    <AndroidAsset Include="Assets\Math\2\a\2\v3.png" />
+    <AndroidAsset Include="Assets\Math\2\a\2\v4.png" />
+    <AndroidAsset Include="Assets\Math\2\a\2\v5.png" />
+    <AndroidAsset Include="Assets\Math\2\a\3\q.png" />
+    <AndroidAsset Include="Assets\Math\2\a\3\task.txt" />
+    <AndroidAsset Include="Assets\Math\2\a\3\v1.png" />
+    <AndroidAsset Include="Assets\Math\2\a\3\v2.png" />
+    <AndroidAsset Include="Assets\Math\2\a\3\v3.png" />
+    <AndroidAsset Include="Assets\Math\2\a\3\v4.png" />
+    <AndroidAsset Include="Assets\Math\2\a\3\v5.png" />
+    <AndroidAsset Include="Assets\Math\2\a\4\q.png" />
+    <AndroidAsset Include="Assets\Math\2\a\4\task.txt" />
+    <AndroidAsset Include="Assets\Math\2\a\5\q.png" />
+    <AndroidAsset Include="Assets\Math\2\a\5\task.txt" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Source\" />
@@ -142,6 +170,7 @@
     <Folder Include="Assets\Math\1\a\3\" />
     <Folder Include="Assets\Math\1\b\1\" />
     <Folder Include="Assets\Math\1\b\2\" />
+    <Folder Include="Assets\Math\2\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\MR.Core\MR.Core\MR.Core.csproj">

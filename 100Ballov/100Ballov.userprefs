@@ -1,15 +1,16 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Release" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="e:\Projects\xamarin\100Ballov\100Ballov\100Ballov\Source\Activities\MainActivity.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench>
     <Files>
-      <File FileName="100Ballov\Source\Activities\TrainingTasksActivity.cs" Line="1" Column="1" />
-      <File FileName="e:\Projects\xamarin\100Ballov\100Ballov\100Ballov\Source\Activities\MainActivity.cs" Line="17" Column="4" />
+      <File FileName="100Ballov\Source\Activities\TrainingTasksActivity.cs" Line="288" Column="1" />
+      <File FileName="e:\Projects\xamarin\100Ballov\100Ballov\100Ballov\Source\Activities\MainActivity.cs" Line="39" Column="47" />
       <File FileName="100Ballov\Resources\values\styles.xml" Line="1" Column="1" />
       <File FileName="100Ballov\Resources\drawable\border.xml" Line="1" Column="1" />
       <File FileName="100Ballov\Source\Data\DBAdapter.cs" Line="1" Column="1" />
       <File FileName="100Ballov\Source\Activities\ChooseTrainingActivity.cs" Line="1" Column="1" />
       <File FileName="100Ballov\Source\Data\SubjectRetriever.cs" Line="1" Column="1" />
       <File FileName="100Ballov\Source\Activities\ChooseTrainingTasksActivity.cs" Line="1" Column="1" />
+      <File FileName="100Ballov\Resources\values\Strings.xml" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
