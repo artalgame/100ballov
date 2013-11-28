@@ -185,23 +185,26 @@ namespace com.flaxtreme.CT
 				FindViewById<LinearLayout> (Resource.Id.VariantsGroup).Enabled = false;
 				FindViewById<LinearLayout> (Resource.Id.VariantsGroup).Visibility = ViewStates.Gone;
 
-				FindViewById<EditText> (Resource.Id.AnswerTextBox).Enabled = true;
-				FindViewById<EditText> (Resource.Id.AnswerTextBox).Visibility = ViewStates.Visible;
+				var answerTextBox = FindViewById<EditText> (Resource.Id.AnswerTextBox);
+				answerTextBox.Enabled = true;
+				answerTextBox.Visibility = ViewStates.Visible;
 
 
-				FindViewById<EditText> (Resource.Id.AnswerTextBox).Text = ((BTask)tasks [currentTaskToShow]).UserAnswer;
+				answerTextBox.Text = ((BTask)tasks [currentTaskToShow]).UserAnswer;
+//				if (String.IsNullOrEmpty (answerTextBox.Text)) {
+//					answerTextBox.Text = "Введите сюда ваш ответ";
+//				}
 				if (isAnswered [currentTaskToShow]) {
 					var tsk = tasks [currentTaskToShow] as BTask;
-					var answerEditText = FindViewById<EditText> (Resource.Id.AnswerTextBox);
 					string answer = tsk.UserAnswer;
 					string rightAnswer = tsk.Variant;
 					if (answer == rightAnswer) {
-						answerEditText.SetBackgroundColor (Android.Graphics.Color.Green);
+						answerTextBox.SetBackgroundColor (Android.Graphics.Color.Green);
 					} else {
-						answerEditText.SetBackgroundColor (Android.Graphics.Color.Red);
+						answerTextBox.SetBackgroundColor (Android.Graphics.Color.Red);
 					}
 				} else {
-					FindViewById<EditText> (Resource.Id.AnswerTextBox).SetBackgroundColor (Android.Graphics.Color.White);
+					answerTextBox.SetBackgroundColor (Android.Graphics.Color.LightGray);
 				}
 			}
 		}
