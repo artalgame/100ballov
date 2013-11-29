@@ -49,10 +49,10 @@ public final class R {
         public static final int ThemesLinearLayout=0x7f060004;
         public static final int TraningButton=0x7f060020;
         public static final int VariantsGroup=0x7f060036;
-        public static final int almaButton=0x7f06001a;
-        public static final int almaTextView=0x7f06001b;
-        public static final int anketaButton=0x7f060017;
-        public static final int anketaTextView=0x7f060018;
+        public static final int almaButton=0x7f060017;
+        public static final int almaTextView=0x7f060018;
+        public static final int anketaButton=0x7f06001a;
+        public static final int anketaTextView=0x7f06001b;
         public static final int linearLayout1=0x7f060000;
         public static final int linearLayout2=0x7f060022;
         public static final int linearLayout3=0x7f060038;
@@ -65,8 +65,8 @@ public final class R {
         public static final int relativeLayout1=0x7f060008;
         public static final int relativeLayout2=0x7f06000b;
         public static final int relativeLayout3=0x7f06000e;
-        public static final int relativeLayout4=0x7f060016;
-        public static final int relativeLayout5=0x7f060019;
+        public static final int relativeLayout4=0x7f060019;
+        public static final int relativeLayout5=0x7f060016;
         public static final int scrollView1=0x7f060003;
         public static final int shareButton=0x7f06000f;
         public static final int shareTextView=0x7f060010;

@@ -1,6 +1,6 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="100Ballov\Source\Data\SubjectRetriever.cs">
+  <MonoDevelop.Ide.Workbench>
     <Files>
       <File FileName="100Ballov\Source\Activities\MainActivity.cs" Line="1" Column="1" />
       <File FileName="100Ballov\Source\Activities\SubjectActivity.cs" Line="1" Column="1" />
@@ -13,7 +13,6 @@
       <Breakpoint file="E:\Projects\xamarin\100Ballov\100Ballov\100Ballov\PreTestActivity.cs" line="26" column="1" />
       <Breakpoint file="E:\Projects\xamarin\100Ballov\100Ballov\100Ballov\Test.cs" line="42" column="1" />
       <Breakpoint file="E:\Projects\xamarin\100Ballov\100Ballov\100Ballov\Source\Activities\TestActivity.cs" line="38" column="1" />
-      <Breakpoint file="e:\Projects\xamarin\100Ballov\100Ballov\100Ballov\Source\Activities\TrainingTasksActivity.cs" line="42" column="1" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />

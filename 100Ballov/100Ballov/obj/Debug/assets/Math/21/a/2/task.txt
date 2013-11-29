@@ -28,7 +28,7 @@
 				{
 					"txt":"-2",
 					"png":"v5.png",
-					"right":"другой ответ"
+					"right":"false"
 				}
 			],
 		   "s_txt":"",

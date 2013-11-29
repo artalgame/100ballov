@@ -11,7 +11,7 @@
 					"right":"true"
 				},
 				{
-					"txt":"1/5"
+					"txt":"1/5",
 					"png":"v2.png",
 					"right":"false"
 				},

@@ -11,7 +11,7 @@
 					"right":"false"
 				},
 				{
-					"txt":""
+					"txt":"",
 					"png":"v2.png",
 					"right":"false"
 				},

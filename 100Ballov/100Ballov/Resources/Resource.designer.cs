@@ -165,17 +165,17 @@ namespace com.flaxtreme.CT
 			// aapt resource value: 0x7f060036
 			public const int VariantsGroup = 2131099702;
 			
-			// aapt resource value: 0x7f06001a
-			public const int almaButton = 2131099674;
-			
-			// aapt resource value: 0x7f06001b
-			public const int almaTextView = 2131099675;
-			
 			// aapt resource value: 0x7f060017
-			public const int anketaButton = 2131099671;
+			public const int almaButton = 2131099671;
 			
 			// aapt resource value: 0x7f060018
-			public const int anketaTextView = 2131099672;
+			public const int almaTextView = 2131099672;
+			
+			// aapt resource value: 0x7f06001a
+			public const int anketaButton = 2131099674;
+			
+			// aapt resource value: 0x7f06001b
+			public const int anketaTextView = 2131099675;
 			
 			// aapt resource value: 0x7f060000
 			public const int linearLayout1 = 2131099648;
@@ -213,11 +213,11 @@ namespace com.flaxtreme.CT
 			// aapt resource value: 0x7f06000e
 			public const int relativeLayout3 = 2131099662;
 			
-			// aapt resource value: 0x7f060016
-			public const int relativeLayout4 = 2131099670;
-			
 			// aapt resource value: 0x7f060019
-			public const int relativeLayout5 = 2131099673;
+			public const int relativeLayout4 = 2131099673;
+			
+			// aapt resource value: 0x7f060016
+			public const int relativeLayout5 = 2131099670;
 			
 			// aapt resource value: 0x7f060003
 			public const int scrollView1 = 2131099651;
