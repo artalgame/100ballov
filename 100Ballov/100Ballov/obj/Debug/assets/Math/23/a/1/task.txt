@@ -1,0 +1,39 @@
+{
+"task":
+	{
+		"q_txt":"",
+		"q_png":"q.png",
+		"vs":
+			[
+				{
+					"txt":"3",
+					"png":"v1.png",
+					"right":"false"
+				},
+				{
+					"txt":"16"
+					"png":"v2.png",
+					"right":"false"
+				},
+				{
+					"txt":"8",
+					"png":"v3.png",
+					"right":"true"
+				},
+				{
+					"txt":"12",
+					"png":"v4.png",
+					"right":"false"
+				},
+				{
+					"txt":"9",
+					"png":"v5.png",
+					"right":"false"
+				}
+			],
+		   "s_txt":"",
+		   "s_png":"s.png",
+		   "s_link":"",
+		   "s_id":""
+	}
+}

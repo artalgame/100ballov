@@ -1,0 +1,12 @@
+{
+"task":
+	{
+		"q_txt":"",
+		"q_png":"q.png",
+		"variant":"-1",
+		"s_txt":"",
+		"s_png":"s.png",
+		"s_link":"",
+		"s_id":""
+	}
+}

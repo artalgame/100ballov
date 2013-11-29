@@ -88,14 +88,16 @@
             <ImageView
                 android:src="@android:drawable/ic_menu_gallery"
                 android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="160dp"
                 android:id="@+id/TaskImage"
-                android:adjustViewBounds="true"
-                android:scaleType="center"
+                android:scaleType="fitCenter"
                 android:layout_marginLeft="16dp"
                 android:layout_marginTop="8dp"
                 android:layout_marginRight="16dp"
-                android:layout_marginBottom="8dp" />
+                android:layout_marginBottom="8dp"
+                android:adjustViewBounds="true"
+                android:layout_weight="1"
+                android:layout_gravity="center" />
             <LinearLayout
                 android:orientation="vertical"
                 android:minWidth="25px"
