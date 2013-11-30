@@ -18,7 +18,6 @@ E:\Projects\xamarin\100Ballov\100Ballov\100Ballov\obj\Release\res\drawable\share
 E:\Projects\xamarin\100Ballov\100Ballov\100Ballov\obj\Release\res\values\styles.xml
 E:\Projects\xamarin\100Ballov\100Ballov\100Ballov\obj\Release\res\drawable\splash.png
 E:\Projects\xamarin\100Ballov\100Ballov\100Ballov\obj\Release\res\layout\subjectactivity.xml
-E:\Projects\xamarin\100Ballov\100Ballov\100Ballov\obj\Release\res\layout\subjectlayout.xml
 E:\Projects\xamarin\100Ballov\100Ballov\100Ballov\obj\Release\res\layout\choosetrainingtaskslayout.xml
 E:\Projects\xamarin\100Ballov\100Ballov\100Ballov\obj\Release\res\layout\choosetraininglayout.xml
 E:\Projects\xamarin\100Ballov\100Ballov\100Ballov\obj\Release\res\layout\trainingtaskslayout.xml
@@ -26,3 +25,5 @@ E:\Projects\xamarin\100Ballov\100Ballov\100Ballov\obj\Release\res\drawable\borde
 E:\Projects\xamarin\100Ballov\100Ballov\100Ballov\obj\Release\R.cs.flag
 E:\Projects\xamarin\100Ballov\100Ballov\100Ballov\obj\Release\uploadflags.txt
 E:\Projects\xamarin\100Ballov\100Ballov\100Ballov\bin\Release\MR.Core.dll.mdb
+E:\Projects\xamarin\100Ballov\100Ballov\100Ballov\obj\Release\res\drawable\anketa.png
+E:\Projects\xamarin\100Ballov\100Ballov\100Ballov\obj\Release\res\drawable\alma.png

@@ -34,7 +34,7 @@
             p1:layout_marginRight="16dp"
             p1:layout_marginBottom="8dp" />
         <Button
-            p1:text="Пройти тест(появятся в следующей версии)"
+            p1:text="Пройти тест(появится в следующей версии)"
             p1:layout_width="fill_parent"
             p1:layout_height="wrap_content"
             p1:id="@+id/TestButton"

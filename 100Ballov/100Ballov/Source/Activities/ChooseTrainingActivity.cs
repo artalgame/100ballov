@@ -20,7 +20,7 @@ namespace com.flaxtreme.CT
 		protected SubjectsEnumeration subjectType;
 		LinearLayout themeButtonsLayout;
 		SubjectsEnumeration subject;
-
+		SubjectRetriever subjectRetriever;
 		protected override void OnCreate (Bundle bundle)
 		{
 			base.OnCreate (bundle);
@@ -33,7 +33,9 @@ namespace com.flaxtreme.CT
 			FindViewById<TextView> (Resource.Id.SubjectNameTextView).Text = subjectStringName;
 
 			themeButtonsLayout = FindViewById<LinearLayout> (Resource.Id.ThemesLinearLayout);
+			subjectRetriever = new SubjectRetriever (subjectType,this.ApplicationContext);
 			LoadThemesButtons ();
+
 		}
 
 		protected void LoadThemesButtons()
@@ -80,10 +82,9 @@ namespace com.flaxtreme.CT
 
 		private int GetTasksStatistic(SubjectTheme theme)
 		{
-			var subjectRetriever = new SubjectRetriever (subjectType,this.ApplicationContext);
+
 			int answered = subjectRetriever.AnsweredTasksForTheme (theme);
 			int overall = subjectRetriever.OverallTasksForTheme (theme);
-			subjectRetriever.DB.Close ();
 			if (overall == 0) {
 				return 0;
 			}
@@ -96,6 +97,11 @@ namespace com.flaxtreme.CT
 			intent.PutExtra ("SubjectType", subjectType.ToString());
 			intent.PutExtra ("ThemeNum", ((Button)sender).Id);
 			StartActivity (intent);
+		}
+		protected void OnDestroy()
+		{
+			base.OnDestroy ();
+			subjectRetriever.DB.Close ();
 		}
 	}
 }

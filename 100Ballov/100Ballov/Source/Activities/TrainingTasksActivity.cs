@@ -174,8 +174,6 @@ namespace com.flaxtreme.CT
 						} else {
 							if (tsk.Variants [i].IsRight) {
 								variantLayout.SetBackgroundColor (Android.Graphics.Color.Green);
-							} else {
-								variantLayout.SetBackgroundColor (Android.Graphics.Color.Red);
 							}
 						}
 					}
