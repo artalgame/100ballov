@@ -84,8 +84,8 @@ namespace com.flaxtreme.CT
 			// aapt resource value: 0x7f06001e
 			public const int AnnoText = 2131099678;
 			
-			// aapt resource value: 0x7f060037
-			public const int AnswerTextBox = 2131099703;
+			// aapt resource value: 0x7f060038
+			public const int AnswerTextBox = 2131099704;
 			
 			// aapt resource value: 0x7f060011
 			public const int AppName = 2131099665;
@@ -93,26 +93,29 @@ namespace com.flaxtreme.CT
 			// aapt resource value: 0x7f060014
 			public const int BelButton = 2131099668;
 			
-			// aapt resource value: 0x7f06002f
-			public const int MainLayout = 2131099695;
+			// aapt resource value: 0x7f060027
+			public const int HintTextView = 2131099687;
+			
+			// aapt resource value: 0x7f060030
+			public const int MainLayout = 2131099696;
 			
 			// aapt resource value: 0x7f060012
 			public const int MathButton = 2131099666;
 			
-			// aapt resource value: 0x7f060033
-			public const int NextButton = 2131099699;
+			// aapt resource value: 0x7f060034
+			public const int NextButton = 2131099700;
 			
 			// aapt resource value: 0x7f060024
 			public const int OverallTextView = 2131099684;
 			
-			// aapt resource value: 0x7f06003c
-			public const int PastTask = 2131099708;
+			// aapt resource value: 0x7f06003d
+			public const int PastTask = 2131099709;
 			
 			// aapt resource value: 0x7f060015
 			public const int PhysButton = 2131099669;
 			
-			// aapt resource value: 0x7f060031
-			public const int PrevButton = 2131099697;
+			// aapt resource value: 0x7f060032
+			public const int PrevButton = 2131099698;
 			
 			// aapt resource value: 0x7f060026
 			public const int ProcentTextView = 2131099686;
@@ -123,14 +126,14 @@ namespace com.flaxtreme.CT
 			// aapt resource value: 0x7f060013
 			public const int RusButton = 2131099667;
 			
-			// aapt resource value: 0x7f06003a
-			public const int SolutionImage = 2131099706;
-			
 			// aapt resource value: 0x7f06003b
-			public const int SolutionInetLink = 2131099707;
+			public const int SolutionImage = 2131099707;
 			
-			// aapt resource value: 0x7f060039
-			public const int SolutionText = 2131099705;
+			// aapt resource value: 0x7f06003c
+			public const int SolutionInetLink = 2131099708;
+			
+			// aapt resource value: 0x7f06003a
+			public const int SolutionText = 2131099706;
 			
 			// aapt resource value: 0x7f06001f
 			public const int StartButton = 2131099679;
@@ -138,14 +141,14 @@ namespace com.flaxtreme.CT
 			// aapt resource value: 0x7f060001
 			public const int SubjectNameTextView = 2131099649;
 			
+			// aapt resource value: 0x7f060036
+			public const int TaskImage = 2131099702;
+			
+			// aapt resource value: 0x7f060033
+			public const int TaskName = 2131099699;
+			
 			// aapt resource value: 0x7f060035
-			public const int TaskImage = 2131099701;
-			
-			// aapt resource value: 0x7f060032
-			public const int TaskName = 2131099698;
-			
-			// aapt resource value: 0x7f060034
-			public const int TaskText = 2131099700;
+			public const int TaskText = 2131099701;
 			
 			// aapt resource value: 0x7f060006
 			public const int TasksLinearLayout = 2131099654;
@@ -162,8 +165,8 @@ namespace com.flaxtreme.CT
 			// aapt resource value: 0x7f060020
 			public const int TraningButton = 2131099680;
 			
-			// aapt resource value: 0x7f060036
-			public const int VariantsGroup = 2131099702;
+			// aapt resource value: 0x7f060037
+			public const int VariantsGroup = 2131099703;
 			
 			// aapt resource value: 0x7f060017
 			public const int almaButton = 2131099671;
@@ -183,11 +186,11 @@ namespace com.flaxtreme.CT
 			// aapt resource value: 0x7f060022
 			public const int linearLayout2 = 2131099682;
 			
-			// aapt resource value: 0x7f060038
-			public const int linearLayout3 = 2131099704;
+			// aapt resource value: 0x7f060039
+			public const int linearLayout3 = 2131099705;
 			
-			// aapt resource value: 0x7f060030
-			public const int linearLayout4 = 2131099696;
+			// aapt resource value: 0x7f060031
+			public const int linearLayout4 = 2131099697;
 			
 			// aapt resource value: 0x7f060009
 			public const int marketButton = 2131099657;
@@ -195,14 +198,14 @@ namespace com.flaxtreme.CT
 			// aapt resource value: 0x7f06000a
 			public const int marketTextView = 2131099658;
 			
+			// aapt resource value: 0x7f06002f
+			public const int nextButton = 2131099695;
+			
 			// aapt resource value: 0x7f06002e
-			public const int nextButton = 2131099694;
+			public const int passButton = 2131099694;
 			
 			// aapt resource value: 0x7f06002d
-			public const int passButton = 2131099693;
-			
-			// aapt resource value: 0x7f06002c
-			public const int prevButton = 2131099692;
+			public const int prevButton = 2131099693;
 			
 			// aapt resource value: 0x7f060008
 			public const int relativeLayout1 = 2131099656;
@@ -228,17 +231,17 @@ namespace com.flaxtreme.CT
 			// aapt resource value: 0x7f060010
 			public const int shareTextView = 2131099664;
 			
-			// aapt resource value: 0x7f060027
-			public const int subjectNameLabel = 2131099687;
+			// aapt resource value: 0x7f060028
+			public const int subjectNameLabel = 2131099688;
+			
+			// aapt resource value: 0x7f06002b
+			public const int taskImage = 2131099691;
 			
 			// aapt resource value: 0x7f06002a
-			public const int taskImage = 2131099690;
+			public const int taskLabel = 2131099690;
 			
 			// aapt resource value: 0x7f060029
-			public const int taskLabel = 2131099689;
-			
-			// aapt resource value: 0x7f060028
-			public const int taskNameLabel = 2131099688;
+			public const int taskNameLabel = 2131099689;
 			
 			// aapt resource value: 0x7f060007
 			public const int testResultTextView = 2131099655;
@@ -255,8 +258,8 @@ namespace com.flaxtreme.CT
 			// aapt resource value: 0x7f06001c
 			public const int textView4 = 2131099676;
 			
-			// aapt resource value: 0x7f06002b
-			public const int variantsLayout = 2131099691;
+			// aapt resource value: 0x7f06002c
+			public const int variantsLayout = 2131099692;
 			
 			// aapt resource value: 0x7f06000c
 			public const int vkButton = 2131099660;
@@ -334,6 +337,12 @@ namespace com.flaxtreme.CT
 			
 			// aapt resource value: 0x7f040006
 			public const int descr_text = 2130968582;
+			
+			// aapt resource value: 0x7f040007
+			public const int hint1 = 2130968583;
+			
+			// aapt resource value: 0x7f040008
+			public const int hint2 = 2130968584;
 			
 			static String()
 			{

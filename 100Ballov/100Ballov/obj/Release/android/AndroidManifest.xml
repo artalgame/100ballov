@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" package="com.flaxtreme.CT" android:versionName="1990">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.flaxtreme.CT" android:versionName="2" android:versionCode="2">
   <uses-sdk android:minSdkVersion="8" android:targetSdkVersion="14" />
-  <application android:label="100Ballov" android:icon="@drawable/icon" android:theme="@android:style/Theme.Light.NoTitleBar" android:name="com.flaxtreme.ct.MRApplication">
+  <application android:icon="@drawable/icon" android:theme="@android:style/Theme.Light.NoTitleBar" android:name="com.flaxtreme.ct.MRApplication" android:label="Мобильный репетитор">
     <activity android:label="MobileRepetitor" android:name="com.flaxtreme.ct.activites.MainActivity">
       <intent-filter>
         <action android:name="android.intent.action.MAIN" />

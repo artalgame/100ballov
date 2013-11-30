@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" package="com.flaxtreme.CT" android:versionName="1990">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.flaxtreme.CT" android:versionName="2" android:versionCode="2">
 	<uses-sdk android:minSdkVersion="8" android:targetSdkVersion="14" />
-	<application android:label="100Ballov" android:icon="@drawable/icon" android:theme="@android:style/Theme.Light.NoTitleBar" android:name="com.flaxtreme.CT.MRApplication" />
+	<application android:icon="@drawable/icon" android:theme="@android:style/Theme.Light.NoTitleBar" android:name="com.flaxtreme.CT.MRApplication" android:label="Мобильный репетитор" />
 	<uses-permission android:name="android.permission.READ_OWNER_DATA" />
 	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 	<uses-permission android:name="android.permission.WRITE_OWNER_DATA" />

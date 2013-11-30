@@ -3,6 +3,7 @@ E:\Projects\xamarin\100Ballov\100Ballov\100Ballov\bin\Release\com.flaxtreme.CT.a
 E:\Projects\xamarin\100Ballov\100Ballov\100Ballov\bin\Release\com.flaxtreme.CT-Signed.apk
 E:\Projects\xamarin\100Ballov\100Ballov\100Ballov\bin\Release\MR.Core.dll
 E:\Projects\xamarin\100Ballov\100Ballov\100Ballov\bin\Release\MR.Core.pdb
+E:\Projects\xamarin\100Ballov\100Ballov\100Ballov\bin\Release\MR.Core.dll.mdb
 E:\Projects\xamarin\100Ballov\100Ballov\100Ballov\obj\Release\MR.Android.csprojResolveAssemblyReference.cache
 E:\Projects\xamarin\100Ballov\100Ballov\100Ballov\obj\Release\100Ballov.dll
 E:\Projects\xamarin\100Ballov\100Ballov\100Ballov\obj\Release\android\bin\com.flaxtreme.CT.apk
@@ -22,8 +23,7 @@ E:\Projects\xamarin\100Ballov\100Ballov\100Ballov\obj\Release\res\layout\chooset
 E:\Projects\xamarin\100Ballov\100Ballov\100Ballov\obj\Release\res\layout\choosetraininglayout.xml
 E:\Projects\xamarin\100Ballov\100Ballov\100Ballov\obj\Release\res\layout\trainingtaskslayout.xml
 E:\Projects\xamarin\100Ballov\100Ballov\100Ballov\obj\Release\res\drawable\border.xml
-E:\Projects\xamarin\100Ballov\100Ballov\100Ballov\obj\Release\R.cs.flag
-E:\Projects\xamarin\100Ballov\100Ballov\100Ballov\obj\Release\uploadflags.txt
-E:\Projects\xamarin\100Ballov\100Ballov\100Ballov\bin\Release\MR.Core.dll.mdb
 E:\Projects\xamarin\100Ballov\100Ballov\100Ballov\obj\Release\res\drawable\anketa.png
 E:\Projects\xamarin\100Ballov\100Ballov\100Ballov\obj\Release\res\drawable\alma.png
+E:\Projects\xamarin\100Ballov\100Ballov\100Ballov\obj\Release\R.cs.flag
+E:\Projects\xamarin\100Ballov\100Ballov\100Ballov\obj\Release\uploadflags.txt

@@ -67,7 +67,6 @@
                 p1:layout_height="wrap_content"
                 p1:id="@+id/OverallTextView"
                 p1:layout_marginLeft="16dp"
-                p1:layout_marginTop="8dp"
                 p1:layout_marginRight="16dp"
                 p1:layout_marginBottom="8dp" />
             <TextView
@@ -86,6 +85,15 @@
                 p1:layout_width="match_parent"
                 p1:layout_height="wrap_content"
                 p1:id="@+id/ProcentTextView"
+                p1:layout_marginLeft="16dp"
+                p1:layout_marginTop="8dp"
+                p1:layout_marginRight="16dp"
+                p1:layout_marginBottom="8dp" />
+            <TextView
+                p1:textAppearance="?android:attr/textAppearanceSmall"
+                p1:layout_width="match_parent"
+                p1:layout_height="wrap_content"
+                p1:id="@+id/HintTextView"
                 p1:layout_marginLeft="16dp"
                 p1:layout_marginTop="8dp"
                 p1:layout_marginRight="16dp"

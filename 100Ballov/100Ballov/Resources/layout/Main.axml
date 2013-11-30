@@ -8,7 +8,7 @@
         android:layout_width="fill_parent"
         android:layout_height="fill_parent">
         <TextView
-            android:text="Мобильный репетитор v 0.2"
+            android:text="Мобильный репетитор"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
