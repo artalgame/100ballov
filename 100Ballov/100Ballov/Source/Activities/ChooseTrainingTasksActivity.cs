@@ -36,12 +36,12 @@ namespace com.flaxtreme.CT
 
 			taskButtonsLayout = FindViewById<LinearLayout> (Resource.Id.TasksLinearLayout);
 			(FindViewById<TextView> (Resource.Id.ThemeName)).Text = theme.Name;
-			LoadThemesButtons ();
 		}
 
-		protected void LoadThemesButtons()
+		protected void LoadTasksButtons()
 		{
-			var tasks = new SubjectRetriever (subjectType,this.ApplicationContext).GetTasksInfo (theme.Num);
+			var subjectRetriever = new SubjectRetriever (subjectType, this.ApplicationContext);
+			var tasks = subjectRetriever.GetTasksInfo (theme.Num);
 			int ai = 1;
 			int bi = 1;
 			int i = 0;
@@ -49,17 +49,51 @@ namespace com.flaxtreme.CT
 			foreach (var task in tasks) {
 				Button taskButton = new Button (this);
 				taskButton.Id = i;
+//				var parameters = new LinearLayout.LayoutParams (LinearLayout.LayoutParams.FillParent, LinearLayout.LayoutParams.WrapContent, 1);
+//				parameters.SetMargins (16, 8, 16, 8);
+//				taskButton.LayoutParameters = parameters;
+				int level = 0;
 				taskButton.Click += TaskButtonClick;
 				if (task == typeof(ATask)) {
-					taskButton.Text = "A" + ai;
+					level = GetTaskStatistic(subjectRetriever, theme, subjectRetriever.GetATask(theme, ai));
+					taskButton.Text = "A" + ai + "(" + level + "%)";
 					ai++;
 				} else {
-					taskButton.Text = "B" + bi;
+					level = GetTaskStatistic(subjectRetriever, theme, subjectRetriever.GetBTask(theme, bi));
+					taskButton.Text = "B" + bi+"(" + level + "%)";
 					bi++;
+				}
+				if (level <= 30) {
+					taskButton.SetTextColor(Android.Graphics.Color.Red);
+				} else {
+					if (level <= 80) {
+						taskButton.SetTextColor (Android.Graphics.Color.Goldenrod);
+					} else {
+						taskButton.SetTextColor (Android.Graphics.Color.Green);
+					}
 				}
 				taskButtonsLayout.AddView (taskButton);
 				i++;
 			}
+			subjectRetriever.DB.Close ();
+		}
+
+		protected override void OnStart()
+		{
+			base.OnStart ();
+			taskButtonsLayout.RemoveAllViews ();
+			LoadTasksButtons ();
+		}
+
+		private int GetTaskStatistic(SubjectRetriever retriever, SubjectTheme theme, Task task)
+		{
+			var taskData = retriever.GetTaskDBData (task, theme);
+			int answered = taskData.RightAttempts;
+			int overall = taskData.OverallAttempts;
+			if (overall == 0) {
+				return 0;
+			}
+			return (int)(((float)answered) / overall * 100);
 		}
 
 		protected void TaskButtonClick(object sender, EventArgs e)

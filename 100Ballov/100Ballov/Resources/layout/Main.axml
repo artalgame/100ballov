@@ -8,7 +8,7 @@
         android:layout_width="fill_parent"
         android:layout_height="fill_parent">
         <TextView
-            android:text="Мобильный репетитор"
+            android:text="Мобильный репетитор v 0.2"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
@@ -76,7 +76,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="10dp" />
             <TextView
-                android:text="Попробуйте порешать тесты на alma.by"
+                android:text="Попробуй порешать тесты на alma.by"
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -99,7 +99,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="10dp" />
             <TextView
-                android:text="Помочь приложению, ответив на вопросы анкеты."
+                android:text="Помоги улучшить приложение, ответив на вопросы анкеты"
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -124,7 +124,7 @@
                 android:layout_marginRight="10dp"
                 android:layout_marginBottom="10dp" />
             <TextView
-                android:text="Оставь свою оценку или комментарий в Google Play."
+                android:text="Оставь свою оценку или комментарий в Google Play"
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -149,7 +149,7 @@
                 android:layout_marginRight="10dp"
                 android:layout_marginBottom="10dp" />
             <TextView
-                android:text="Обсуждение будущего полноценного приложения здесь."
+                android:text="Задай вопрос или предложи что-то новое"
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -172,7 +172,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="10dp" />
             <TextView
-                android:text="Отправь ссылку другу. Больше оценок - быстрее появится полноценное приложение"
+                android:text="Отправь ссылку другу. Пускай готовиться к поступлению с нами"
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

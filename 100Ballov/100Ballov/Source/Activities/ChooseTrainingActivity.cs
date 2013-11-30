@@ -30,7 +30,7 @@ namespace com.flaxtreme.CT
 			Enum.TryParse<SubjectsEnumeration> (Intent.GetStringExtra ("TestType"), out subjectType);
 			subjectStringName = SubjectHelper.GetSubjectName (subjectType, this);
 
-			FindViewById<TextView> (Resource.Id.SubjectNameTextView).Text = subjectType.ToString ();
+			FindViewById<TextView> (Resource.Id.SubjectNameTextView).Text = subjectStringName;
 
 			themeButtonsLayout = FindViewById<LinearLayout> (Resource.Id.ThemesLinearLayout);
 			LoadThemesButtons ();
@@ -43,19 +43,51 @@ namespace com.flaxtreme.CT
 				Button themeButton = new Button (this);
 				themeButton.Id = Int32.Parse(theme.Num);
 				themeButton.Click += ThemeButtonClick;
-				themeButton.Text = theme.Num + ')' + theme.Name + GetTaskStatisticToString(theme);
+				//SetButtonParameters (themeButton);
+				int level = GetTasksStatistic(theme);
+				themeButton.Text = theme.Num + ')' + theme.Name + "(" + level + "%)";
+				SetButtonColor (themeButton, level);
 				themeButtonsLayout.AddView (themeButton);
 			}
 		}
+		protected override void OnStart()
+		{
+			base.OnStart ();
+			themeButtonsLayout.RemoveAllViews ();
+			LoadThemesButtons ();
+		}
 
-		private string GetTaskStatisticToString(SubjectTheme theme)
+
+		void SetButtonColor (Button button, int level)
+		{
+			if (level <= 30) {
+				button.SetTextColor (Android.Graphics.Color.Red);
+			} else {
+				if (level <= 80) {
+					button.SetTextColor (Android.Graphics.Color.Goldenrod);
+				} else {
+					button.SetTextColor (Android.Graphics.Color.Green);
+				}
+			}
+		}
+
+		void SetButtonParameters (Button themeButton)
+		{
+			var parameters = new LinearLayout.LayoutParams (LinearLayout.LayoutParams.FillParent, LinearLayout.LayoutParams.WrapContent, 1);
+			parameters.SetMargins (16, 8, 16, 8);
+			themeButton.LayoutParameters = parameters;
+		}
+
+		private int GetTasksStatistic(SubjectTheme theme)
 		{
 			var subjectRetriever = new SubjectRetriever (subjectType,this.ApplicationContext);
 			int answered = subjectRetriever.AnsweredTasksForTheme (theme);
 			int overall = subjectRetriever.OverallTasksForTheme (theme);
 			subjectRetriever.DB.Close ();
-			return "(" + answered + "/" + overall + ")";
-
+			if (overall == 0) {
+				return 0;
+			}
+			return (int)(((float)answered) / overall * 100);
 		}
 
 		protected void ThemeButtonClick(object sender, EventArgs e)
