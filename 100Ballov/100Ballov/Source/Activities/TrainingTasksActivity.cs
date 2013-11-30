@@ -44,7 +44,7 @@ namespace com.flaxtreme.CT
 
 			SetParameters ();
 			PresetLayout ();
-			ShowTask ();
+			//ShowTask ();
 		}
 
 		protected void SetParameters()
@@ -80,7 +80,7 @@ namespace com.flaxtreme.CT
 
 			FindViewById<EditText> (Resource.Id.AnswerTextBox).TextChanged += AnswerTextBoxChanged;
 
-			ShowTask ();
+			//ShowTask ();
 		}
 
 		protected void ShowTask()
@@ -163,7 +163,15 @@ namespace com.flaxtreme.CT
 							text.SetTextColor (Android.Graphics.Color.WhiteSmoke);
 						}
 					} else {
-						if (tsk.CheckedAnswers [i]) {
+						if (!isShowAnswer [currentTaskToShow]) {
+							if (tsk.CheckedAnswers [i]) {
+								if (tsk.Variants [i].IsRight) {
+									variantLayout.SetBackgroundColor (Android.Graphics.Color.Green);
+								} else {
+									variantLayout.SetBackgroundColor (Android.Graphics.Color.Red);
+								}
+							}
+						} else {
 							if (tsk.Variants [i].IsRight) {
 								variantLayout.SetBackgroundColor (Android.Graphics.Color.Green);
 							} else {
@@ -198,12 +206,19 @@ namespace com.flaxtreme.CT
 					var tsk = tasks [currentTaskToShow] as BTask;
 					string answer = tsk.UserAnswer;
 					string rightAnswer = tsk.Variant;
-					if (answer == rightAnswer) {
-						answerTextBox.SetBackgroundColor (Android.Graphics.Color.Green);
+					if (!isShowAnswer [currentTaskToShow]) {
+						if (answer == rightAnswer) {
+							answerTextBox.SetBackgroundColor (Android.Graphics.Color.Green);
+						} else {
+							answerTextBox.SetBackgroundColor (Android.Graphics.Color.Red);
+						}
 					} else {
-						answerTextBox.SetBackgroundColor (Android.Graphics.Color.Red);
-					}
-				} else {
+						answerTextBox.SetBackgroundColor (Android.Graphics.Color.Green);
+						answerTextBox.Text = rightAnswer;
+						answerTextBox.Enabled = false;
+					} 
+				}
+				else {
 					answerTextBox.SetBackgroundColor (Android.Graphics.Color.LightGray);
 				}
 			}
@@ -308,9 +323,29 @@ namespace com.flaxtreme.CT
 				}
 				subjectRetriever.UpdateTaskDBData (taskDBData);
 				ShowTask ();
+			} else {
+				if (!isShowAnswer [currentTaskToShow]) {
+					isShowAnswer [currentTaskToShow] = true;
+					GoToURL ("http://goo.gl/MHtO2W");
+				}
 			}
 		}
-		
+
+		protected override void OnStart()
+		{
+			base.OnStart ();
+			ShowTask ();
+		}
+
+		private void GoToURL(string url)
+		{
+			Android.Net.Uri uri = Android.Net.Uri.Parse (url);
+			if (uri != null) {
+				Intent launchBrowser = new Intent (Intent.ActionView, uri);
+				StartActivity (launchBrowser);
+			} 
+		}
+
 		protected void SetIsAnswered(object sender)
 		{
 			var button = (Button)sender;

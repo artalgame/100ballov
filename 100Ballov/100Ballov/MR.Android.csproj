@@ -69,6 +69,7 @@
     <Compile Include="Source\Activities\TrainingTasksActivity.cs" />
     <Compile Include="Source\Data\DBAdapter.cs" />
     <Compile Include="Source\Data\TaskDBData.cs" />
+    <Compile Include="Source\Analytics\FlurryAnalytics.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -81,6 +82,439 @@
       <Visible>False</Visible>
     </None>
     <None Include="Resources\layout\SubjectLayout.axml">
+      <Visible>False</Visible>
+    </None>
+    <None Include="FlurryAnalytics_3.3.0.jar" />
+    <None Include="packages\ProjectApiKey.txt">
+      <Visible>False</Visible>
+    </None>
+    <None Include="packages\Android 3.3.0\FlurryAndroid-3.3.x-Upgrade-README.pdf">
+      <Visible>False</Visible>
+    </None>
+    <None Include="packages\Android 3.3.0\FlurryAndroidAdvertisingREADMEv3.3.0.pdf">
+      <Visible>False</Visible>
+    </None>
+    <None Include="packages\Android 3.3.0\FlurryAndroidAnalyticsREADMEv3.3.0.pdf">
+      <Visible>False</Visible>
+    </None>
+    <None Include="packages\Android 3.3.0\FlurryAndroidReleaseNotesv3.3.0.pdf">
+      <Visible>False</Visible>
+    </None>
+    <None Include="packages\Android 3.3.0\Flurry Android API Documentation\annotated.html">
+      <Visible>False</Visible>
+    </None>
+    <None Include="packages\Android 3.3.0\Flurry Android API Documentation\annotated.js">
+      <Visible>False</Visible>
+    </None>
+    <None Include="packages\Android 3.3.0\Flurry Android API Documentation\bc_s.png">
+      <Visible>False</Visible>
+    </None>
+    <None Include="packages\Android 3.3.0\Flurry Android API Documentation\bdwn.png">
+      <Visible>False</Visible>
+    </None>
+    <None Include="packages\Android 3.3.0\Flurry Android API Documentation\classcom_1_1flurry_1_1android_1_1_flurry_ads-members.html">
+      <Visible>False</Visible>
+    </None>
+    <None Include="packages\Android 3.3.0\Flurry Android API Documentation\classcom_1_1flurry_1_1android_1_1_flurry_ads.html">
+      <Visible>False</Visible>
+    </None>
+    <None Include="packages\Android 3.3.0\Flurry Android API Documentation\classcom_1_1flurry_1_1android_1_1_flurry_agent-members.html">
+      <Visible>False</Visible>
+    </None>
+    <None Include="packages\Android 3.3.0\Flurry Android API Documentation\classcom_1_1flurry_1_1android_1_1_flurry_agent.html">
+      <Visible>False</Visible>
+    </None>
+    <None Include="packages\Android 3.3.0\Flurry Android API Documentation\classes.html">
+      <Visible>False</Visible>
+    </None>
+    <None Include="packages\Android 3.3.0\Flurry Android API Documentation\closed.png">
+      <Visible>False</Visible>
+    </None>
+    <None Include="packages\Android 3.3.0\Flurry Android API Documentation\deprecated.html">
+      <Visible>False</Visible>
+    </None>
+    <None Include="packages\Android 3.3.0\Flurry Android API Documentation\dir_1009667ba211c0c2e7124fb498744507.html">
+      <Visible>False</Visible>
+    </None>
+    <None Include="packages\Android 3.3.0\Flurry Android API Documentation\dir_4677ec06b2dad509ca69c46168929ab4.html">
+      <Visible>False</Visible>
+    </None>
+    <None Include="packages\Android 3.3.0\Flurry Android API Documentation\dir_5e01ceff5116ddd31a7a554932b407c2.html">
+      <Visible>False</Visible>
+    </None>
+    <None Include="packages\Android 3.3.0\Flurry Android API Documentation\dir_ad396d066f858cb762dd937aa0201af9.html">
+      <Visible>False</Visible>
+    </None>
+    <None Include="packages\Android 3.3.0\Flurry Android API Documentation\dir_beacbdcc5671dac60a4ffab995ca5aeb.html">
+      <Visible>False</Visible>
+    </None>
+    <None Include="packages\Android 3.3.0\Flurry Android API Documentation\dir_df204f574d7d2f12ff9abe6346f0fede.html">
+      <Visible>False</Visible>
+    </None>
+    <None Include="packages\Android 3.3.0\Flurry Android API Documentation\dir_e7fb17d3c7af1acf1d115aceb488549d.html">
+      <Visible>False</Visible>
+    </None>
+    <None Include="packages\Android 3.3.0\Flurry Android API Documentation\dir_ee2dee788e81e6271b8648db4acebdf9.html">
+      <Visible>False</Visible>
+    </None>
+    <None Include="packages\Android 3.3.0\Flurry Android API Documentation\dir_f14c8c037c4b0744a49749eb692268bd.html">
+      <Visible>False</Visible>
+    </None>
+    <None Include="packages\Android 3.3.0\Flurry Android API Documentation\dir_f433acbe765f13829aeb1304fe2a6faa.html">
+      <Visible>False</Visible>
+    </None>
+    <None Include="packages\Android 3.3.0\Flurry Android API Documentation\doxygen.css">
+      <Visible>False</Visible>
+    </None>
+    <None Include="packages\Android 3.3.0\Flurry Android API Documentation\doxygen.png">
+      <Visible>False</Visible>
+    </None>
+    <None Include="packages\Android 3.3.0\Flurry Android API Documentation\dynsections.js">
+      <Visible>False</Visible>
+    </None>
+    <None Include="packages\Android 3.3.0\Flurry Android API Documentation\enumcom_1_1flurry_1_1android_1_1_flurry_ad_size-members.html">
+      <Visible>False</Visible>
+    </None>
+    <None Include="packages\Android 3.3.0\Flurry Android API Documentation\enumcom_1_1flurry_1_1android_1_1_flurry_ad_size.html">
+      <Visible>False</Visible>
+    </None>
+    <None Include="packages\Android 3.3.0\Flurry Android API Documentation\ftv2blank.png">
+      <Visible>False</Visible>
+    </None>
+    <None Include="packages\Android 3.3.0\Flurry Android API Documentation\ftv2cl.png">
+      <Visible>False</Visible>
+    </None>
+    <None Include="packages\Android 3.3.0\Flurry Android API Documentation\ftv2doc.png">
+      <Visible>False</Visible>
+    </None>
+    <None Include="packages\Android 3.3.0\Flurry Android API Documentation\ftv2folderclosed.png">
+      <Visible>False</Visible>
+    </None>
+    <None Include="packages\Android 3.3.0\Flurry Android API Documentation\ftv2folderopen.png">
+      <Visible>False</Visible>
+    </None>
+    <None Include="packages\Android 3.3.0\Flurry Android API Documentation\ftv2lastnode.png">
+      <Visible>False</Visible>
+    </None>
+    <None Include="packages\Android 3.3.0\Flurry Android API Documentation\ftv2link.png">
+      <Visible>False</Visible>
+    </None>
+    <None Include="packages\Android 3.3.0\Flurry Android API Documentation\ftv2mlastnode.png">
+      <Visible>False</Visible>
+    </None>
+    <None Include="packages\Android 3.3.0\Flurry Android API Documentation\ftv2mnode.png">
+      <Visible>False</Visible>
+    </None>
+    <None Include="packages\Android 3.3.0\Flurry Android API Documentation\ftv2mo.png">
+      <Visible>False</Visible>
+    </None>
+    <None Include="packages\Android 3.3.0\Flurry Android API Documentation\ftv2node.png">
+      <Visible>False</Visible>
+    </None>
+    <None Include="packages\Android 3.3.0\Flurry Android API Documentation\ftv2ns.png">
+      <Visible>False</Visible>
+    </None>
+    <None Include="packages\Android 3.3.0\Flurry Android API Documentation\ftv2plastnode.png">
+      <Visible>False</Visible>
+    </None>
+    <None Include="packages\Android 3.3.0\Flurry Android API Documentation\ftv2pnode.png">
+      <Visible>False</Visible>
+    </None>
+    <None Include="packages\Android 3.3.0\Flurry Android API Documentation\ftv2splitbar.png">
+      <Visible>False</Visible>
+    </None>
+    <None Include="packages\Android 3.3.0\Flurry Android API Documentation\ftv2vertline.png">
+      <Visible>False</Visible>
+    </None>
+    <None Include="packages\Android 3.3.0\Flurry Android API Documentation\functions.html">
+      <Visible>False</Visible>
+    </None>
+    <None Include="packages\Android 3.3.0\Flurry Android API Documentation\functions_func.html">
+      <Visible>False</Visible>
+    </None>
+    <None Include="packages\Android 3.3.0\Flurry Android API Documentation\functions_vars.html">
+      <Visible>False</Visible>
+    </None>
+    <None Include="packages\Android 3.3.0\Flurry Android API Documentation\index.html">
+      <Visible>False</Visible>
+    </None>
+    <None Include="packages\Android 3.3.0\Flurry Android API Documentation\interfacecom_1_1flurry_1_1android_1_1_constants-members.html">
+      <Visible>False</Visible>
+    </None>
+    <None Include="packages\Android 3.3.0\Flurry Android API Documentation\interfacecom_1_1flurry_1_1android_1_1_constants.html">
+      <Visible>False</Visible>
+    </None>
+    <None Include="packages\Android 3.3.0\Flurry Android API Documentation\interfacecom_1_1flurry_1_1android_1_1_flurry_ad_listener-members.html">
+      <Visible>False</Visible>
+    </None>
+    <None Include="packages\Android 3.3.0\Flurry Android API Documentation\interfacecom_1_1flurry_1_1android_1_1_flurry_ad_listener.html">
+      <Visible>False</Visible>
+    </None>
+    <None Include="packages\Android 3.3.0\Flurry Android API Documentation\interfacecom_1_1flurry_1_1android_1_1_flurry_ad_listener.js">
+      <Visible>False</Visible>
+    </None>
+    <None Include="packages\Android 3.3.0\Flurry Android API Documentation\jquery.js">
+      <Visible>False</Visible>
+    </None>
+    <None Include="packages\Android 3.3.0\Flurry Android API Documentation\navtree.css">
+      <Visible>False</Visible>
+    </None>
+    <None Include="packages\Android 3.3.0\Flurry Android API Documentation\navtree.js">
+      <Visible>False</Visible>
+    </None>
+    <None Include="packages\Android 3.3.0\Flurry Android API Documentation\navtreeindex0.js">
+      <Visible>False</Visible>
+    </None>
+    <None Include="packages\Android 3.3.0\Flurry Android API Documentation\nav_f.png">
+      <Visible>False</Visible>
+    </None>
+    <None Include="packages\Android 3.3.0\Flurry Android API Documentation\nav_g.png">
+      <Visible>False</Visible>
+    </None>
+    <None Include="packages\Android 3.3.0\Flurry Android API Documentation\nav_h.png">
+      <Visible>False</Visible>
+    </None>
+    <None Include="packages\Android 3.3.0\Flurry Android API Documentation\open.png">
+      <Visible>False</Visible>
+    </None>
+    <None Include="packages\Android 3.3.0\Flurry Android API Documentation\pages.html">
+      <Visible>False</Visible>
+    </None>
+    <None Include="packages\Android 3.3.0\Flurry Android API Documentation\resize.js">
+      <Visible>False</Visible>
+    </None>
+    <None Include="packages\Android 3.3.0\Flurry Android API Documentation\sync_off.png">
+      <Visible>False</Visible>
+    </None>
+    <None Include="packages\Android 3.3.0\Flurry Android API Documentation\sync_on.png">
+      <Visible>False</Visible>
+    </None>
+    <None Include="packages\Android 3.3.0\Flurry Android API Documentation\tabs.css">
+      <Visible>False</Visible>
+    </None>
+    <None Include="packages\Android 3.3.0\Flurry Android API Documentation\tab_a.png">
+      <Visible>False</Visible>
+    </None>
+    <None Include="packages\Android 3.3.0\Flurry Android API Documentation\tab_b.png">
+      <Visible>False</Visible>
+    </None>
+    <None Include="packages\Android 3.3.0\Flurry Android API Documentation\tab_h.png">
+      <Visible>False</Visible>
+    </None>
+    <None Include="packages\Android 3.3.0\Flurry Android API Documentation\tab_s.png">
+      <Visible>False</Visible>
+    </None>
+    <None Include="packages\Android 3.3.0\Flurry Android API Documentation\search\all_63.html">
+      <Visible>False</Visible>
+    </None>
+    <None Include="packages\Android 3.3.0\Flurry Android API Documentation\search\all_63.js">
+      <Visible>False</Visible>
+    </None>
+    <None Include="packages\Android 3.3.0\Flurry Android API Documentation\search\all_64.html">
+      <Visible>False</Visible>
+    </None>
+    <None Include="packages\Android 3.3.0\Flurry Android API Documentation\search\all_64.js">
+      <Visible>False</Visible>
+    </None>
+    <None Include="packages\Android 3.3.0\Flurry Android API Documentation\search\all_65.html">
+      <Visible>False</Visible>
+    </None>
+    <None Include="packages\Android 3.3.0\Flurry Android API Documentation\search\all_65.js">
+      <Visible>False</Visible>
+    </None>
+    <None Include="packages\Android 3.3.0\Flurry Android API Documentation\search\all_66.html">
+      <Visible>False</Visible>
+    </None>
+    <None Include="packages\Android 3.3.0\Flurry Android API Documentation\search\all_66.js">
+      <Visible>False</Visible>
+    </None>
+    <None Include="packages\Android 3.3.0\Flurry Android API Documentation\search\all_67.html">
+      <Visible>False</Visible>
+    </None>
+    <None Include="packages\Android 3.3.0\Flurry Android API Documentation\search\all_67.js">
+      <Visible>False</Visible>
+    </None>
+    <None Include="packages\Android 3.3.0\Flurry Android API Documentation\search\all_69.html">
+      <Visible>False</Visible>
+    </None>
+    <None Include="packages\Android 3.3.0\Flurry Android API Documentation\search\all_69.js">
+      <Visible>False</Visible>
+    </None>
+    <None Include="packages\Android 3.3.0\Flurry Android API Documentation\search\all_6c.html">
+      <Visible>False</Visible>
+    </None>
+    <None Include="packages\Android 3.3.0\Flurry Android API Documentation\search\all_6c.js">
+      <Visible>False</Visible>
+    </None>
+    <None Include="packages\Android 3.3.0\Flurry Android API Documentation\search\all_6d.html">
+      <Visible>False</Visible>
+    </None>
+    <None Include="packages\Android 3.3.0\Flurry Android API Documentation\search\all_6d.js">
+      <Visible>False</Visible>
+    </None>
+    <None Include="packages\Android 3.3.0\Flurry Android API Documentation\search\all_6f.html">
+      <Visible>False</Visible>
+    </None>
+    <None Include="packages\Android 3.3.0\Flurry Android API Documentation\search\all_6f.js">
+      <Visible>False</Visible>
+    </None>
+    <None Include="packages\Android 3.3.0\Flurry Android API Documentation\search\all_72.html">
+      <Visible>False</Visible>
+    </None>
+    <None Include="packages\Android 3.3.0\Flurry Android API Documentation\search\all_72.js">
+      <Visible>False</Visible>
+    </None>
+    <None Include="packages\Android 3.3.0\Flurry Android API Documentation\search\all_73.html">
+      <Visible>False</Visible>
+    </None>
+    <None Include="packages\Android 3.3.0\Flurry Android API Documentation\search\all_73.js">
+      <Visible>False</Visible>
+    </None>
+    <None Include="packages\Android 3.3.0\Flurry Android API Documentation\search\all_75.html">
+      <Visible>False</Visible>
+    </None>
+    <None Include="packages\Android 3.3.0\Flurry Android API Documentation\search\all_75.js">
+      <Visible>False</Visible>
+    </None>
+    <None Include="packages\Android 3.3.0\Flurry Android API Documentation\search\classes_63.html">
+      <Visible>False</Visible>
+    </None>
+    <None Include="packages\Android 3.3.0\Flurry Android API Documentation\search\classes_63.js">
+      <Visible>False</Visible>
+    </None>
+    <None Include="packages\Android 3.3.0\Flurry Android API Documentation\search\classes_66.html">
+      <Visible>False</Visible>
+    </None>
+    <None Include="packages\Android 3.3.0\Flurry Android API Documentation\search\classes_66.js">
+      <Visible>False</Visible>
+    </None>
+    <None Include="packages\Android 3.3.0\Flurry Android API Documentation\search\close.png">
+      <Visible>False</Visible>
+    </None>
+    <None Include="packages\Android 3.3.0\Flurry Android API Documentation\search\functions_63.html">
+      <Visible>False</Visible>
+    </None>
+    <None Include="packages\Android 3.3.0\Flurry Android API Documentation\search\functions_63.js">
+      <Visible>False</Visible>
+    </None>
+    <None Include="packages\Android 3.3.0\Flurry Android API Documentation\search\functions_64.html">
+      <Visible>False</Visible>
+    </None>
+    <None Include="packages\Android 3.3.0\Flurry Android API Documentation\search\functions_64.js">
+      <Visible>False</Visible>
+    </None>
+    <None Include="packages\Android 3.3.0\Flurry Android API Documentation\search\functions_65.html">
+      <Visible>False</Visible>
+    </None>
+    <None Include="packages\Android 3.3.0\Flurry Android API Documentation\search\functions_65.js">
+      <Visible>False</Visible>
+    </None>
+    <None Include="packages\Android 3.3.0\Flurry Android API Documentation\search\functions_66.html">
+      <Visible>False</Visible>
+    </None>
+    <None Include="packages\Android 3.3.0\Flurry Android API Documentation\search\functions_66.js">
+      <Visible>False</Visible>
+    </None>
+    <None Include="packages\Android 3.3.0\Flurry Android API Documentation\search\functions_67.html">
+      <Visible>False</Visible>
+    </None>
+    <None Include="packages\Android 3.3.0\Flurry Android API Documentation\search\functions_67.js">
+      <Visible>False</Visible>
+    </None>
+    <None Include="packages\Android 3.3.0\Flurry Android API Documentation\search\functions_69.html">
+      <Visible>False</Visible>
+    </None>
+    <None Include="packages\Android 3.3.0\Flurry Android API Documentation\search\functions_69.js">
+      <Visible>False</Visible>
+    </None>
+    <None Include="packages\Android 3.3.0\Flurry Android API Documentation\search\functions_6c.html">
+      <Visible>False</Visible>
+    </None>
+    <None Include="packages\Android 3.3.0\Flurry Android API Documentation\search\functions_6c.js">
+      <Visible>False</Visible>
+    </None>
+    <None Include="packages\Android 3.3.0\Flurry Android API Documentation\search\functions_6f.html">
+      <Visible>False</Visible>
+    </None>
+    <None Include="packages\Android 3.3.0\Flurry Android API Documentation\search\functions_6f.js">
+      <Visible>False</Visible>
+    </None>
+    <None Include="packages\Android 3.3.0\Flurry Android API Documentation\search\functions_72.html">
+      <Visible>False</Visible>
+    </None>
+    <None Include="packages\Android 3.3.0\Flurry Android API Documentation\search\functions_72.js">
+      <Visible>False</Visible>
+    </None>
+    <None Include="packages\Android 3.3.0\Flurry Android API Documentation\search\functions_73.html">
+      <Visible>False</Visible>
+    </None>
+    <None Include="packages\Android 3.3.0\Flurry Android API Documentation\search\functions_73.js">
+      <Visible>False</Visible>
+    </None>
+    <None Include="packages\Android 3.3.0\Flurry Android API Documentation\search\mag_sel.png">
+      <Visible>False</Visible>
+    </None>
+    <None Include="packages\Android 3.3.0\Flurry Android API Documentation\search\nomatches.html">
+      <Visible>False</Visible>
+    </None>
+    <None Include="packages\Android 3.3.0\Flurry Android API Documentation\search\pages_64.html">
+      <Visible>False</Visible>
+    </None>
+    <None Include="packages\Android 3.3.0\Flurry Android API Documentation\search\pages_64.js">
+      <Visible>False</Visible>
+    </None>
+    <None Include="packages\Android 3.3.0\Flurry Android API Documentation\search\search.css">
+      <Visible>False</Visible>
+    </None>
+    <None Include="packages\Android 3.3.0\Flurry Android API Documentation\search\search.js">
+      <Visible>False</Visible>
+    </None>
+    <None Include="packages\Android 3.3.0\Flurry Android API Documentation\search\search_l.png">
+      <Visible>False</Visible>
+    </None>
+    <None Include="packages\Android 3.3.0\Flurry Android API Documentation\search\search_m.png">
+      <Visible>False</Visible>
+    </None>
+    <None Include="packages\Android 3.3.0\Flurry Android API Documentation\search\search_r.png">
+      <Visible>False</Visible>
+    </None>
+    <None Include="packages\Android 3.3.0\Flurry Android API Documentation\search\variables_66.html">
+      <Visible>False</Visible>
+    </None>
+    <None Include="packages\Android 3.3.0\Flurry Android API Documentation\search\variables_66.js">
+      <Visible>False</Visible>
+    </None>
+    <None Include="packages\Android 3.3.0\Flurry Android API Documentation\search\variables_6d.html">
+      <Visible>False</Visible>
+    </None>
+    <None Include="packages\Android 3.3.0\Flurry Android API Documentation\search\variables_6d.js">
+      <Visible>False</Visible>
+    </None>
+    <None Include="packages\Android 3.3.0\Flurry Android API Documentation\search\variables_75.html">
+      <Visible>False</Visible>
+    </None>
+    <None Include="packages\Android 3.3.0\Flurry Android API Documentation\search\variables_75.js">
+      <Visible>False</Visible>
+    </None>
+    <None Include="packages\Android 3.3.0\FlurryAds\FlurryAds_3.3.0.jar">
+      <Visible>False</Visible>
+    </None>
+    <None Include="packages\Android 3.3.0\FlurryAnalytics\FlurryAnalytics_3.3.0.jar">
+      <Visible>False</Visible>
+    </None>
+    <None Include="packages\Android 3.3.0\Licenses\Avro-LICENSE.txt">
+      <Visible>False</Visible>
+    </None>
+    <None Include="packages\Android 3.3.0\Licenses\Flurry-LICENSE.txt">
+      <Visible>False</Visible>
+    </None>
+    <None Include="packages\Android 3.3.0\Licenses\Flurry_AppCircle_Advertiser_TOS.pdf">
+      <Visible>False</Visible>
+    </None>
+    <None Include="packages\Android 3.3.0\Licenses\Flurry_AppSpot_Publisher_Platform_TOS.pdf">
+      <Visible>False</Visible>
+    </None>
+    <None Include="packages\Android 3.3.0\Licenses\Jackson-LICENSE.txt">
       <Visible>False</Visible>
     </None>
   </ItemGroup>
@@ -551,6 +985,7 @@
     <Folder Include="Assets\Math\1\b\1\" />
     <Folder Include="Assets\Math\1\b\2\" />
     <Folder Include="Assets\Math\2\" />
+    <Folder Include="Source\Analytics\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\MR.Core\MR.Core\MR.Core.csproj">
